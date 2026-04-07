@@ -1,0 +1,162 @@
+.file-uploader-section {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 16px;
+  margin-top: -10px;
+}
+
+.drop-zone {
+  border: 2px dashed rgba(71, 85, 105, 0.4);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: rgba(30, 41, 59, 0.2);
+}
+
+.drop-zone:hover,
+.drop-zone.drag-over {
+  border-color: rgba(59, 130, 246, 0.6);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.drop-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.drop-text {
+  font-size: 16px;
+  color: #e2e8f0;
+  margin-bottom: 4px;
+}
+
+.drop-hint {
+  font-size: 13px;
+  color: #475569;
+}
+
+.upload-error {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  color: #f87171;
+  font-size: 14px;
+}
+
+.upload-loading {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #94a3b8;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.upload-results {
+  margin-top: 20px;
+}
+
+.upload-summary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.summary-stat {
+  text-align: center;
+  padding: 16px;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(71, 85, 105, 0.2);
+  border-radius: 12px;
+}
+
+.summary-num {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.summary-label {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.upload-packages {
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(71, 85, 105, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.upload-pkg-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(71, 85, 105, 0.1);
+  font-size: 14px;
+}
+
+.upload-pkg-row:last-child {
+  border-bottom: none;
+}
+
+.pkg-name {
+  font-weight: 600;
+  min-width: 150px;
+}
+
+.pkg-version {
+  color: #64748b;
+  font-size: 13px;
+  min-width: 80px;
+}
+
+.pkg-risk-badge {
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pkg-error {
+  color: #f87171;
+  font-size: 13px;
+}
+
+.pkg-vuln-count {
+  font-size: 13px;
+  color: #f97316;
+}
+
+.pkg-typo-alert {
+  font-size: 13px;
+  color: #ef4444;
+  font-weight: 600;
+}

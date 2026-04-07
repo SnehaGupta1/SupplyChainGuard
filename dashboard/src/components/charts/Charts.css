@@ -1,0 +1,109 @@
+.chart-wrapper {
+  width: 100%;
+}
+
+.gauge-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.no-data {
+  text-align: center;
+  color: var(--text-dim);
+  padding: 30px;
+  font-size: 14px;
+}
+
+.no-vuln-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.no-vuln-icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.no-vuln-container p {
+  color: var(--accent-green);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.vuln-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend-label {
+  color: var(--text-secondary);
+}
+
+.legend-value {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.weight-labels {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.weight-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--bg-card);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text-primary);
+  transition: background 0.3s;
+}
+
+.weight-value {
+  color: var(--text-muted);
+}
+
+.weighted-value {
+  color: var(--accent-blue-light);
+  font-weight: 600;
+}
+
+.graph-container {
+  width: 100%;
+  overflow-x: auto;
+  background: var(--bg-overlay);
+  border-radius: 8px;
+  padding: 16px;
+  transition: background 0.3s;
+}
+
+.graph-legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.graph-info {
+  font-size: 13px;
+  color: var(--text-muted);
+}
