@@ -1,0 +1,237 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-29T12:03:01.655561+00:00",
+    "tools": [
+      {
+        "vendor": "SupplyChainGuard",
+        "name": "SBOM Generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "numpi",
+      "version": "0.9.0"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "numpi",
+      "version": "0.9.0",
+      "purl": "pkg:pypi/numpi@0.9.0",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "29.25"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:03:01.655561+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "DiscoverVersion",
+      "version": "latest",
+      "purl": "pkg:pypi/DiscoverVersion@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:03:01.655561+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "scipy",
+      "version": "latest",
+      "purl": "pkg:pypi/scipy@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:03:01.656557+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "primefac",
+      "version": "latest",
+      "purl": "pkg:pypi/primefac@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:03:01.656557+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mpi4py",
+      "version": "latest",
+      "purl": "pkg:pypi/mpi4py@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:03:01.656557+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "flake8",
+      "version": "latest",
+      "purl": "pkg:pypi/flake8@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:03:01.656557+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest",
+      "version": "latest",
+      "purl": "pkg:pypi/pytest@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:03:01.656557+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest-cov",
+      "version": "latest",
+      "purl": "pkg:pypi/pytest-cov@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:03:01.657570+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest-flake8",
+      "version": "latest",
+      "purl": "pkg:pypi/pytest-flake8@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:03:01.657570+00:00"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2008-0504",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpi@0.9.0"
+        }
+      ],
+      "description": "Multiple SQL injection vulnerabilities in Coppermine Photo Gallery (CPG) before 1.4.15 allow remote authenticated administrators to execute arbitrary SQL commands via the (1) albumid, (2) startpic, and (3) numpics parameters to util.php; and (4) cid_array parameter to reviewcom.php."
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "numpi",
+      "dependsOn": [
+        "DiscoverVersion",
+        "scipy",
+        "primefac",
+        "mpi4py",
+        "flake8",
+        "pytest",
+        "pytest-cov",
+        "pytest-flake8"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-29T13:11:52.721371+00:00",
+    "tools": [
+      {
+        "vendor": "SupplyChainGuard",
+        "name": "SBOM Generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "requests",
+      "version": "2.33.0"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "requests",
+      "version": "2.33.0",
+      "purl": "pkg:pypi/requests@2.33.0",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "45.5"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "charset_normalizer",
+      "version": "latest",
+      "purl": "pkg:pypi/charset_normalizer@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "idna",
+      "version": "latest",
+      "purl": "pkg:pypi/idna@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "urllib3",
+      "version": "latest",
+      "purl": "pkg:pypi/urllib3@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "certifi",
+      "version": "latest",
+      "purl": "pkg:pypi/certifi@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "PySocks",
+      "version": "latest",
+      "purl": "pkg:pypi/PySocks@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "chardet",
+      "version": "latest",
+      "purl": "pkg:pypi/chardet@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest-httpbin",
+      "version": "latest",
+      "purl": "pkg:pypi/pytest-httpbin@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest-cov",
+      "version": "latest",
+      "purl": "pkg:pypi/pytest-cov@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest-mock",
+      "version": "latest",
+      "purl": "pkg:pypi/pytest-mock@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest-xdist",
+      "version": "latest",
+      "purl": "pkg:pypi/pytest-xdist@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.721371+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytest",
+      "version": "latest",
+      "purl": "pkg:pypi/pytest@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T13:11:52.722447+00:00"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-1999-0168",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/requests@2.33.0"
+        }
+      ],
+      "description": "The portmapper may act as a proxy and redirect service requests from an attacker, making the request appear to come from the local host, possibly bypassing authentication that would otherwise have taken place.  For example, NFS file systems could be mounted through the portmapper despite export rest"
+    },
+    {
+      "id": "CVE-1999-0107",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/requests@2.33.0"
+        }
+      ],
+      "description": "Buffer overflow in Apache 1.2.5 and earlier allows a remote attacker to cause a denial of service with a large number of GET requests containing a large number of / characters."
+    },
+    {
+      "id": "CVE-1999-0551",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 4.6
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/requests@2.33.0"
+        }
+      ],
+      "description": "HP OpenMail can be misconfigured to allow users to run arbitrary commands using malicious print requests."
+    },
+    {
+      "id": "CVE-1999-0797",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "LOW",
+          "score": 2.6
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/requests@2.33.0"
+        }
+      ],
+      "description": "NIS finger allows an attacker to conduct a denial of service via a large number of finger requests, resulting in a large number of NIS queries."
+    },
+    {
+      "id": "CVE-1999-1412",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/requests@2.33.0"
+        }
+      ],
+      "description": "A possible interaction between Apple MacOS X release 1.0 and Apache HTTP server allows remote attackers to cause a denial of service (crash) via a flood of HTTP GET requests to CGI programs, which generates a large number of processes."
+    },
+    {
+      "id": "CVE-1999-0929",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/requests@2.33.0"
+        }
+      ],
+      "description": "Novell NetWare with Novell-HTTP-Server or YAWN web servers allows remote attackers to conduct a denial of service via a large number of HTTP GET requests."
+    },
+    {
+      "id": "CVE-1999-1537",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/requests@2.33.0"
+        }
+      ],
+      "description": "IIS 3.x and 4.x does not distinguish between pages requiring encryption and those that do not, which allows remote attackers to cause a denial of service (resource exhaustion) via SSL requests to the HTTPS port for normally unencrypted files, which will cause IIS to perform extra work to send the fi"
+    },
+    {
+      "id": "CVE-1999-0867",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/requests@2.33.0"
+        }
+      ],
+      "description": "Denial of service in IIS 4.0 via a flood of HTTP requests with malformed headers."
+    },
+    {
+      "id": "CVE-1999-0746",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/requests@2.33.0"
+        }
+      ],
+      "description": "A default configuration of in.identd in SuSE Linux waits 120 seconds between requests, allowing a remote attacker to conduct a denial of service."
+    },
+    {
+      "id": "CVE-1999-1351",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/requests@2.33.0"
+        }
+      ],
+      "description": "Directory traversal vulnerability in KVIrc IRC client 0.9.0 with the \"Listen to !nick <soundname> requests\" option enabled allows remote attackers to read arbitrary files via a .. (dot dot) in a DCC GET request."
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "requests",
+      "dependsOn": [
+        "charset_normalizer",
+        "idna",
+        "urllib3",
+        "certifi",
+        "PySocks",
+        "chardet",
+        "pytest-httpbin",
+        "pytest-cov",
+        "pytest-mock",
+        "pytest-xdist",
+        "pytest"
+      ]
+    }
+  ]
+}

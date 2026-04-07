@@ -1,0 +1,723 @@
+{
+  "report_id": "SCG-20260329172412",
+  "generated_at": "2026-03-29T11:54:12.338949+00:00",
+  "tool": "SupplyChainGuard v1.0",
+  "target": {
+    "package_name": "flask",
+    "ecosystem": "pypi"
+  },
+  "summary": {
+    "final_score": 42.5,
+    "risk_level": "LOW",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "evidence_count": 14
+  },
+  "risk_assessment": {
+    "final_score": 42.5,
+    "risk_level": "LOW",
+    "risk_color": "#00c853",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "category_breakdown": {
+      "metadata": {
+        "raw_score": 30,
+        "normalized": 30,
+        "weight": 0.2,
+        "weighted_score": 6.0
+      },
+      "vulnerability": {
+        "raw_score": 100,
+        "normalized": 100,
+        "weight": 0.35,
+        "weighted_score": 35.0
+      },
+      "code_analysis": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.3,
+        "weighted_score": 0.0
+      },
+      "dependency_graph": {
+        "raw_score": 10,
+        "normalized": 10,
+        "weight": 0.15,
+        "weighted_score": 1.5
+      }
+    },
+    "bonus_scores": {
+      "typosquatting": 0.0,
+      "behavioral": 0.0
+    },
+    "evidence": [
+      {
+        "source": "metadata",
+        "description": "No author information provided",
+        "score": 15,
+        "severity": "medium"
+      },
+      {
+        "source": "metadata",
+        "description": "Only 0 maintainer(s)",
+        "score": 10,
+        "severity": "low"
+      },
+      {
+        "source": "metadata",
+        "description": "No license specified",
+        "score": 5,
+        "severity": "low"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2008-3687: Heap-based buffer overflow in the flask_security_label function in Xen 3.3, when compiled with the X",
+        "score": 6.8,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2014-1891: Multiple integer overflows in the (1) FLASK_GETBOOL, (2) FLASK_SETBOOL, (3) FLASK_USER, and (4) FLAS",
+        "score": 5.2,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2014-1893: Multiple integer overflows in the (1) FLASK_GETBOOL and (2) FLASK_SETBOOL suboperations in the flask",
+        "score": 5.2,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2014-1894: Multiple integer overflows in unspecified suboperations in the flask hypercall in Xen 3.2.x and earl",
+        "score": 5.2,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2014-1895: Off-by-one error in the flask_security_avc_cachestats function in xsm/flask/flask_op.c in Xen 4.2.x ",
+        "score": 5.8,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2015-5306: OpenStack Ironic Inspector (aka ironic-inspector or ironic-discoverd), when debug mode is enabled, m",
+        "score": 6.8,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2016-1000001: flask-oidc version 0.1.2 and earlier is vulnerable to an open redirect",
+        "score": 7.4,
+        "severity": "high"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2016-10516: Cross-site scripting (XSS) vulnerability in the render_full function in debug/tbtools.py in the debu",
+        "score": 6.1,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2018-1000656: The Pallets Project flask version Before 0.12.3 contains a CWE-20: Improper Input Validation vulnera",
+        "score": 7.5,
+        "severity": "high"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2018-16516: helpers.py in Flask-Admin 1.5.2 has Reflected XSS via a crafted URL.",
+        "score": 6.1,
+        "severity": "medium"
+      },
+      {
+        "source": "dependency_graph",
+        "description": "Large dependency tree: 33 packages",
+        "score": 10,
+        "severity": "medium"
+      }
+    ],
+    "evidence_count": 14,
+    "timestamp": "2026-03-29T11:54:12.338949+00:00"
+  },
+  "metadata_analysis": {
+    "risk_score": 30,
+    "checks_performed": 11,
+    "issues_found": 3,
+    "details": {
+      "package_name": "flask",
+      "ecosystem": "pypi",
+      "metadata": {
+        "name": "Flask",
+        "latest_version": "3.1.3",
+        "description": "A simple framework for building complex web applications.",
+        "author": null,
+        "author_email": null,
+        "maintainers": [
+          null
+        ],
+        "maintainer_count": 0,
+        "license": null,
+        "homepage": null,
+        "repository": "https://github.com/pallets/flask/",
+        "readme": "<div align=\"center\"><img src=\"https://raw.githubusercontent.com/pallets/flask/refs/heads/stable/docs/_static/flask-name.svg\" alt=\"\" height=\"150\"></div>\n\n# Flask\n\nFlask is a lightweight [WSGI] web application framework. It is designed\nto make getting started quick and easy, with the ability to scale up to\ncomplex applications. It began as a simple wrapper around [Werkzeug]\nand [Jinja], and has become one of the most popular Python web\napplication frameworks.\n\nFlask offers suggestions, but doesn't enforce any dependencies or\nproject layout. It is up to the developer to choose the tools and\nlibraries they want to use. There are many extensions provided by the\ncommunity that make adding new functionality easy.\n\n[WSGI]: https://wsgi.readthedocs.io/\n[Werkzeug]: https://werkzeug.palletsprojects.com/\n[Jinja]: https://jinja.palletsprojects.com/\n\n## A Simple Example\n\n```python\n# save this as app.py\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef hello():\n    return \"Hello, World!\"\n```\n\n```\n$ flask run\n  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)\n```\n\n## Donate\n\nThe Pallets organization develops and supports Flask and the libraries\nit uses. In order to grow the community of contributors and users, and\nallow the maintainers to devote more time to the projects, [please\ndonate today].\n\n[please donate today]: https://palletsprojects.com/donate\n\n## Contributing\n\nSee our [detailed contributing documentation][contrib] for many ways to\ncontribute, including reporting issues, requesting features, asking or answering\nquestions, and making PRs.\n\n[contrib]: https://palletsprojects.com/contributing/\n\n",
+        "publish_time": "2026-02-19T05:00:56.027585Z",
+        "created_time": "2010-04-16T14:29:37.458396Z",
+        "modified_time": "2026-02-19T05:00:56.027585Z",
+        "version_count": 64,
+        "version_history": {
+          "0.1": "2010-04-16T14:29:37.458396Z",
+          "0.10": "2013-06-13T08:35:51.483512Z",
+          "0.10.1": "2013-06-14T08:54:19.252169Z",
+          "0.11": "2016-05-29T09:02:35.093225Z",
+          "0.11.1": "2016-06-07T16:25:21.831874Z",
+          "0.12": "2016-12-21T20:22:15.304851Z",
+          "0.12.1": "2017-03-31T16:43:41.486925Z",
+          "0.12.2": "2017-05-16T06:39:38.355773Z",
+          "0.12.3": "2018-04-26T20:12:32.459965Z",
+          "0.12.4": "2018-04-30T01:24:56.768063Z",
+          "0.12.5": "2020-02-10T19:31:26.873584Z",
+          "0.2": "2010-05-12T01:31:26.850453Z",
+          "0.3": "2010-05-28T01:24:37.182936Z",
+          "0.3.1": "2010-05-28T21:23:15.767688Z",
+          "0.4": "2010-06-18T17:14:06.911868Z",
+          "0.5": "2010-07-06T16:28:02.414425Z",
+          "0.5.1": "2010-07-06T19:25:37.546865Z",
+          "0.5.2": "2010-07-15T20:02:56.267146Z",
+          "0.6": "2010-07-27T14:39:13.285427Z",
+          "0.6.1": "2010-12-31T15:23:05.868761Z",
+          "0.7": "2011-06-28T16:06:18.291844Z",
+          "0.7.1": "2011-06-29T18:37:29.978951Z",
+          "0.7.2": "2011-07-06T10:19:39.762212Z",
+          "0.8": "2011-09-29T23:34:21.197086Z",
+          "0.8.1": "2012-07-01T13:08:59.206109Z",
+          "0.9": "2012-07-01T13:12:50.941321Z",
+          "1.0": "2018-04-26T20:12:52.254298Z",
+          "1.0.1": "2018-04-30T02:09:48.725075Z",
+          "1.0.2": "2018-05-02T14:26:26.228390Z",
+          "1.0.3": "2019-05-17T17:59:03.245856Z",
+          "1.0.4": "2019-07-04T22:58:23.261646Z",
+          "1.1.0": "2019-07-04T23:19:19.719994Z",
+          "1.1.1": "2019-07-08T18:00:28.597456Z",
+          "1.1.2": "2020-04-03T17:17:53.739219Z",
+          "1.1.3": "2021-05-13T23:26:08.710780Z",
+          "1.1.4": "2021-05-14T01:45:55.061151Z",
+          "2.0.0": "2021-05-11T21:46:04.397919Z",
+          "2.0.0rc1": "2021-04-16T15:54:18.348273Z",
+          "2.0.0rc2": "2021-05-03T14:14:54.562105Z",
+          "2.0.1": "2021-05-21T15:53:08.128824Z",
+          "2.0.2": "2021-10-04T14:34:52.916386Z",
+          "2.0.3": "2022-02-14T20:01:06.923079Z",
+          "2.1.0": "2022-03-28T19:15:12.784348Z",
+          "2.1.1": "2022-03-30T21:38:30.055541Z",
+          "2.1.2": "2022-04-28T17:47:38.409651Z",
+          "2.1.3": "2022-07-13T20:55:57.512393Z",
+          "2.2.0": "2022-08-02T00:14:07.998878Z",
+          "2.2.1": "2022-08-03T23:52:22.699213Z",
+          "2.2.2": "2022-08-08T23:26:30.228750Z",
+          "2.2.3": "2023-02-15T22:43:55.501110Z",
+          "2.2.4": "2023-04-25T17:52:11.659458Z",
+          "2.2.5": "2023-05-02T14:42:34.858087Z",
+          "2.3.0": "2023-04-25T18:41:55.795394Z",
+          "2.3.1": "2023-04-25T21:20:30.610853Z",
+          "2.3.2": "2023-05-01T15:42:08.893644Z",
+          "2.3.3": "2023-08-21T19:52:33.115955Z",
+          "3.0.0": "2023-09-30T14:36:10.961495Z",
+          "3.0.1": "2024-01-18T20:02:43.898152Z",
+          "3.0.2": "2024-02-03T21:11:42.661757Z",
+          "3.0.3": "2024-04-07T19:26:08.569305Z",
+          "3.1.0": "2024-11-13T18:24:36.135982Z",
+          "3.1.1": "2025-05-13T15:01:15.591997Z",
+          "3.1.2": "2025-08-19T21:03:19.499263Z",
+          "3.1.3": "2026-02-19T05:00:56.027585Z"
+        },
+        "dependencies": {
+          "blinker": "blinker>=1.9.0",
+          "click": "click>=8.1.3",
+          "importlib-metadata": "importlib-metadata>=3.6.0",
+          "itsdangerous": "itsdangerous>=2.2.0",
+          "jinja2": "jinja2>=3.1.2",
+          "markupsafe": "markupsafe>=2.1.1",
+          "werkzeug": "werkzeug>=3.1.0",
+          "asgiref": "asgiref>=3.2",
+          "python-dotenv": "python-dotenv"
+        },
+        "dev_dependencies": {},
+        "scripts": {},
+        "keywords": [],
+        "has_types": false,
+        "classifiers": [
+          "Development Status :: 5 - Production/Stable",
+          "Environment :: Web Environment",
+          "Framework :: Flask",
+          "Intended Audience :: Developers",
+          "Operating System :: OS Independent",
+          "Programming Language :: Python",
+          "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+          "Topic :: Internet :: WWW/HTTP :: WSGI",
+          "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+          "Topic :: Software Development :: Libraries :: Application Frameworks",
+          "Typing :: Typed"
+        ],
+        "requires_python": ">=3.9",
+        "project_urls": {
+          "Changes": "https://flask.palletsprojects.com/page/changes/",
+          "Chat": "https://discord.gg/pallets",
+          "Documentation": "https://flask.palletsprojects.com/",
+          "Donate": "https://palletsprojects.com/donate",
+          "Source": "https://github.com/pallets/flask/"
+        }
+      },
+      "checks": [
+        {
+          "name": "author_check",
+          "description": "No author information provided",
+          "flagged": true,
+          "score": 15,
+          "severity": "medium",
+          "details": {
+            "author": null
+          }
+        },
+        {
+          "name": "package_age_check",
+          "description": "Package is 38 days old",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "publish_time": "2026-02-19T05:00:56.027585Z",
+            "days_old": 38
+          }
+        },
+        {
+          "name": "install_scripts_check",
+          "description": "No install scripts detected",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "scripts": {}
+          }
+        },
+        {
+          "name": "script_contents_check",
+          "description": "No scripts to analyze",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {}
+        },
+        {
+          "name": "dependency_count_check",
+          "description": "Dependency count: 9",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "dependency_count": 9,
+            "threshold": 20,
+            "dependencies": [
+              "blinker",
+              "click",
+              "importlib-metadata",
+              "itsdangerous",
+              "jinja2",
+              "markupsafe",
+              "werkzeug",
+              "asgiref",
+              "python-dotenv"
+            ]
+          }
+        },
+        {
+          "name": "repository_check",
+          "description": "Source repository present",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "repository": "https://github.com/pallets/flask/"
+          }
+        },
+        {
+          "name": "readme_check",
+          "description": "README present",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "readme_length": 1640
+          }
+        },
+        {
+          "name": "version_history_check",
+          "description": "64 versions published",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "version_count": 64
+          }
+        },
+        {
+          "name": "maintainer_count_check",
+          "description": "Only 0 maintainer(s)",
+          "flagged": true,
+          "score": 10,
+          "severity": "low",
+          "details": {
+            "maintainer_count": 0,
+            "maintainers": [
+              null
+            ]
+          }
+        },
+        {
+          "name": "license_check",
+          "description": "No license specified",
+          "flagged": true,
+          "score": 5,
+          "severity": "low",
+          "details": {
+            "license": null
+          }
+        },
+        {
+          "name": "version_anomaly_check",
+          "description": "No version anomalies",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "anomalies": []
+          }
+        }
+      ],
+      "risk_score": 30,
+      "risk_factors": [
+        {
+          "check": "author_check",
+          "description": "No author information provided",
+          "score": 15,
+          "severity": "medium"
+        },
+        {
+          "check": "maintainer_count_check",
+          "description": "Only 0 maintainer(s)",
+          "score": 10,
+          "severity": "low"
+        },
+        {
+          "check": "license_check",
+          "description": "No license specified",
+          "score": 5,
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  "typosquatting_analysis": {
+    "is_suspect": false,
+    "closest_match": null,
+    "techniques_triggered": [],
+    "details": {
+      "package_name": "flask",
+      "ecosystem": "pypi",
+      "is_typosquat_suspect": false,
+      "matches": [],
+      "techniques_triggered": [],
+      "closest_legitimate": null,
+      "min_distance": null,
+      "risk_score": 0,
+      "details": {
+        "note": "Package is a known popular package"
+      }
+    }
+  },
+  "vulnerability_analysis": {
+    "total_vulnerabilities": 10,
+    "critical": 0,
+    "high": 2,
+    "medium": 8,
+    "low": 0,
+    "details": {
+      "package_name": "flask",
+      "version": "3.1.3",
+      "ecosystem": "pypi",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2008-3687",
+          "summary": "Heap-based buffer overflow in the flask_security_label function in Xen 3.3, when compiled with the XSM:FLASK module, allows unprivileged domain users (domU) to execute arbitrary code via the flask_op hypercall.",
+          "details": "Heap-based buffer overflow in the flask_security_label function in Xen 3.3, when compiled with the XSM:FLASK module, allows unprivileged domain users (domU) to execute arbitrary code via the flask_op hypercall.",
+          "severity": "MEDIUM",
+          "cvss_score": 6.8,
+          "source": "NVD",
+          "references": [
+            "http://invisiblethingslab.com/bh08/part2.pdf",
+            "http://secunia.com/advisories/31561",
+            "http://theinvisiblethings.blogspot.com/2008/08/our-xen-0wning-trilogy-highlights.html",
+            "http://www.nabble.com/-PATCH--XSM--FLASK--Argument-handling-bugs-in-XSM:FLASK-to18536032.html",
+            "http://www.securityfocus.com/bid/30834"
+          ],
+          "published": "2008-08-14T22:41:00.000",
+          "modified": "2025-04-09T00:30:58.490"
+        },
+        {
+          "id": "CVE-2014-1891",
+          "summary": "Multiple integer overflows in the (1) FLASK_GETBOOL, (2) FLASK_SETBOOL, (3) FLASK_USER, and (4) FLASK_CONTEXT_TO_SID suboperations in the flask hypercall in Xen 4.3.x, 4.2.x, 4.1.x, 3.2.x, and earlier, when XSM is enabled, allow local users to cause a denial of service (processor fault) via unspecif",
+          "details": "Multiple integer overflows in the (1) FLASK_GETBOOL, (2) FLASK_SETBOOL, (3) FLASK_USER, and (4) FLASK_CONTEXT_TO_SID suboperations in the flask hypercall in Xen 4.3.x, 4.2.x, 4.1.x, 3.2.x, and earlier, when XSM is enabled, allow local users to cause a denial of service (processor fault) via unspecified vectors, a different vulnerability than CVE-2014-1892, CVE-2014-1893, and CVE-2014-1894.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.2,
+          "source": "NVD",
+          "references": [
+            "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00010.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00011.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00021.html",
+            "http://security.gentoo.org/glsa/glsa-201407-03.xml",
+            "http://www.openwall.com/lists/oss-security/2014/02/07/12"
+          ],
+          "published": "2014-04-01T06:35:53.467",
+          "modified": "2025-04-12T10:46:40.837"
+        },
+        {
+          "id": "CVE-2014-1893",
+          "summary": "Multiple integer overflows in the (1) FLASK_GETBOOL and (2) FLASK_SETBOOL suboperations in the flask hypercall in Xen 4.1.x, 3.3.x, 3.2.x, and earlier, when XSM is enabled, allow local users to cause a denial of service (processor fault) via unspecified vectors, a different vulnerability than CVE-20",
+          "details": "Multiple integer overflows in the (1) FLASK_GETBOOL and (2) FLASK_SETBOOL suboperations in the flask hypercall in Xen 4.1.x, 3.3.x, 3.2.x, and earlier, when XSM is enabled, allow local users to cause a denial of service (processor fault) via unspecified vectors, a different vulnerability than CVE-2014-1891, CVE-2014-1892, and CVE-2014-1894.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.2,
+          "source": "NVD",
+          "references": [
+            "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00010.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00011.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00021.html",
+            "http://security.gentoo.org/glsa/glsa-201407-03.xml",
+            "http://www.openwall.com/lists/oss-security/2014/02/07/12"
+          ],
+          "published": "2014-04-01T06:35:53.513",
+          "modified": "2025-04-12T10:46:40.837"
+        },
+        {
+          "id": "CVE-2014-1894",
+          "summary": "Multiple integer overflows in unspecified suboperations in the flask hypercall in Xen 3.2.x and earlier, when XSM is enabled, allow local users to cause a denial of service (processor fault) via unspecified vectors, a different vulnerability than CVE-2014-1891, CVE-2014-1892, and CVE-2014-1893.",
+          "details": "Multiple integer overflows in unspecified suboperations in the flask hypercall in Xen 3.2.x and earlier, when XSM is enabled, allow local users to cause a denial of service (processor fault) via unspecified vectors, a different vulnerability than CVE-2014-1891, CVE-2014-1892, and CVE-2014-1893.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.2,
+          "source": "NVD",
+          "references": [
+            "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00010.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00011.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00021.html",
+            "http://security.gentoo.org/glsa/glsa-201407-03.xml",
+            "http://www.openwall.com/lists/oss-security/2014/02/07/12"
+          ],
+          "published": "2014-04-01T06:35:53.547",
+          "modified": "2025-04-12T10:46:40.837"
+        },
+        {
+          "id": "CVE-2014-1895",
+          "summary": "Off-by-one error in the flask_security_avc_cachestats function in xsm/flask/flask_op.c in Xen 4.2.x and 4.3.x, when the maximum number of physical CPUs are in use, allows local users to cause a denial of service (host crash) or obtain sensitive information from hypervisor memory by leveraging a FLAS",
+          "details": "Off-by-one error in the flask_security_avc_cachestats function in xsm/flask/flask_op.c in Xen 4.2.x and 4.3.x, when the maximum number of physical CPUs are in use, allows local users to cause a denial of service (host crash) or obtain sensitive information from hypervisor memory by leveraging a FLASK_AVC_CACHESTAT hypercall, which triggers a buffer over-read.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.8,
+          "source": "NVD",
+          "references": [
+            "http://lists.opensuse.org/opensuse-security-announce/2014-03/msg00011.html",
+            "http://security.gentoo.org/glsa/glsa-201407-03.xml",
+            "http://www.openwall.com/lists/oss-security/2014/02/07/12",
+            "http://www.openwall.com/lists/oss-security/2014/02/10/6",
+            "http://xenbits.xen.org/xsa/advisory-85.html"
+          ],
+          "published": "2014-04-01T06:35:53.577",
+          "modified": "2025-04-12T10:46:40.837"
+        },
+        {
+          "id": "CVE-2015-5306",
+          "summary": "OpenStack Ironic Inspector (aka ironic-inspector or ironic-discoverd), when debug mode is enabled, might allow remote attackers to access the Flask console and execute arbitrary Python code by triggering an error.",
+          "details": "OpenStack Ironic Inspector (aka ironic-inspector or ironic-discoverd), when debug mode is enabled, might allow remote attackers to access the Flask console and execute arbitrary Python code by triggering an error.",
+          "severity": "MEDIUM",
+          "cvss_score": 6.8,
+          "source": "NVD",
+          "references": [
+            "http://rhn.redhat.com/errata/RHSA-2015-2685.html",
+            "https://access.redhat.com/errata/RHSA-2015:1929",
+            "https://bugs.launchpad.net/ironic-inspector/+bug/1506419",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1273698",
+            "http://rhn.redhat.com/errata/RHSA-2015-2685.html"
+          ],
+          "published": "2015-11-25T20:59:06.273",
+          "modified": "2025-04-12T10:46:40.837"
+        },
+        {
+          "id": "CVE-2016-1000001",
+          "summary": "flask-oidc version 0.1.2 and earlier is vulnerable to an open redirect",
+          "details": "flask-oidc version 0.1.2 and earlier is vulnerable to an open redirect",
+          "severity": "HIGH",
+          "cvss_score": 7.4,
+          "source": "NVD",
+          "references": [
+            "https://github.com/puiterwijk/flask-oidc/blob/master/flask_oidc/__init__.py#L293",
+            "https://github.com/puiterwijk/flask-oidc/blob/master/flask_oidc/__init__.py#L293"
+          ],
+          "published": "2016-10-07T18:59:00.210",
+          "modified": "2025-04-12T10:46:40.837"
+        },
+        {
+          "id": "CVE-2016-10516",
+          "summary": "Cross-site scripting (XSS) vulnerability in the render_full function in debug/tbtools.py in the debugger in Pallets Werkzeug before 0.11.11 (as used in Pallets Flask and other products) allows remote attackers to inject arbitrary web script or HTML via a field that contains an exception message.",
+          "details": "Cross-site scripting (XSS) vulnerability in the render_full function in debug/tbtools.py in the debugger in Pallets Werkzeug before 0.11.11 (as used in Pallets Flask and other products) allows remote attackers to inject arbitrary web script or HTML via a field that contains an exception message.",
+          "severity": "MEDIUM",
+          "cvss_score": 6.1,
+          "source": "NVD",
+          "references": [
+            "http://blog.neargle.com/2016/09/21/flask-src-review-get-a-xss-from-debuger/",
+            "https://github.com/pallets/werkzeug/pull/1001",
+            "https://lists.debian.org/debian-lts-announce/2017/11/msg00037.html",
+            "http://blog.neargle.com/2016/09/21/flask-src-review-get-a-xss-from-debuger/",
+            "https://github.com/pallets/werkzeug/pull/1001"
+          ],
+          "published": "2017-10-23T16:29:00.313",
+          "modified": "2025-04-20T01:37:25.860"
+        },
+        {
+          "id": "CVE-2018-1000656",
+          "summary": "The Pallets Project flask version Before 0.12.3 contains a CWE-20: Improper Input Validation vulnerability in flask that can result in Large amount of memory usage possibly leading to denial of service. This attack appear to be exploitable via Attacker provides JSON data in incorrect encoding. This ",
+          "details": "The Pallets Project flask version Before 0.12.3 contains a CWE-20: Improper Input Validation vulnerability in flask that can result in Large amount of memory usage possibly leading to denial of service. This attack appear to be exploitable via Attacker provides JSON data in incorrect encoding. This vulnerability appears to have been fixed in 0.12.3. NOTE: this may overlap CVE-2019-1010083.",
+          "severity": "HIGH",
+          "cvss_score": 7.5,
+          "source": "NVD",
+          "references": [
+            "https://github.com/pallets/flask/pull/2691",
+            "https://github.com/pallets/flask/releases/tag/0.12.3",
+            "https://lists.debian.org/debian-lts-announce/2019/08/msg00025.html",
+            "https://security.netapp.com/advisory/ntap-20190221-0001/",
+            "https://usn.ubuntu.com/4378-1/"
+          ],
+          "published": "2018-08-20T19:31:45.340",
+          "modified": "2024-11-21T03:40:20.450"
+        },
+        {
+          "id": "CVE-2018-16516",
+          "summary": "helpers.py in Flask-Admin 1.5.2 has Reflected XSS via a crafted URL.",
+          "details": "helpers.py in Flask-Admin 1.5.2 has Reflected XSS via a crafted URL.",
+          "severity": "MEDIUM",
+          "cvss_score": 6.1,
+          "source": "NVD",
+          "references": [
+            "https://github.com/flask-admin/flask-admin/pull/1699",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UJIYCWIH3BRLI2QNC53CQXLKVP27X7EH/",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZU2VKULURVXEU4YFTLMBQGYMPSXQ4MBN/",
+            "https://github.com/flask-admin/flask-admin/pull/1699",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UJIYCWIH3BRLI2QNC53CQXLKVP27X7EH/"
+          ],
+          "published": "2018-09-05T14:29:01.137",
+          "modified": "2024-11-21T03:52:53.620"
+        }
+      ],
+      "total_count": 10,
+      "critical_count": 0,
+      "high_count": 2,
+      "medium_count": 8,
+      "low_count": 0,
+      "risk_score": 100,
+      "sources_checked": [
+        "OSV",
+        "NVD"
+      ],
+      "errors": []
+    }
+  },
+  "code_analysis": {
+    "risk_score": 0,
+    "total_issues": 0,
+    "obfuscation_detected": false,
+    "details": {
+      "risk_score": 0,
+      "issues": [],
+      "summary": {}
+    }
+  },
+  "behavioral_analysis": {
+    "risk_score": 0,
+    "dominant_behavior": null,
+    "assessment": "",
+    "details": {
+      "risk_score": 0,
+      "behavior_summary": []
+    }
+  },
+  "dependency_graph_analysis": {
+    "total_dependencies": 33,
+    "critical_nodes": 0,
+    "details": {
+      "root_package": "flask",
+      "ecosystem": "pypi",
+      "total_dependencies": 33,
+      "max_depth_reached": 2,
+      "dependency_list": [
+        "werkzeug",
+        "click",
+        "itsdangerous",
+        "python-dotenv",
+        "blinker",
+        "asgiref",
+        "jinja2",
+        "markupsafe",
+        "importlib-metadata",
+        "flask"
+      ],
+      "critical_nodes": [],
+      "blast_radius": {
+        "affected_packages": [
+          "werkzeug",
+          "sphinx",
+          "pytest-checkdocs",
+          "jinja2",
+          "mypy",
+          "pytest",
+          "pytest-cov",
+          "MarkupSafe",
+          "packaging",
+          "python-dotenv",
+          "watchdog",
+          "asgiref",
+          "pytest-enabler",
+          "importlib-metadata",
+          "typing_extensions",
+          "ipython",
+          "zipp",
+          "pytest-asyncio",
+          "Babel",
+          "click",
+          "pytest-mypy",
+          "itsdangerous",
+          "pytest-perf",
+          "jaraco.packaging",
+          "sphinx-lint",
+          "pytest-ruff",
+          "markupsafe",
+          "colorama",
+          "blinker",
+          "furo",
+          "rst.linker",
+          "jaraco.tidelift",
+          "pyfakefs"
+        ],
+        "affected_count": 33,
+        "total_packages": 34,
+        "percentage": 97.06
+      },
+      "depth_analysis": {
+        "max_depth": 3,
+        "is_deep": false,
+        "warning": null
+      },
+      "risk_score": 10,
+      "risk_factors": [
+        "Large dependency tree: 33 packages"
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "INFO",
+      "action": "No significant issues found. Package appears safe for installation."
+    }
+  ]
+}

@@ -1,0 +1,609 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-29T12:11:54.628629+00:00",
+    "tools": [
+      {
+        "vendor": "SupplyChainGuard",
+        "name": "SBOM Generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "jvm",
+      "version": "0.6.0b6"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "jvm",
+      "version": "0.6.0b6",
+      "purl": "pkg:pypi/jvm@0.6.0b6",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "41.0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "setuptools",
+      "version": "latest",
+      "purl": "pkg:pypi/setuptools@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pkg-about",
+      "version": "latest",
+      "purl": "pkg:pypi/pkg-about@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "memorybuffer",
+      "version": "latest",
+      "purl": "pkg:pypi/memorybuffer@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cffi",
+      "version": "latest",
+      "purl": "pkg:pypi/cffi@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jni",
+      "version": "latest",
+      "purl": "pkg:pypi/jni@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jni[cffi]",
+      "version": "latest",
+      "purl": "pkg:pypi/jni[cffi]@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jni[cython]",
+      "version": "latest",
+      "purl": "pkg:pypi/jni[cython]@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "Sphinx",
+      "version": "latest",
+      "purl": "pkg:pypi/Sphinx@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sphinx-autodoc-typehints",
+      "version": "latest",
+      "purl": "pkg:pypi/sphinx-autodoc-typehints@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sphinx-toolbox",
+      "version": "latest",
+      "purl": "pkg:pypi/sphinx-toolbox@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sphinx-tabs",
+      "version": "latest",
+      "purl": "pkg:pypi/sphinx-tabs@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sphinx-copybutton",
+      "version": "latest",
+      "purl": "pkg:pypi/sphinx-copybutton@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sphinxcontrib-spelling",
+      "version": "latest",
+      "purl": "pkg:pypi/sphinxcontrib-spelling@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sphinx-lint",
+      "version": "latest",
+      "purl": "pkg:pypi/sphinx-lint@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "restructuredtext-lint",
+      "version": "latest",
+      "purl": "pkg:pypi/restructuredtext-lint@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nbsphinx",
+      "version": "latest",
+      "purl": "pkg:pypi/nbsphinx@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "deepdiff",
+      "version": "latest",
+      "purl": "pkg:pypi/deepdiff@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rich",
+      "version": "latest",
+      "purl": "pkg:pypi/rich@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:11:54.628629+00:00"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2002-2284",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.4
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jvm@0.6.0b6"
+        }
+      ],
+      "description": "Netscape Communicator 4.0 through 4.79 allows remote attackers to bypass JVM security and execute arbitrary Java code via an applet that loads user-supplied Java classes."
+    },
+    {
+      "id": "CVE-2003-0525",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jvm@0.6.0b6"
+        }
+      ],
+      "description": "The getCanonicalPath function in Windows NT 4.0 may free memory that it does not own and cause heap corruption, which allows attackers to cause a denial of service (crash) via requests that cause a long file name to be passed to getCanonicalPath, as demonstrated on the IBM JVM using a long string to"
+    },
+    {
+      "id": "CVE-2007-0014",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 4.4
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jvm@0.6.0b6"
+        }
+      ],
+      "description": "ChainKey Java Code Protection allows attackers to decompile Java class files via a Java class loader with a modified defineClass method that saves the bytecode to a file before it is passed to the JVM."
+    },
+    {
+      "id": "CVE-2007-5375",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "LOW",
+          "score": 2.6
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jvm@0.6.0b6"
+        }
+      ],
+      "description": "Interpretation conflict in the Sun Java Virtual Machine (JVM) allows user-assisted remote attackers to conduct a multi-pin DNS rebinding attack and execute arbitrary JavaScript in an intranet context, when an intranet web server has an HTML document that references a \"mayscript=true\" Java applet thr"
+    },
+    {
+      "id": "CVE-2007-0012",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 4.3
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jvm@0.6.0b6"
+        }
+      ],
+      "description": "Sun JRE 5.0 before update 14 allows remote attackers to cause a denial of service (Internet Explorer crash) via an object tag with an encoded applet and an undefined name attribute, which triggers a NULL pointer dereference in jpiexp32.dll when the applet is decoded and passed to the JVM."
+    },
+    {
+      "id": "CVE-2010-0838",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jvm@0.6.0b6"
+        }
+      ],
+      "description": "Unspecified vulnerability in the Java 2D component in Oracle Java SE and Java for Business 6 Update 18, 5.0, Update, and 23 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.  NOTE: the previous information was obtained from the March 2010 CPU.  Oracl"
+    },
+    {
+      "id": "CVE-2010-3564",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.4
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jvm@0.6.0b6"
+        }
+      ],
+      "description": "Unspecified vulnerability in the Oracle Communications Messaging Server (Sun Java System Messaging Server) component in Oracle Sun Products Suite 7.0 allows remote attackers to affect confidentiality and integrity via unknown vectors related to Webmail.  NOTE: the previous information was obtained f"
+    },
+    {
+      "id": "CVE-2011-2526",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 4.4
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jvm@0.6.0b6"
+        }
+      ],
+      "description": "Apache Tomcat 5.5.x before 5.5.34, 6.x before 6.0.33, and 7.x before 7.0.19, when sendfile is enabled for the HTTP APR or HTTP NIO connector, does not validate certain request attributes, which allows local users to bypass intended file access restrictions or cause a denial of service (infinite loop"
+    },
+    {
+      "id": "CVE-2012-0213",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jvm@0.6.0b6"
+        }
+      ],
+      "description": "The UnhandledDataStructure function in hwpf/model/UnhandledDataStructure.java in Apache POI 3.8 and earlier allows remote attackers to cause a denial of service (OutOfMemoryError exception and possibly JVM destabilization) via a crafted length value in a Channel Definition Format (CDF) or Compound F"
+    },
+    {
+      "id": "CVE-2013-1493",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "CRITICAL",
+          "score": 10.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/jvm@0.6.0b6"
+        }
+      ],
+      "description": "The color management (CMM) functionality in the 2D component in Oracle Java SE 7 Update 15 and earlier, 6 Update 41 and earlier, and 5.0 Update 40 and earlier allows remote attackers to execute arbitrary code or cause a denial of service (crash) via an image with crafted raster parameters, which tri"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "jvm",
+      "dependsOn": [
+        "setuptools",
+        "pkg-about",
+        "memorybuffer",
+        "cffi",
+        "jni",
+        "jni[cffi]",
+        "jni[cython]",
+        "Sphinx",
+        "sphinx-autodoc-typehints",
+        "sphinx-toolbox",
+        "sphinx-tabs",
+        "sphinx-copybutton",
+        "sphinxcontrib-spelling",
+        "sphinx-lint",
+        "restructuredtext-lint",
+        "nbsphinx",
+        "deepdiff",
+        "rich"
+      ]
+    }
+  ]
+}

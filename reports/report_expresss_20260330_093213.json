@@ -1,0 +1,489 @@
+{
+  "report_id": "SCG-20260330093213",
+  "generated_at": "2026-03-30T04:02:13.686981+00:00",
+  "tool": "SupplyChainGuard v1.0",
+  "target": {
+    "package_name": "expresss",
+    "ecosystem": "npm"
+  },
+  "summary": {
+    "final_score": 37.5,
+    "risk_level": "LOW",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "evidence_count": 7
+  },
+  "risk_assessment": {
+    "final_score": 37.5,
+    "risk_level": "LOW",
+    "risk_color": "#00c853",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "category_breakdown": {
+      "metadata": {
+        "raw_score": 60,
+        "normalized": 60,
+        "weight": 0.2,
+        "weighted_score": 12.0
+      },
+      "vulnerability": {
+        "raw_score": 30,
+        "normalized": 30,
+        "weight": 0.35,
+        "weighted_score": 10.5
+      },
+      "code_analysis": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.3,
+        "weighted_score": 0.0
+      },
+      "dependency_graph": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.15,
+        "weighted_score": 0.0
+      }
+    },
+    "bonus_scores": {
+      "typosquatting": 15.0,
+      "behavioral": 0.0
+    },
+    "evidence": [
+      {
+        "source": "metadata",
+        "description": "No author information provided",
+        "score": 15,
+        "severity": "medium"
+      },
+      {
+        "source": "metadata",
+        "description": "No source repository linked",
+        "score": 15,
+        "severity": "medium"
+      },
+      {
+        "source": "metadata",
+        "description": "No README or very short README",
+        "score": 10,
+        "severity": "low"
+      },
+      {
+        "source": "metadata",
+        "description": "Only 1 version(s) published",
+        "score": 10,
+        "severity": "medium"
+      },
+      {
+        "source": "metadata",
+        "description": "Only 1 maintainer(s)",
+        "score": 10,
+        "severity": "low"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2010-1941: Unspecified vulnerability in NEC WebSAM DeploymentManager 5.13 and earlier, as used in SigmaSystemCe",
+        "score": 7.8,
+        "severity": "high"
+      },
+      {
+        "source": "typosquatting",
+        "description": "Package name similar to 'express'",
+        "score": 50,
+        "severity": "critical"
+      }
+    ],
+    "evidence_count": 7,
+    "timestamp": "2026-03-30T04:02:13.685998+00:00"
+  },
+  "metadata_analysis": {
+    "risk_score": 60,
+    "checks_performed": 11,
+    "issues_found": 5,
+    "details": {
+      "package_name": "expresss",
+      "ecosystem": "npm",
+      "metadata": {
+        "name": "expresss",
+        "latest_version": "0.0.0",
+        "description": "temp test",
+        "author": "",
+        "maintainers": [
+          "davidribyrne"
+        ],
+        "maintainer_count": 1,
+        "license": "ISC",
+        "homepage": null,
+        "repository": null,
+        "readme": "ERROR: No README data found!",
+        "publish_time": "2016-08-15T18:34:04.884Z",
+        "created_time": "2016-08-15T18:34:04.884Z",
+        "modified_time": "2022-06-17T22:50:24.393Z",
+        "version_count": 1,
+        "version_history": {
+          "0.0.0": "2016-08-15T18:34:04.884Z"
+        },
+        "dependencies": {},
+        "dev_dependencies": {},
+        "scripts": {
+          "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "keywords": [],
+        "has_types": false,
+        "dist": {
+          "shasum": "5b33a7f89e7af90d312c4fd649e9020bfc820929",
+          "tarball": "https://registry.npmjs.org/expresss/-/expresss-0.0.0.tgz",
+          "integrity": "sha512-dnfKMF9CM+MRGXD58Ul3T+neY+5C9i4CaT5sEEOvIWxdueyk7TiFIzauAOFnxmMZAdio5uak7M3FDcr+B9A8xg==",
+          "signatures": [
+            {
+              "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+              "sig": "MEUCIQDDywb1hZYJ4NOVXnh2ZykRSgTVF3wW3Eouy4xM2bVF3wIgEHA9BgRT4fZWrtmMZeyfE8otEgv0XS/2ukdhX2vIQaA="
+            }
+          ]
+        },
+        "engines": {}
+      },
+      "checks": [
+        {
+          "name": "author_check",
+          "description": "No author information provided",
+          "flagged": true,
+          "score": 15,
+          "severity": "medium",
+          "details": {
+            "author": ""
+          }
+        },
+        {
+          "name": "package_age_check",
+          "description": "Package is 3513 days old",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "publish_time": "2016-08-15T18:34:04.884Z",
+            "days_old": 3513
+          }
+        },
+        {
+          "name": "install_scripts_check",
+          "description": "No suspicious install scripts",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "all_scripts": [
+              "test"
+            ],
+            "suspicious_scripts": []
+          }
+        },
+        {
+          "name": "script_contents_check",
+          "description": "No suspicious keywords in scripts",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "findings": []
+          }
+        },
+        {
+          "name": "dependency_count_check",
+          "description": "Dependency count: 0",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "dependency_count": 0,
+            "threshold": 20,
+            "dependencies": []
+          }
+        },
+        {
+          "name": "repository_check",
+          "description": "No source repository linked",
+          "flagged": true,
+          "score": 15,
+          "severity": "medium",
+          "details": {
+            "repository": null
+          }
+        },
+        {
+          "name": "readme_check",
+          "description": "No README or very short README",
+          "flagged": true,
+          "score": 10,
+          "severity": "low",
+          "details": {
+            "readme_length": 28
+          }
+        },
+        {
+          "name": "version_history_check",
+          "description": "Only 1 version(s) published",
+          "flagged": true,
+          "score": 10,
+          "severity": "medium",
+          "details": {
+            "version_count": 1
+          }
+        },
+        {
+          "name": "maintainer_count_check",
+          "description": "Only 1 maintainer(s)",
+          "flagged": true,
+          "score": 10,
+          "severity": "low",
+          "details": {
+            "maintainer_count": 1,
+            "maintainers": [
+              "davidribyrne"
+            ]
+          }
+        },
+        {
+          "name": "license_check",
+          "description": "License: ISC",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "license": "ISC"
+          }
+        },
+        {
+          "name": "version_anomaly_check",
+          "description": "Not enough versions to analyze",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {}
+        }
+      ],
+      "risk_score": 60,
+      "risk_factors": [
+        {
+          "check": "author_check",
+          "description": "No author information provided",
+          "score": 15,
+          "severity": "medium"
+        },
+        {
+          "check": "repository_check",
+          "description": "No source repository linked",
+          "score": 15,
+          "severity": "medium"
+        },
+        {
+          "check": "readme_check",
+          "description": "No README or very short README",
+          "score": 10,
+          "severity": "low"
+        },
+        {
+          "check": "version_history_check",
+          "description": "Only 1 version(s) published",
+          "score": 10,
+          "severity": "medium"
+        },
+        {
+          "check": "maintainer_count_check",
+          "description": "Only 1 maintainer(s)",
+          "score": 10,
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  "typosquatting_analysis": {
+    "is_suspect": true,
+    "closest_match": "express",
+    "techniques_triggered": [
+      "repeated_char",
+      "levenshtein"
+    ],
+    "details": {
+      "package_name": "expresss",
+      "ecosystem": "npm",
+      "is_typosquat_suspect": true,
+      "matches": [
+        {
+          "suspect_package": "expresss",
+          "legitimate_package": "express",
+          "is_similar": true,
+          "distance": 1,
+          "techniques": [
+            "levenshtein",
+            "repeated_char"
+          ]
+        }
+      ],
+      "techniques_triggered": [
+        "repeated_char",
+        "levenshtein"
+      ],
+      "closest_legitimate": "express",
+      "min_distance": 1,
+      "risk_score": 50,
+      "details": {}
+    }
+  },
+  "vulnerability_analysis": {
+    "total_vulnerabilities": 1,
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0,
+    "details": {
+      "package_name": "expresss",
+      "version": "0.0.0",
+      "ecosystem": "npm",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2010-1941",
+          "summary": "Unspecified vulnerability in NEC WebSAM DeploymentManager 5.13 and earlier, as used in SigmaSystemCenter 2.1 Update2 and earlier, BladeSystemCenter, ExpressSystemCenter, and VirtualPCCenter 2.2 and earlier, allows remote attackers to cause a denial of service (OS shutdown or restart) via unknown vec",
+          "details": "Unspecified vulnerability in NEC WebSAM DeploymentManager 5.13 and earlier, as used in SigmaSystemCenter 2.1 Update2 and earlier, BladeSystemCenter, ExpressSystemCenter, and VirtualPCCenter 2.2 and earlier, allows remote attackers to cause a denial of service (OS shutdown or restart) via unknown vectors related to Client Service for DPM and crafted packets to port 56010.",
+          "severity": "HIGH",
+          "cvss_score": 7.8,
+          "source": "NVD",
+          "references": [
+            "http://jvn.jp/en/jp/JVN90872372/index.html",
+            "http://jvndb.jvn.jp/ja/contents/2010/JVNDB-2010-000019.html",
+            "http://osvdb.org/64700",
+            "http://secunia.com/advisories/39802",
+            "http://www.nec.co.jp/security-info/secinfo/nv10-004.html"
+          ],
+          "published": "2010-05-19T12:08:04.460",
+          "modified": "2025-04-11T00:51:21.963"
+        }
+      ],
+      "total_count": 1,
+      "critical_count": 0,
+      "high_count": 1,
+      "medium_count": 0,
+      "low_count": 0,
+      "risk_score": 30,
+      "sources_checked": [
+        "OSV",
+        "NVD"
+      ],
+      "errors": []
+    }
+  },
+  "code_analysis": {
+    "risk_score": 0,
+    "total_issues": 0,
+    "obfuscation_detected": false,
+    "details": {
+      "filename": "expresss/scripts",
+      "language": "javascript",
+      "issues": [],
+      "risk_score": 0,
+      "entropy_score": 3.9361,
+      "obfuscation_detected": false,
+      "encoded_payloads": [],
+      "suspicious_urls": [],
+      "suspicious_ips": [],
+      "dangerous_imports": [],
+      "suspicious_function_calls": [],
+      "summary": {
+        "total_issues": 0,
+        "critical_issues": 0,
+        "high_issues": 0,
+        "medium_issues": 0,
+        "low_issues": 0
+      }
+    }
+  },
+  "behavioral_analysis": {
+    "risk_score": 0,
+    "dominant_behavior": null,
+    "assessment": "MINIMAL - No significant behavioral concerns detected.",
+    "details": {
+      "behaviors": {
+        "network": {
+          "description": "Network communication",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "filesystem": {
+          "description": "File system operations",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "process_execution": {
+          "description": "Process spawning and command execution",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "code_execution": {
+          "description": "Dynamic code execution",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "data_encoding": {
+          "description": "Data encoding/decoding operations",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "environment_access": {
+          "description": "Environment variable and system info access",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "crypto_operations": {
+          "description": "Cryptographic operations",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "data_exfiltration": {
+          "description": "Potential data exfiltration patterns",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        }
+      },
+      "fingerprint_vector": {
+        "network": 0,
+        "filesystem": 0,
+        "process_execution": 0,
+        "code_execution": 0,
+        "data_encoding": 0,
+        "environment_access": 0,
+        "crypto_operations": 0,
+        "data_exfiltration": 0
+      },
+      "total_behaviors_detected": 0,
+      "dominant_behavior": null,
+      "risk_score": 0,
+      "risk_assessment": "MINIMAL - No significant behavioral concerns detected.",
+      "behavior_summary": []
+    }
+  },
+  "dependency_graph_analysis": {
+    "total_dependencies": 0,
+    "critical_nodes": 0,
+    "details": {
+      "risk_score": 0,
+      "total_dependencies": 0,
+      "error": "'DependencyGraphAnalyzer' object has no attribute 'adjacency'"
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "action": "Package name is suspiciously similar to 'express'. Verify you have the correct package name."
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Package metadata shows multiple anomalies. Verify the package source and maintainer."
+    }
+  ]
+}

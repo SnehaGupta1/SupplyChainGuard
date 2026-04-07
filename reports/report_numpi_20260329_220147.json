@@ -1,0 +1,528 @@
+{
+  "report_id": "SCG-20260329220147",
+  "generated_at": "2026-03-29T16:31:47.614160+00:00",
+  "tool": "SupplyChainGuard v1.0",
+  "target": {
+    "package_name": "numpi",
+    "ecosystem": "pypi"
+  },
+  "summary": {
+    "final_score": 29.25,
+    "risk_level": "LOW",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "evidence_count": 7
+  },
+  "risk_assessment": {
+    "final_score": 29.25,
+    "risk_level": "LOW",
+    "risk_color": "#00c853",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "category_breakdown": {
+      "metadata": {
+        "raw_score": 45,
+        "normalized": 45,
+        "weight": 0.2,
+        "weighted_score": 9.0
+      },
+      "vulnerability": {
+        "raw_score": 15,
+        "normalized": 15,
+        "weight": 0.35,
+        "weighted_score": 5.25
+      },
+      "code_analysis": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.3,
+        "weighted_score": 0.0
+      },
+      "dependency_graph": {
+        "raw_score": 20,
+        "normalized": 20,
+        "weight": 0.15,
+        "weighted_score": 3.0
+      }
+    },
+    "bonus_scores": {
+      "typosquatting": 12.0,
+      "behavioral": 0.0
+    },
+    "evidence": [
+      {
+        "source": "metadata",
+        "description": "No author information provided",
+        "score": 15,
+        "severity": "medium"
+      },
+      {
+        "source": "metadata",
+        "description": "No source repository linked",
+        "score": 15,
+        "severity": "medium"
+      },
+      {
+        "source": "metadata",
+        "description": "Only 0 maintainer(s)",
+        "score": 10,
+        "severity": "low"
+      },
+      {
+        "source": "metadata",
+        "description": "No license specified",
+        "score": 5,
+        "severity": "low"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2008-0504: Multiple SQL injection vulnerabilities in Coppermine Photo Gallery (CPG) before 1.4.15 allow remote ",
+        "score": 6.5,
+        "severity": "medium"
+      },
+      {
+        "source": "dependency_graph",
+        "description": "Very large dependency tree: 69 packages",
+        "score": 10,
+        "severity": "medium"
+      },
+      {
+        "source": "typosquatting",
+        "description": "Package name similar to 'numpy'",
+        "score": 40,
+        "severity": "critical"
+      }
+    ],
+    "evidence_count": 7,
+    "timestamp": "2026-03-29T16:31:47.613108+00:00"
+  },
+  "metadata_analysis": {
+    "risk_score": 45,
+    "checks_performed": 11,
+    "issues_found": 4,
+    "details": {
+      "package_name": "numpi",
+      "ecosystem": "pypi",
+      "metadata": {
+        "name": "NuMPI",
+        "latest_version": "0.9.0",
+        "description": "Numerical tools for MPI-parallelized code",
+        "author": null,
+        "author_email": "Antoine Sanner <antoine.sanner@imtek.uni-freiburg.de>, Lars Pastewka <lars.pastewka@imtek.uni-freiburg.de>",
+        "maintainers": [
+          null
+        ],
+        "maintainer_count": 0,
+        "license": null,
+        "homepage": null,
+        "repository": null,
+        "readme": "NuMPI\n=====\n\nNuMPI is a collection of numerical tools for MPI-parallelized Python codes. NuMPI presently contains:\n\n- An (incomplete) stub implementation of the [mpi4py](https://github.com/mpi4py/mpi4py) interface to the MPI libraries. This allows running serial versions of MPI parallel code  without having `mpi4py` (and hence a full MPI stack) installed.\n- Parallel file IO in numpy's [.npy](https://docs.scipy.org/doc/numpy/reference/generated/numpy.save.html) format using MPI I/O.\n- An MPI-parallel implementation of the L-BFGS optimizer.\n- An MPI-parallel bound constrained conjugate gradients algorithm.\n\nBuild status\n------------\n\n[![Tests](https://github.com/IMTEK-Simulation/NuMPI/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/IMTEK-Simulation/NuMPI/actions/workflows/tests.yml) [![Flake8](https://github.com/IMTEK-Simulation/NuMPI/actions/workflows/flake8.yml/badge.svg?branch=master)](https://github.com/IMTEK-Simulation/NuMPI/actions/workflows/flake8.yml)\n\nInstallation\n------------\n\n```\npython3 -m pip install NuMPI\n```\n\nDevelopment Installation\n------------------------\n\nClone the repository.\n\nTo use the code, install the current package as editable:\n\n```\npip install -e .[test]\n```\n\nTesting\n-------\n\nYou have to do a development installation to be able to run the tests.\n\nWe use [runtests](https://github.com/bccp/runtests). \n\nFrom the main installation directory:\n```bash\npython run-tests.py\n```\n\nIf you want to use NuMPI without mpi4py, you can simply run the tests with pytest. \n\n```bash\npytest tests/\n```\n\nTesting on the cluster\n----------------------\nOn NEMO for example\n\n```bash\nmsub -q express -l walltime=15:00,nodes=1:ppn=20 NEMO_test_job.sh -m bea\n```\n\nDevelopment & Funding\n---------------------\n\nDevelopment of this project is funded by the [European Research Council](https://erc.europa.eu) within [Starting Grant 757343](https://cordis.europa.eu/project/id/757343) and by the [Deutsche Forschungsgemeinschaft](https://www.dfg.de/en) within project [EXC 2193](https://gepris.dfg.de/gepris/projekt/390951807).\n\n",
+        "publish_time": "2025-11-24T20:00:27.665016Z",
+        "created_time": "2019-08-25T11:40:55.398993Z",
+        "modified_time": "2025-11-24T20:00:27.665016Z",
+        "version_count": 22,
+        "version_history": {
+          "0.1": "2019-08-25T11:40:55.398993Z",
+          "0.1.1": "2019-12-02T19:48:08.338357Z",
+          "0.1.2": "2020-06-28T18:04:57.555355Z",
+          "0.1.3": "2020-10-14T13:34:39.447681Z",
+          "0.1.4": "2020-10-16T10:12:24.286945Z",
+          "0.1.5": "2021-03-02T14:55:55.237783Z",
+          "0.1.6": "2021-06-22T10:40:28.722122Z",
+          "0.2.0": "2021-10-28T12:13:45.918706Z",
+          "0.3.0": "2021-11-11T14:16:56.319437Z",
+          "0.3.1": "2022-11-07T20:00:56.738322Z",
+          "0.4.0": "2024-01-13T23:25:10.349627Z",
+          "0.5.0": "2024-04-14T12:35:05.286683Z",
+          "0.6.0": "2024-07-23T07:52:49.816148Z",
+          "0.6.1": "2024-07-23T13:54:36.632922Z",
+          "0.7.0": "2025-03-12T21:09:54.025150Z",
+          "0.7.1": "2025-03-18T07:28:35.636114Z",
+          "0.7.2": "2025-03-26T21:52:35.501340Z",
+          "0.7.3": "2025-04-10T09:44:40.527905Z",
+          "0.8.0": "2025-06-05T20:45:21.374869Z",
+          "0.8.2": "2025-06-27T08:51:23.408816Z",
+          "0.8.3": "2025-11-14T11:27:10.067723Z",
+          "0.9.0": "2025-11-24T20:00:27.665016Z"
+        },
+        "dependencies": {
+          "DiscoverVersion": "DiscoverVersion",
+          "scipy": "scipy>1.1.0",
+          "primefac": "primefac",
+          "mpi4py": "mpi4py",
+          "flake8": "flake8<5",
+          "pytest": "pytest",
+          "pytest-cov": "pytest-cov",
+          "pytest-flake8": "pytest-flake8"
+        },
+        "dev_dependencies": {},
+        "scripts": {},
+        "keywords": [],
+        "has_types": false,
+        "classifiers": [
+          "Development Status :: 5 - Production/Stable",
+          "Programming Language :: Python"
+        ],
+        "requires_python": ">=3.8.0",
+        "project_urls": {
+          "changelog": "https://github.com/IMTEK-Simulation/NuMPI/blob/master/ChangeLog.md",
+          "repository": "https://github.com/IMTEK-Simulation/NuMPI"
+        }
+      },
+      "checks": [
+        {
+          "name": "author_check",
+          "description": "No author information provided",
+          "flagged": true,
+          "score": 15,
+          "severity": "medium",
+          "details": {
+            "author": null
+          }
+        },
+        {
+          "name": "package_age_check",
+          "description": "Package is 124 days old",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "publish_time": "2025-11-24T20:00:27.665016Z",
+            "days_old": 124
+          }
+        },
+        {
+          "name": "install_scripts_check",
+          "description": "No install scripts detected",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "scripts": {}
+          }
+        },
+        {
+          "name": "script_contents_check",
+          "description": "No scripts to analyze",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {}
+        },
+        {
+          "name": "dependency_count_check",
+          "description": "Dependency count: 8",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "dependency_count": 8,
+            "threshold": 20,
+            "dependencies": [
+              "DiscoverVersion",
+              "scipy",
+              "primefac",
+              "mpi4py",
+              "flake8",
+              "pytest",
+              "pytest-cov",
+              "pytest-flake8"
+            ]
+          }
+        },
+        {
+          "name": "repository_check",
+          "description": "No source repository linked",
+          "flagged": true,
+          "score": 15,
+          "severity": "medium",
+          "details": {
+            "repository": null
+          }
+        },
+        {
+          "name": "readme_check",
+          "description": "README present",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "readme_length": 2068
+          }
+        },
+        {
+          "name": "version_history_check",
+          "description": "22 versions published",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "version_count": 22
+          }
+        },
+        {
+          "name": "maintainer_count_check",
+          "description": "Only 0 maintainer(s)",
+          "flagged": true,
+          "score": 10,
+          "severity": "low",
+          "details": {
+            "maintainer_count": 0,
+            "maintainers": [
+              null
+            ]
+          }
+        },
+        {
+          "name": "license_check",
+          "description": "No license specified",
+          "flagged": true,
+          "score": 5,
+          "severity": "low",
+          "details": {
+            "license": null
+          }
+        },
+        {
+          "name": "version_anomaly_check",
+          "description": "No version anomalies",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "anomalies": []
+          }
+        }
+      ],
+      "risk_score": 45,
+      "risk_factors": [
+        {
+          "check": "author_check",
+          "description": "No author information provided",
+          "score": 15,
+          "severity": "medium"
+        },
+        {
+          "check": "repository_check",
+          "description": "No source repository linked",
+          "score": 15,
+          "severity": "medium"
+        },
+        {
+          "check": "maintainer_count_check",
+          "description": "Only 0 maintainer(s)",
+          "score": 10,
+          "severity": "low"
+        },
+        {
+          "check": "license_check",
+          "description": "No license specified",
+          "score": 5,
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  "typosquatting_analysis": {
+    "is_suspect": true,
+    "closest_match": "numpy",
+    "techniques_triggered": [
+      "levenshtein"
+    ],
+    "details": {
+      "package_name": "numpi",
+      "ecosystem": "pypi",
+      "is_typosquat_suspect": true,
+      "matches": [
+        {
+          "suspect_package": "numpi",
+          "legitimate_package": "numpy",
+          "is_similar": true,
+          "distance": 1,
+          "techniques": [
+            "levenshtein"
+          ]
+        }
+      ],
+      "techniques_triggered": [
+        "levenshtein"
+      ],
+      "closest_legitimate": "numpy",
+      "min_distance": 1,
+      "risk_score": 40,
+      "details": {}
+    }
+  },
+  "vulnerability_analysis": {
+    "total_vulnerabilities": 1,
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0,
+    "details": {
+      "package_name": "numpi",
+      "version": "0.9.0",
+      "ecosystem": "pypi",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2008-0504",
+          "summary": "Multiple SQL injection vulnerabilities in Coppermine Photo Gallery (CPG) before 1.4.15 allow remote authenticated administrators to execute arbitrary SQL commands via the (1) albumid, (2) startpic, and (3) numpics parameters to util.php; and (4) cid_array parameter to reviewcom.php.",
+          "details": "Multiple SQL injection vulnerabilities in Coppermine Photo Gallery (CPG) before 1.4.15 allow remote authenticated administrators to execute arbitrary SQL commands via the (1) albumid, (2) startpic, and (3) numpics parameters to util.php; and (4) cid_array parameter to reviewcom.php.",
+          "severity": "MEDIUM",
+          "cvss_score": 6.5,
+          "source": "NVD",
+          "references": [
+            "http://coppermine-gallery.net/forum/index.php?topic=50103.0",
+            "http://secunia.com/advisories/28682",
+            "http://www.securityfocus.com/archive/1/487351/100/200/threaded",
+            "http://www.securityfocus.com/bid/27509",
+            "http://www.securitytracker.com/id?1019285"
+          ],
+          "published": "2008-01-31T20:00:00.000",
+          "modified": "2025-04-09T00:30:58.490"
+        }
+      ],
+      "total_count": 1,
+      "critical_count": 0,
+      "high_count": 0,
+      "medium_count": 1,
+      "low_count": 0,
+      "risk_score": 15,
+      "sources_checked": [
+        "OSV",
+        "NVD"
+      ],
+      "errors": []
+    }
+  },
+  "code_analysis": {
+    "risk_score": 0,
+    "total_issues": 0,
+    "obfuscation_detected": false,
+    "details": {
+      "risk_score": 0,
+      "issues": [],
+      "summary": {}
+    }
+  },
+  "behavioral_analysis": {
+    "risk_score": 0,
+    "dominant_behavior": null,
+    "assessment": "",
+    "details": {
+      "risk_score": 0,
+      "behavior_summary": []
+    }
+  },
+  "dependency_graph_analysis": {
+    "total_dependencies": 69,
+    "critical_nodes": 0,
+    "details": {
+      "root_package": "numpi",
+      "ecosystem": "pypi",
+      "total_dependencies": 69,
+      "max_depth_reached": 2,
+      "dependency_list": [
+        "numpi",
+        "scipy",
+        "mpi4py",
+        "pytest-cov",
+        "DiscoverVersion",
+        "pytest-flake8",
+        "primefac",
+        "flake8",
+        "pytest"
+      ],
+      "critical_nodes": [],
+      "blast_radius": {
+        "affected_packages": [
+          "myst-nb",
+          "process-tests",
+          "mccabe",
+          "pytest-enabler",
+          "furo",
+          "intersphinx_registry",
+          "linkify-it-py",
+          "DiscoverVersion",
+          "pycodestyle",
+          "pluggy",
+          "mypy",
+          "pytest",
+          "ruff",
+          "xmlschema",
+          "tabulate",
+          "mpmath",
+          "scikit-umfpack",
+          "jupytext",
+          "hypothesis",
+          "attrs",
+          "types-psutil",
+          "mock",
+          "pytest-timeout",
+          "numpydoc",
+          "exceptiongroup",
+          "packaging",
+          "coverage[toml]",
+          "array-api-strict",
+          "sphinx-lint",
+          "pyflakes",
+          "pooch",
+          "typing_extensions",
+          "requests",
+          "click",
+          "numpy",
+          "threadpoolctl",
+          "pydata-sphinx-theme",
+          "colorama",
+          "pytest-ruff",
+          "argcomplete",
+          "jaraco.packaging",
+          "Cython",
+          "mpi4py",
+          "pytest-checkdocs",
+          "asv",
+          "setuptools",
+          "matplotlib",
+          "sphinx",
+          "sphinx-design",
+          "jupyterlite-sphinx",
+          "pytest-cov",
+          "primefac",
+          "sphinx-copybutton",
+          "pytest-flake8",
+          "flake8",
+          "cython-lint",
+          "iniconfig",
+          "tomli",
+          "rst.linker",
+          "pytest-mypy",
+          "scipy",
+          "virtualenv",
+          "jupyterlite-pyodide-kernel",
+          "ninja",
+          "spin",
+          "gmpy2",
+          "meson",
+          "pytest-xdist",
+          "pygments"
+        ],
+        "affected_count": 69,
+        "total_packages": 70,
+        "percentage": 98.57
+      },
+      "depth_analysis": {
+        "max_depth": 5,
+        "is_deep": false,
+        "warning": null
+      },
+      "risk_score": 20,
+      "risk_factors": [
+        "Very large dependency tree: 69 packages"
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "action": "Package name is suspiciously similar to 'numpy'. Verify you have the correct package name."
+    }
+  ]
+}

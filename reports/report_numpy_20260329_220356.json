@@ -1,0 +1,730 @@
+{
+  "report_id": "SCG-20260329220356",
+  "generated_at": "2026-03-29T16:33:56.010671+00:00",
+  "tool": "SupplyChainGuard v1.0",
+  "target": {
+    "package_name": "numpy",
+    "ecosystem": "pypi"
+  },
+  "summary": {
+    "final_score": 45.0,
+    "risk_level": "LOW",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "evidence_count": 14
+  },
+  "risk_assessment": {
+    "final_score": 45.0,
+    "risk_level": "LOW",
+    "risk_color": "#00c853",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "category_breakdown": {
+      "metadata": {
+        "raw_score": 50,
+        "normalized": 50,
+        "weight": 0.2,
+        "weighted_score": 10.0
+      },
+      "vulnerability": {
+        "raw_score": 100,
+        "normalized": 100,
+        "weight": 0.35,
+        "weighted_score": 35.0
+      },
+      "code_analysis": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.3,
+        "weighted_score": 0.0
+      },
+      "dependency_graph": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.15,
+        "weighted_score": 0.0
+      }
+    },
+    "bonus_scores": {
+      "typosquatting": 0.0,
+      "behavioral": 0.0
+    },
+    "evidence": [
+      {
+        "source": "metadata",
+        "description": "Package is only 0 days old",
+        "score": 20,
+        "severity": "high"
+      },
+      {
+        "source": "metadata",
+        "description": "No source repository linked",
+        "score": 15,
+        "severity": "medium"
+      },
+      {
+        "source": "metadata",
+        "description": "Only 1 maintainer(s)",
+        "score": 10,
+        "severity": "low"
+      },
+      {
+        "source": "metadata",
+        "description": "No license specified",
+        "score": 5,
+        "severity": "low"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2017-12852: The numpy.pad function in Numpy 1.13.1 and older versions is missing input validation. An empty list",
+        "score": 7.5,
+        "severity": "high"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2014-1858: __init__.py in f2py in NumPy before 1.8.1 allows local users to write to arbitrary files via a symli",
+        "score": 5.5,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2014-1859: (1) core/tests/test_memmap.py, (2) core/tests/test_multiarray.py, (3) f2py/f2py2e.py, and (4) lib/te",
+        "score": 5.5,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2019-6446: An issue was discovered in NumPy before 1.16.3. It uses the pickle Python module unsafely, which all",
+        "score": 9.8,
+        "severity": "critical"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2021-33430: A Buffer Overflow vulnerability exists in NumPy 1.9.x in the PyArray_NewFromDescr_int function of ct",
+        "score": 5.3,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2021-34141: An incomplete string comparison in the numpy.core component in NumPy before 1.22.0 allows attackers ",
+        "score": 5.3,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2021-41495: Null Pointer Dereference vulnerability exists in numpy.sort in NumPy &lt and 1.19 in the PyArray_Des",
+        "score": 5.3,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2021-41496: Buffer overflow in the array_from_pyobj function of fortranobject.c in NumPy < 1.19, which allows at",
+        "score": 5.5,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2022-29216: TensorFlow is an open source platform for machine learning. Prior to versions 2.9.0, 2.8.1, 2.7.2, a",
+        "score": 7.8,
+        "severity": "high"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2022-41884: TensorFlow is an open source platform for machine learning. If a numpy array is created with a shape",
+        "score": 4.8,
+        "severity": "medium"
+      }
+    ],
+    "evidence_count": 14,
+    "timestamp": "2026-03-29T16:33:56.010671+00:00"
+  },
+  "metadata_analysis": {
+    "risk_score": 50,
+    "checks_performed": 11,
+    "issues_found": 4,
+    "details": {
+      "package_name": "numpy",
+      "ecosystem": "pypi",
+      "metadata": {
+        "name": "numpy",
+        "latest_version": "2.4.4",
+        "description": "Fundamental package for array computing in Python",
+        "author": "Travis E. Oliphant et al.",
+        "author_email": null,
+        "maintainers": [
+          "Travis E. Oliphant et al."
+        ],
+        "maintainer_count": 1,
+        "license": null,
+        "homepage": null,
+        "repository": null,
+        "readme": "<h1 align=\"center\">\n<img src=\"https://raw.githubusercontent.com/numpy/numpy/main/branding/logo/primary/numpylogo.svg\" width=\"300\">\n</h1><br>\n\n\n[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](\nhttps://numfocus.org)\n[![PyPI Downloads](https://img.shields.io/pypi/dm/numpy.svg?label=PyPI%20downloads)](\nhttps://pypi.org/project/numpy/)\n[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/numpy.svg?label=Conda%20downloads)](\nhttps://anaconda.org/conda-forge/numpy)\n[![Stack Overflow](https://img.shields.io/badge/stackoverflow-Ask%20questions-blue.svg)](\nhttps://stackoverflow.com/questions/tagged/numpy)\n[![Nature Paper](https://img.shields.io/badge/DOI-10.1038%2Fs41586--020--2649--2-blue)](\nhttps://doi.org/10.1038/s41586-020-2649-2)\n[![LFX Health Score](https://insights.linuxfoundation.org/api/badge/health-score?project=numpy)](https://insights.linuxfoundation.org/project/numpy)\n[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/numpy/numpy/badge)](https://securityscorecards.dev/viewer/?uri=github.com/numpy/numpy)\n[![Typing](https://img.shields.io/pypi/types/numpy)](https://pypi.org/project/numpy/)\n\n\nNumPy is the fundamental package for scientific computing with Python.\n\n- **Website:** https://numpy.org\n- **Documentation:** https://numpy.org/doc\n- **Mailing list:** https://mail.python.org/mailman/listinfo/numpy-discussion\n- **Source code:** https://github.com/numpy/numpy\n- **Contributing:** https://numpy.org/devdocs/dev/index.html\n- **Bug reports:** https://github.com/numpy/numpy/issues\n- **Report a security vulnerability:** https://tidelift.com/docs/security\n\nIt provides:\n\n- a powerful N-dimensional array object\n- sophisticated (broadcasting) functions\n- tools for integrating C/C++ and Fortran code\n- useful linear algebra, Fourier transform, and random number capabilities\n\nTesting:\n\nNumPy requires `pytest` and `hypothesis`.  Tests can then be run after installation with:\n\n    python -c \"import numpy, sys; sys.exit(numpy.test() is False)\"\n\nCode of Conduct\n----------------------\n\nNumPy is a community-driven open source project developed by a diverse group of\n[contributors](https://numpy.org/teams/). The NumPy leadership has made a strong\ncommitment to creating an open, inclusive, and positive community. Please read the\n[NumPy Code of Conduct](https://numpy.org/code-of-conduct/) for guidance on how to interact\nwith others in a way that makes our community thrive.\n\nCall for Contributions\n----------------------\n\nThe NumPy project welcomes your expertise and enthusiasm!\n\nSmall improvements or fixes are always appreciated. If you are considering larger contributions\nto the source code, please contact us through the [mailing\nlist](https://mail.python.org/mailman/listinfo/numpy-discussion) first.\n\nWriting code isn\u2019t the only way to contribute to NumPy. You can also:\n- review pull requests\n- help us stay on top of new and old issues\n- develop tutorials, presentations, and other educational materials\n- maintain and improve [our website](https://github.com/numpy/numpy.org)\n- develop graphic design for our brand assets and promotional materials\n- translate website content\n- help with outreach and onboard new contributors\n- write grant proposals and help with other fundraising efforts\n\nFor more information about the ways you can contribute to NumPy, visit [our website](https://numpy.org/contribute/). \nIf you\u2019re unsure where to start or how your skills fit in, reach out! You can\nask on the mailing list or here, on GitHub, by opening a new issue or leaving a\ncomment on a relevant issue that is already open.\n\nOur preferred channels of communication are all public, but if you\u2019d like to\nspeak to us in private first, contact our community coordinators at\nnumpy-team@googlegroups.com or on Slack (write numpy-team@googlegroups.com for\nan invitation).\n\nWe also have a biweekly community call, details of which are announced on the\nmailing list. You are very welcome to join.\n\nIf you are new to contributing to open source, [this\nguide](https://opensource.guide/how-to-contribute/) helps explain why, what,\nand how to successfully get involved.\n",
+        "publish_time": "2026-03-29T13:18:15.438035Z",
+        "created_time": null,
+        "modified_time": "2026-03-29T13:18:15.438035Z",
+        "version_count": 144,
+        "version_history": {
+          "0.9.6": null,
+          "0.9.8": null,
+          "1.0": "2006-12-02T02:07:43Z",
+          "1.0.3": null,
+          "1.0.4": null,
+          "1.0b1": null,
+          "1.0b4": null,
+          "1.0b5": null,
+          "1.0rc1": null,
+          "1.0rc2": null,
+          "1.0rc3": null,
+          "1.1.1": null,
+          "1.10.0": "2016-04-20T04:13:06.946151Z",
+          "1.10.1": "2016-04-20T04:09:15.029914Z",
+          "1.10.2": "2016-04-20T04:04:07.470440Z",
+          "1.10.3": "2016-04-20T03:58:58.733468Z",
+          "1.10.4": "2016-04-20T01:18:00.031326Z",
+          "1.11.0": "2016-03-27T21:03:46.766995Z",
+          "1.11.1": "2016-06-26T13:55:46.843476Z",
+          "1.11.2": "2016-10-04T01:11:06.507852Z",
+          "1.11.3": "2016-12-19T01:03:14.739485Z",
+          "1.12.0": "2017-01-15T23:22:13.788260Z",
+          "1.12.1": "2017-03-18T16:59:51.184804Z",
+          "1.13.0": "2017-06-07T18:53:04.062389Z",
+          "1.13.1": "2017-07-07T01:27:17.548548Z",
+          "1.13.3": "2017-09-30T20:05:20.632905Z",
+          "1.14.0": "2018-01-06T23:35:53.601039Z",
+          "1.14.1": "2018-02-21T00:18:25.841764Z",
+          "1.14.2": "2018-03-12T17:49:21.097326Z",
+          "1.14.3": "2018-04-28T15:56:12.867128Z",
+          "1.14.4": "2018-06-06T17:00:59.759569Z",
+          "1.14.5": "2018-06-12T22:28:32.345187Z",
+          "1.14.6": "2018-09-23T16:50:37.374358Z",
+          "1.15.0": "2018-07-23T16:03:25.445499Z",
+          "1.15.1": "2018-08-21T19:28:58.028359Z",
+          "1.15.2": "2018-09-23T12:12:14.166931Z",
+          "1.15.3": "2018-10-22T17:10:58.473781Z",
+          "1.15.4": "2018-11-04T16:20:32.088397Z",
+          "1.16.0": "2019-01-14T02:39:58.065461Z",
+          "1.16.1": "2019-01-31T23:13:15.370526Z",
+          "1.16.2": "2019-02-26T19:10:02.484594Z",
+          "1.16.3": "2019-04-22T01:23:42.415945Z",
+          "1.16.4": "2019-05-28T18:53:17.368073Z",
+          "1.16.5": "2019-08-28T01:11:32.963476Z",
+          "1.16.6": "2019-12-29T22:23:23.324959Z",
+          "1.17.0": "2019-07-26T18:16:22.344976Z",
+          "1.17.1": "2019-08-27T00:20:20.120947Z",
+          "1.17.2": "2019-09-07T00:00:13.016768Z",
+          "1.17.3": "2019-10-17T14:39:53.130305Z",
+          "1.17.4": "2019-11-11T01:49:18.515066Z",
+          "1.17.5": "2020-01-01T16:56:30.998785Z",
+          "1.18.0": "2019-12-22T15:32:32.898512Z",
+          "1.18.1": "2020-01-06T21:53:39.363138Z",
+          "1.18.2": "2020-03-17T16:36:47.804465Z",
+          "1.18.3": "2020-04-19T19:56:51.761814Z",
+          "1.18.4": "2020-05-03T15:18:15.269722Z",
+          "1.18.5": "2020-06-04T00:10:51.562807Z",
+          "1.19.0": "2020-06-20T20:14:54.337985Z",
+          "1.19.1": "2020-07-21T20:54:49.738073Z",
+          "1.19.2": "2020-09-10T17:48:12.682501Z",
+          "1.19.3": "2020-10-29T01:08:10.847529Z",
+          "1.19.4": "2020-11-02T15:46:22.539624Z",
+          "1.19.5": "2021-01-05T17:19:38.152665Z",
+          "1.2.0": null,
+          "1.2.1": null,
+          "1.20.0": "2021-01-30T19:35:22.261149Z",
+          "1.20.1": "2021-02-07T20:27:20.715020Z",
+          "1.20.2": "2021-03-27T22:16:26.599131Z",
+          "1.20.3": "2021-05-10T15:17:40.190393Z",
+          "1.21.0": "2021-06-22T13:39:59.699188Z",
+          "1.21.1": "2021-07-18T19:37:41.147001Z",
+          "1.21.2": "2021-08-15T20:07:03.361113Z",
+          "1.21.3": "2021-10-20T20:17:59.602416Z",
+          "1.21.4": "2021-11-05T01:20:44.695026Z",
+          "1.21.5": "2021-12-19T23:58:44.615292Z",
+          "1.21.6": "2022-04-12T14:48:15.695596Z",
+          "1.22.0": "2021-12-31T20:32:18.055882Z",
+          "1.22.1": "2022-01-14T18:52:16.369571Z",
+          "1.22.2": "2022-02-04T00:30:48.962221Z",
+          "1.22.3": "2022-03-07T22:39:39.822214Z",
+          "1.22.4": "2022-05-20T20:50:53.578694Z",
+          "1.23.0": "2022-06-22T22:13:34.426695Z",
+          "1.23.1": "2022-07-09T01:07:24.593590Z",
+          "1.23.2": "2022-08-14T00:14:09.173414Z",
+          "1.23.3": "2022-09-09T17:48:27.159123Z",
+          "1.23.4": "2022-10-12T14:42:05.424357Z",
+          "1.23.5": "2022-11-20T01:21:22.661546Z",
+          "1.24.0": "2022-12-18T17:53:12.273343Z",
+          "1.24.1": "2022-12-26T13:37:55.240563Z",
+          "1.24.2": "2023-02-05T19:45:29.320338Z",
+          "1.24.3": "2023-04-22T21:29:36.764975Z",
+          "1.24.4": "2023-06-26T13:22:33.184535Z",
+          "1.25.0": "2023-06-17T14:38:18.191717Z",
+          "1.25.1": "2023-07-08T21:38:33.449846Z",
+          "1.25.2": "2023-07-31T14:50:49.761194Z",
+          "1.26.0": "2023-09-16T19:58:18.591674Z",
+          "1.26.1": "2023-10-14T19:39:25.820070Z",
+          "1.26.2": "2023-11-12T22:51:49.818678Z",
+          "1.26.3": "2024-01-02T22:20:37.359401Z",
+          "1.26.4": "2024-02-05T23:48:01.194769Z",
+          "1.3.0": "2009-04-06T06:19:25.098717Z",
+          "1.4.0": null,
+          "1.4.1": "2010-04-24T16:30:04.598432Z",
+          "1.5.0": "2010-09-15T14:44:53.723687Z",
+          "1.5.1": "2014-07-30T22:27:08.796621Z",
+          "1.6.0": "2016-04-20T04:34:00.952569Z",
+          "1.6.1": "2016-04-20T04:32:47.076826Z",
+          "1.6.2": "2016-04-20T03:56:05.797715Z",
+          "1.7.0": "2016-04-20T04:30:25.991931Z",
+          "1.7.1": "2016-04-20T04:28:11.931928Z",
+          "1.7.2": "2016-04-20T03:54:09.639942Z",
+          "1.8.0": "2016-04-20T04:25:51.777823Z",
+          "1.8.1": "2016-04-20T04:22:59.657398Z",
+          "1.8.2": "2016-04-20T01:39:46.750045Z",
+          "1.9.0": "2016-04-20T04:19:42.998019Z",
+          "1.9.1": "2016-04-20T04:17:34.630988Z",
+          "1.9.2": "2016-04-20T04:15:28.518755Z",
+          "1.9.3": "2016-04-20T01:37:06.985219Z",
+          "2.0.0": "2024-06-16T13:06:46.930043Z",
+          "2.0.1": "2024-07-21T13:29:55.558361Z",
+          "2.0.2": "2024-08-26T20:04:14.625862Z",
+          "2.1.0": "2024-08-18T21:39:07.105191Z",
+          "2.1.1": "2024-09-03T15:01:06.905664Z",
+          "2.1.2": "2024-10-05T18:28:18.443739Z",
+          "2.1.3": "2024-11-02T17:30:37.354009Z",
+          "2.2.0": "2024-12-08T15:20:47.292582Z",
+          "2.2.1": "2024-12-21T20:29:57.832822Z",
+          "2.2.2": "2025-01-18T22:56:28.939363Z",
+          "2.2.3": "2025-02-13T16:41:34.557908Z",
+          "2.2.4": "2025-03-16T18:02:13.017640Z",
+          "2.2.5": "2025-04-19T22:31:01.142106Z",
+          "2.2.6": "2025-05-17T21:27:58.555672Z",
+          "2.3.0": "2025-06-07T14:36:52.067369Z",
+          "2.3.1": "2025-06-21T11:47:47.570483Z",
+          "2.3.2": "2025-07-24T20:24:35.214147Z",
+          "2.3.3": "2025-09-09T15:56:02.094369Z",
+          "2.3.4": "2025-10-15T16:15:19.012032Z",
+          "2.3.5": "2025-11-16T22:49:19.336288Z",
+          "2.4.0": "2025-12-20T16:15:43.434135Z",
+          "2.4.0rc1": "2025-12-03T08:06:57.480125Z",
+          "2.4.1": "2026-01-10T06:42:14.615963Z",
+          "2.4.2": "2026-01-31T23:10:25.623288Z",
+          "2.4.3": "2026-03-09T07:55:57.774728Z",
+          "2.4.4": "2026-03-29T13:18:15.438035Z"
+        },
+        "dependencies": {},
+        "dev_dependencies": {},
+        "scripts": {},
+        "keywords": [],
+        "has_types": false,
+        "classifiers": [
+          "Development Status :: 5 - Production/Stable",
+          "Intended Audience :: Developers",
+          "Intended Audience :: Science/Research",
+          "Operating System :: MacOS",
+          "Operating System :: Microsoft :: Windows",
+          "Operating System :: POSIX",
+          "Operating System :: Unix",
+          "Programming Language :: C",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3 :: Only",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: Implementation :: CPython",
+          "Topic :: Scientific/Engineering",
+          "Topic :: Software Development",
+          "Typing :: Typed"
+        ],
+        "requires_python": ">=3.11",
+        "project_urls": {
+          "documentation": "https://numpy.org/doc/",
+          "download": "https://pypi.org/project/numpy/#files",
+          "homepage": "https://numpy.org",
+          "release notes": "https://numpy.org/doc/stable/release",
+          "source": "https://github.com/numpy/numpy",
+          "tracker": "https://github.com/numpy/numpy/issues"
+        }
+      },
+      "checks": [
+        {
+          "name": "author_check",
+          "description": "Author information present",
+          "flagged": false,
+          "score": 15,
+          "severity": "medium",
+          "details": {
+            "author": "Travis E. Oliphant et al."
+          }
+        },
+        {
+          "name": "package_age_check",
+          "description": "Package is only 0 days old",
+          "flagged": true,
+          "score": 20,
+          "severity": "high",
+          "details": {
+            "publish_time": "2026-03-29T13:18:15.438035Z",
+            "days_old": 0
+          }
+        },
+        {
+          "name": "install_scripts_check",
+          "description": "No install scripts detected",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "scripts": {}
+          }
+        },
+        {
+          "name": "script_contents_check",
+          "description": "No scripts to analyze",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {}
+        },
+        {
+          "name": "dependency_count_check",
+          "description": "Dependency count: 0",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "dependency_count": 0,
+            "threshold": 20,
+            "dependencies": []
+          }
+        },
+        {
+          "name": "repository_check",
+          "description": "No source repository linked",
+          "flagged": true,
+          "score": 15,
+          "severity": "medium",
+          "details": {
+            "repository": null
+          }
+        },
+        {
+          "name": "readme_check",
+          "description": "README present",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "readme_length": 4199
+          }
+        },
+        {
+          "name": "version_history_check",
+          "description": "144 versions published",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "version_count": 144
+          }
+        },
+        {
+          "name": "maintainer_count_check",
+          "description": "Only 1 maintainer(s)",
+          "flagged": true,
+          "score": 10,
+          "severity": "low",
+          "details": {
+            "maintainer_count": 1,
+            "maintainers": [
+              "Travis E. Oliphant et al."
+            ]
+          }
+        },
+        {
+          "name": "license_check",
+          "description": "No license specified",
+          "flagged": true,
+          "score": 5,
+          "severity": "low",
+          "details": {
+            "license": null
+          }
+        },
+        {
+          "name": "version_anomaly_check",
+          "description": "No version anomalies",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "anomalies": []
+          }
+        }
+      ],
+      "risk_score": 50,
+      "risk_factors": [
+        {
+          "check": "package_age_check",
+          "description": "Package is only 0 days old",
+          "score": 20,
+          "severity": "high"
+        },
+        {
+          "check": "repository_check",
+          "description": "No source repository linked",
+          "score": 15,
+          "severity": "medium"
+        },
+        {
+          "check": "maintainer_count_check",
+          "description": "Only 1 maintainer(s)",
+          "score": 10,
+          "severity": "low"
+        },
+        {
+          "check": "license_check",
+          "description": "No license specified",
+          "score": 5,
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  "typosquatting_analysis": {
+    "is_suspect": false,
+    "closest_match": null,
+    "techniques_triggered": [],
+    "details": {
+      "package_name": "numpy",
+      "ecosystem": "pypi",
+      "is_typosquat_suspect": false,
+      "matches": [],
+      "techniques_triggered": [],
+      "closest_legitimate": null,
+      "min_distance": null,
+      "risk_score": 0,
+      "details": {
+        "note": "Package is a known popular package"
+      }
+    }
+  },
+  "vulnerability_analysis": {
+    "total_vulnerabilities": 10,
+    "critical": 1,
+    "high": 2,
+    "medium": 7,
+    "low": 0,
+    "details": {
+      "package_name": "numpy",
+      "version": "2.4.4",
+      "ecosystem": "pypi",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2017-12852",
+          "summary": "The numpy.pad function in Numpy 1.13.1 and older versions is missing input validation. An empty list or ndarray will stick into an infinite loop, which can allow attackers to cause a DoS attack.",
+          "details": "The numpy.pad function in Numpy 1.13.1 and older versions is missing input validation. An empty list or ndarray will stick into an infinite loop, which can allow attackers to cause a DoS attack.",
+          "severity": "HIGH",
+          "cvss_score": 7.5,
+          "source": "NVD",
+          "references": [
+            "https://github.com/BT123/testcasesForMyRequest/tree/master/CVE-2017-12852",
+            "https://github.com/numpy/numpy/issues/9560#issuecomment-322395292",
+            "https://github.com/BT123/testcasesForMyRequest/tree/master/CVE-2017-12852",
+            "https://github.com/numpy/numpy/issues/9560#issuecomment-322395292"
+          ],
+          "published": "2017-08-15T16:29:00.200",
+          "modified": "2025-04-20T01:37:25.860"
+        },
+        {
+          "id": "CVE-2014-1858",
+          "summary": "__init__.py in f2py in NumPy before 1.8.1 allows local users to write to arbitrary files via a symlink attack on a temporary file.",
+          "details": "__init__.py in f2py in NumPy before 1.8.1 allows local users to write to arbitrary files via a symlink attack on a temporary file.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.5,
+          "source": "NVD",
+          "references": [
+            "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128358.html",
+            "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128781.html",
+            "http://www.openwall.com/lists/oss-security/2014/02/08/3",
+            "http://www.securityfocus.com/bid/65441",
+            "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=737778"
+          ],
+          "published": "2018-01-08T19:29:00.237",
+          "modified": "2024-11-21T02:05:09.923"
+        },
+        {
+          "id": "CVE-2014-1859",
+          "summary": "(1) core/tests/test_memmap.py, (2) core/tests/test_multiarray.py, (3) f2py/f2py2e.py, and (4) lib/tests/test_io.py in NumPy before 1.8.1 allow local users to write to arbitrary files via a symlink attack on a temporary file.",
+          "details": "(1) core/tests/test_memmap.py, (2) core/tests/test_multiarray.py, (3) f2py/f2py2e.py, and (4) lib/tests/test_io.py in NumPy before 1.8.1 allow local users to write to arbitrary files via a symlink attack on a temporary file.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.5,
+          "source": "NVD",
+          "references": [
+            "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128358.html",
+            "http://lists.fedoraproject.org/pipermail/package-announce/2014-February/128781.html",
+            "http://www.openwall.com/lists/oss-security/2014/02/08/3",
+            "http://www.securityfocus.com/bid/65440",
+            "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=737778"
+          ],
+          "published": "2018-01-08T19:29:00.297",
+          "modified": "2024-11-21T02:05:10.077"
+        },
+        {
+          "id": "CVE-2019-6446",
+          "summary": "An issue was discovered in NumPy before 1.16.3. It uses the pickle Python module unsafely, which allows remote attackers to execute arbitrary code via a crafted serialized object, as demonstrated by a numpy.load call. NOTE: third parties dispute this issue because it is a behavior that might have le",
+          "details": "An issue was discovered in NumPy before 1.16.3. It uses the pickle Python module unsafely, which allows remote attackers to execute arbitrary code via a crafted serialized object, as demonstrated by a numpy.load call. NOTE: third parties dispute this issue because it is a behavior that might have legitimate applications in (for example) loading serialized Python object arrays from trusted and authenticated sources.",
+          "severity": "CRITICAL",
+          "cvss_score": 9.8,
+          "source": "NVD",
+          "references": [
+            "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00091.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00092.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2019-10/msg00015.html",
+            "http://www.securityfocus.com/bid/106670",
+            "https://access.redhat.com/errata/RHSA-2019:3335"
+          ],
+          "published": "2019-01-16T05:29:01.370",
+          "modified": "2025-07-21T23:15:25.020"
+        },
+        {
+          "id": "CVE-2021-33430",
+          "summary": "A Buffer Overflow vulnerability exists in NumPy 1.9.x in the PyArray_NewFromDescr_int function of ctors.c when specifying arrays of large dimensions (over 32) from Python code, which could let a malicious user cause a Denial of Service. NOTE: The vendor does not agree this is a vulneraility; In (ver",
+          "details": "A Buffer Overflow vulnerability exists in NumPy 1.9.x in the PyArray_NewFromDescr_int function of ctors.c when specifying arrays of large dimensions (over 32) from Python code, which could let a malicious user cause a Denial of Service. NOTE: The vendor does not agree this is a vulneraility; In (very limited) circumstances a user may be able provoke the buffer overflow, the user is most likely already privileged to at least provoke denial of service by exhausting memory. Triggering this further requires the use of uncommon API (complicated structured dtypes), which is very unlikely to be available to an unprivileged user",
+          "severity": "MEDIUM",
+          "cvss_score": 5.3,
+          "source": "NVD",
+          "references": [
+            "https://github.com/numpy/numpy/issues/18939",
+            "https://github.com/numpy/numpy/issues/18939"
+          ],
+          "published": "2021-12-17T19:15:07.500",
+          "modified": "2024-11-21T06:08:48.743"
+        },
+        {
+          "id": "CVE-2021-34141",
+          "summary": "An incomplete string comparison in the numpy.core component in NumPy before 1.22.0 allows attackers to trigger slightly incorrect copying by constructing specific string objects. NOTE: the vendor states that this reported code behavior is \"completely harmless.\"",
+          "details": "An incomplete string comparison in the numpy.core component in NumPy before 1.22.0 allows attackers to trigger slightly incorrect copying by constructing specific string objects. NOTE: the vendor states that this reported code behavior is \"completely harmless.\"",
+          "severity": "MEDIUM",
+          "cvss_score": 5.3,
+          "source": "NVD",
+          "references": [
+            "https://github.com/numpy/numpy/issues/18993",
+            "https://www.oracle.com/security-alerts/cpujul2022.html",
+            "https://github.com/numpy/numpy/issues/18993",
+            "https://www.oracle.com/security-alerts/cpujul2022.html"
+          ],
+          "published": "2021-12-17T19:15:07.543",
+          "modified": "2024-11-21T06:09:56.397"
+        },
+        {
+          "id": "CVE-2021-41495",
+          "summary": "Null Pointer Dereference vulnerability exists in numpy.sort in NumPy &lt and 1.19 in the PyArray_DescrNew function due to missing return-value validation, which allows attackers to conduct DoS attacks by repetitively creating sort arrays. NOTE: While correct that validation is missing, an error can ",
+          "details": "Null Pointer Dereference vulnerability exists in numpy.sort in NumPy &lt and 1.19 in the PyArray_DescrNew function due to missing return-value validation, which allows attackers to conduct DoS attacks by repetitively creating sort arrays. NOTE: While correct that validation is missing, an error can only occur due to an exhaustion of memory. If the user can exhaust memory, they are already privileged. Further, it should be practically impossible to construct an attack which can target the memory exhaustion to occur at exactly this place",
+          "severity": "MEDIUM",
+          "cvss_score": 5.3,
+          "source": "NVD",
+          "references": [
+            "https://github.com/numpy/numpy/issues/19038",
+            "https://www.oracle.com/security-alerts/cpujul2022.html",
+            "https://github.com/numpy/numpy/issues/19038",
+            "https://www.oracle.com/security-alerts/cpujul2022.html"
+          ],
+          "published": "2021-12-17T20:15:08.477",
+          "modified": "2024-11-21T06:26:18.940"
+        },
+        {
+          "id": "CVE-2021-41496",
+          "summary": "Buffer overflow in the array_from_pyobj function of fortranobject.c in NumPy < 1.19, which allows attackers to conduct a Denial of Service attacks by carefully constructing an array with negative values. NOTE: The vendor does not agree this is a vulnerability; the negative dimensions can only be cre",
+          "details": "Buffer overflow in the array_from_pyobj function of fortranobject.c in NumPy < 1.19, which allows attackers to conduct a Denial of Service attacks by carefully constructing an array with negative values. NOTE: The vendor does not agree this is a vulnerability; the negative dimensions can only be created by an already privileged user (or internally)",
+          "severity": "MEDIUM",
+          "cvss_score": 5.5,
+          "source": "NVD",
+          "references": [
+            "https://github.com/numpy/numpy/issues/19000",
+            "https://www.oracle.com/security-alerts/cpujul2022.html",
+            "https://github.com/numpy/numpy/issues/19000",
+            "https://www.oracle.com/security-alerts/cpujul2022.html"
+          ],
+          "published": "2021-12-17T20:15:08.517",
+          "modified": "2024-11-21T06:26:19.130"
+        },
+        {
+          "id": "CVE-2022-29216",
+          "summary": "TensorFlow is an open source platform for machine learning. Prior to versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4, TensorFlow's `saved_model_cli` tool is vulnerable to a code injection. This can be used to open a reverse shell. This code path was maintained for compatibility reasons as the maintainers ha",
+          "details": "TensorFlow is an open source platform for machine learning. Prior to versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4, TensorFlow's `saved_model_cli` tool is vulnerable to a code injection. This can be used to open a reverse shell. This code path was maintained for compatibility reasons as the maintainers had several test cases where numpy expressions were used as arguments. However, given that the tool is always run manually, the impact of this is still not severe. The maintainers have now removed the `safe=False` argument, so all parsing is done without calling `eval`. The patch is available in versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4.",
+          "severity": "HIGH",
+          "cvss_score": 7.8,
+          "source": "NVD",
+          "references": [
+            "https://github.com/tensorflow/tensorflow/blob/f3b9bf4c3c0597563b289c0512e98d4ce81f886e/tensorflow/python/tools/saved_model_cli.py#L566-L574",
+            "https://github.com/tensorflow/tensorflow/commit/8b202f08d52e8206af2bdb2112a62fafbc546ec7",
+            "https://github.com/tensorflow/tensorflow/commit/c5da7af048611aa29e9382371f0aed5018516cac",
+            "https://github.com/tensorflow/tensorflow/releases/tag/v2.6.4",
+            "https://github.com/tensorflow/tensorflow/releases/tag/v2.7.2"
+          ],
+          "published": "2022-05-21T00:15:11.980",
+          "modified": "2024-11-21T06:58:44.327"
+        },
+        {
+          "id": "CVE-2022-41884",
+          "summary": "TensorFlow is an open source platform for machine learning. If a numpy array is created with a shape such that one element is zero and the others sum to a large number, an error will be raised. We have patched the issue in GitHub commit 2b56169c16e375c521a3bc8ea658811cc0793784. The fix will be inclu",
+          "details": "TensorFlow is an open source platform for machine learning. If a numpy array is created with a shape such that one element is zero and the others sum to a large number, an error will be raised. We have patched the issue in GitHub commit 2b56169c16e375c521a3bc8ea658811cc0793784. The fix will be included in TensorFlow 2.11. We will also cherrypick this commit on TensorFlow 2.10.1, 2.9.3, and TensorFlow 2.8.4, as these are also affected and still in supported range.",
+          "severity": "MEDIUM",
+          "cvss_score": 4.8,
+          "source": "NVD",
+          "references": [
+            "https://github.com/tensorflow/tensorflow/commit/2b56169c16e375c521a3bc8ea658811cc0793784",
+            "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-jq6x-99hj-q636",
+            "https://github.com/tensorflow/tensorflow/commit/2b56169c16e375c521a3bc8ea658811cc0793784",
+            "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-jq6x-99hj-q636"
+          ],
+          "published": "2022-11-18T22:15:13.573",
+          "modified": "2024-11-21T07:23:59.267"
+        }
+      ],
+      "total_count": 10,
+      "critical_count": 1,
+      "high_count": 2,
+      "medium_count": 7,
+      "low_count": 0,
+      "risk_score": 100,
+      "sources_checked": [
+        "OSV",
+        "NVD"
+      ],
+      "errors": []
+    }
+  },
+  "code_analysis": {
+    "risk_score": 0,
+    "total_issues": 0,
+    "obfuscation_detected": false,
+    "details": {
+      "risk_score": 0,
+      "issues": [],
+      "summary": {}
+    }
+  },
+  "behavioral_analysis": {
+    "risk_score": 0,
+    "dominant_behavior": null,
+    "assessment": "",
+    "details": {
+      "risk_score": 0,
+      "behavior_summary": []
+    }
+  },
+  "dependency_graph_analysis": {
+    "total_dependencies": 0,
+    "critical_nodes": 0,
+    "details": {
+      "risk_score": 0,
+      "total_dependencies": 0,
+      "error": "'DependencyGraphAnalyzer' object has no attribute 'adjacency'"
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Package has 1 critical vulnerability(ies). Check for patches or alternatives."
+    }
+  ]
+}

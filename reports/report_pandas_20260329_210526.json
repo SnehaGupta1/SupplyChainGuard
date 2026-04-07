@@ -1,0 +1,629 @@
+{
+  "report_id": "SCG-20260329210526",
+  "generated_at": "2026-03-29T15:35:26.547254+00:00",
+  "tool": "SupplyChainGuard v1.0",
+  "target": {
+    "package_name": "pandas",
+    "ecosystem": "npm"
+  },
+  "summary": {
+    "final_score": 37.0,
+    "risk_level": "LOW",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "evidence_count": 11
+  },
+  "risk_assessment": {
+    "final_score": 37.0,
+    "risk_level": "LOW",
+    "risk_color": "#00c853",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "category_breakdown": {
+      "metadata": {
+        "raw_score": 10,
+        "normalized": 10,
+        "weight": 0.2,
+        "weighted_score": 2.0
+      },
+      "vulnerability": {
+        "raw_score": 100,
+        "normalized": 100,
+        "weight": 0.35,
+        "weighted_score": 35.0
+      },
+      "code_analysis": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.3,
+        "weighted_score": 0.0
+      },
+      "dependency_graph": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.15,
+        "weighted_score": 0.0
+      }
+    },
+    "bonus_scores": {
+      "typosquatting": 0.0,
+      "behavioral": 0.0
+    },
+    "evidence": [
+      {
+        "source": "metadata",
+        "description": "Only 1 maintainer(s)",
+        "score": 10,
+        "severity": "low"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2020-13091: pandas through 1.0.3 can unserialize and execute commands from an untrusted file that is passed to t",
+        "score": 9.8,
+        "severity": "critical"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2023-39661: An issue in pandas-ai v.0.9.1 and before allows a remote attacker to execute arbitrary code via the ",
+        "score": 9.8,
+        "severity": "critical"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2023-39662: An issue in llama_index v.0.7.13 and before allows a remote attacker to execute arbitrary code via t",
+        "score": 9.8,
+        "severity": "critical"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2023-39660: An issue in Gaberiele Venturi pandasai v.0.8.0 and before allows a remote attacker to execute arbitr",
+        "score": 9.8,
+        "severity": "critical"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2023-46134: D-Tale is the combination of a Flask back-end and a React front-end to view & analyze Pandas data st",
+        "score": 6.1,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2024-21642: D-Tale is a visualizer for Pandas data structures. Users hosting versions D-Tale prior to 3.9.0 publ",
+        "score": 7.5,
+        "severity": "high"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2024-23752: GenerateSDFPipeline in synthetic_dataframe in PandasAI (aka pandas-ai) through 1.5.17 allows attacke",
+        "score": 9.8,
+        "severity": "critical"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2024-45595: D-Tale is a visualizer for Pandas data structures. Users hosting D-Tale publicly can be vulnerable t",
+        "score": 6.1,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2024-55890: D-Tale is a visualizer for pandas data structures. Prior to version 3.16.1, users hosting D-Tale pub",
+        "score": 0.0,
+        "severity": "unknown"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2024-12366: PandasAI uses an interactive prompt function that is vulnerable to prompt injection and run arbitrar",
+        "score": 9.8,
+        "severity": "critical"
+      }
+    ],
+    "evidence_count": 11,
+    "timestamp": "2026-03-29T15:35:26.543366+00:00"
+  },
+  "metadata_analysis": {
+    "risk_score": 10,
+    "checks_performed": 11,
+    "issues_found": 1,
+    "details": {
+      "package_name": "pandas",
+      "ecosystem": "npm",
+      "metadata": {
+        "name": "pandas",
+        "latest_version": "0.0.3",
+        "description": "Flickr's Pandas api",
+        "author": {
+          "name": "Stanley Stuart",
+          "email": "fivetanley"
+        },
+        "maintainers": [
+          "fivetanley"
+        ],
+        "maintainer_count": 1,
+        "license": "WTFPL",
+        "homepage": null,
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/fivetanley/pandas.git"
+        },
+        "readme": "Pandas\n====\nStreaming API for Flickr's [Panda API][pandas-api]\n\n## Usage\n\n### Panda( apiKey )\n\nYou'll need to register an API key with flickr. This is *not* your secret key.\n\nCalling 'Panda' without an `apiKey` or a non-string `apiKey` will throw an\n Error\n\nUsage:\n\n```\nvar Panda = require( 'pandas' )\n  , panda = new Panda( 'myApiKey' )\n```\n\n### getList()\n\nReturns a `ReadableStream` that emits a `data` event for every panda name.\n\nUsage:\n\n```\nvar pandaNameStream = panda.getList()\npandaNameStream.on( 'data', function( data ) {\n  console.log( data )\n})\n\n```\n\n### getPhotos( pandaName )\n\nReturns a `ReadableStream` that emits a `data` event for every photo the panda\n tells us about\n\n```\nvar pandaPhotoStream = panda.getPhoto( 'example panda' )\npandaPhotoStream.on( 'data', function( photo ) {\n  //if the panda has 10 photos, this will be called 10 times\n  console.log( JSON.stringify( photo ) )\n})\n```\n\nSee the `example.js` file for an example of it in action. You'll need to create\n your own `api_settings.json` file with a key called `api_key` and a value\n which is your Flickr API key\n\n[pandas-api]:http://code.flickr.com/blog/2009/03/03/panda-tuesday-the-history-of-the-panda-new-apis-explore-and-you/\n",
+        "publish_time": "2012-10-05T01:58:59.301Z",
+        "created_time": "2012-10-04T23:30:14.502Z",
+        "modified_time": "2022-06-23T08:44:18.211Z",
+        "version_count": 3,
+        "version_history": {
+          "0.0.0": "2012-10-04T23:30:15.632Z",
+          "0.0.2": "2012-10-05T01:53:00.281Z",
+          "0.0.3": "2012-10-05T01:58:59.301Z"
+        },
+        "dependencies": {},
+        "dev_dependencies": {
+          "sinon-chai": "~2.1.2",
+          "chai": "~1.3.0",
+          "sinon": "~1.4.2",
+          "sandboxed-module": "~0.1.3",
+          "JSONStream": "~0.4.2"
+        },
+        "scripts": {
+          "test": "mocha --reporter nyan"
+        },
+        "keywords": [
+          "flickr",
+          "panda",
+          "photos"
+        ],
+        "has_types": false,
+        "dist": {
+          "shasum": "2a11b02074f0ffcc0729c73235572e5adbb0f1f7",
+          "tarball": "https://registry.npmjs.org/pandas/-/pandas-0.0.3.tgz",
+          "integrity": "sha512-b6b0XOuj8mvj2Kn6qfcvPmb0ILCcbuep5VYZche3730P9cXQcvarbbvWJxwXkxc3OXyGFYjJ4kozjX5ZXXMrsw==",
+          "signatures": [
+            {
+              "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+              "sig": "MEYCIQDKZbJcmWGnvnZgrRk2pPSKLgE1FvRFD0Hy9uwWXH2kegIhAJN3BfwU32j4ZCTZdjiiMWylf71MYbohYCKvvNXY5Omp"
+            }
+          ]
+        },
+        "engines": {}
+      },
+      "checks": [
+        {
+          "name": "author_check",
+          "description": "Author information present",
+          "flagged": false,
+          "score": 15,
+          "severity": "medium",
+          "details": {
+            "author": {
+              "name": "Stanley Stuart",
+              "email": "fivetanley"
+            }
+          }
+        },
+        {
+          "name": "package_age_check",
+          "description": "Package is 4923 days old",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "publish_time": "2012-10-05T01:58:59.301Z",
+            "days_old": 4923
+          }
+        },
+        {
+          "name": "install_scripts_check",
+          "description": "No suspicious install scripts",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "all_scripts": [
+              "test"
+            ],
+            "suspicious_scripts": []
+          }
+        },
+        {
+          "name": "script_contents_check",
+          "description": "No suspicious keywords in scripts",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "findings": []
+          }
+        },
+        {
+          "name": "dependency_count_check",
+          "description": "Dependency count: 0",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "dependency_count": 0,
+            "threshold": 20,
+            "dependencies": []
+          }
+        },
+        {
+          "name": "repository_check",
+          "description": "Source repository present",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "repository": {
+              "type": "git",
+              "url": "git://github.com/fivetanley/pandas.git"
+            }
+          }
+        },
+        {
+          "name": "readme_check",
+          "description": "README present",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "readme_length": 1209
+          }
+        },
+        {
+          "name": "version_history_check",
+          "description": "3 versions published",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "version_count": 3
+          }
+        },
+        {
+          "name": "maintainer_count_check",
+          "description": "Only 1 maintainer(s)",
+          "flagged": true,
+          "score": 10,
+          "severity": "low",
+          "details": {
+            "maintainer_count": 1,
+            "maintainers": [
+              "fivetanley"
+            ]
+          }
+        },
+        {
+          "name": "license_check",
+          "description": "License: WTFPL",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "license": "WTFPL"
+          }
+        },
+        {
+          "name": "version_anomaly_check",
+          "description": "No version anomalies",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "anomalies": []
+          }
+        }
+      ],
+      "risk_score": 10,
+      "risk_factors": [
+        {
+          "check": "maintainer_count_check",
+          "description": "Only 1 maintainer(s)",
+          "score": 10,
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  "typosquatting_analysis": {
+    "is_suspect": false,
+    "closest_match": null,
+    "techniques_triggered": [],
+    "details": {
+      "package_name": "pandas",
+      "ecosystem": "npm",
+      "is_typosquat_suspect": false,
+      "matches": [],
+      "techniques_triggered": [],
+      "closest_legitimate": null,
+      "min_distance": null,
+      "risk_score": 0,
+      "details": {}
+    }
+  },
+  "vulnerability_analysis": {
+    "total_vulnerabilities": 10,
+    "critical": 6,
+    "high": 1,
+    "medium": 2,
+    "low": 0,
+    "details": {
+      "package_name": "pandas",
+      "version": "0.0.3",
+      "ecosystem": "npm",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2020-13091",
+          "summary": "pandas through 1.0.3 can unserialize and execute commands from an untrusted file that is passed to the read_pickle() function, if __reduce__ makes an os.system call. NOTE: third parties dispute this issue because the read_pickle() function is documented as unsafe and it is the user's responsibility ",
+          "details": "pandas through 1.0.3 can unserialize and execute commands from an untrusted file that is passed to the read_pickle() function, if __reduce__ makes an os.system call. NOTE: third parties dispute this issue because the read_pickle() function is documented as unsafe and it is the user's responsibility to use the function in a secure manner",
+          "severity": "CRITICAL",
+          "cvss_score": 9.8,
+          "source": "NVD",
+          "references": [
+            "https://github.com/0FuzzingQ/vuln/blob/master/pandas%20unserialize.md",
+            "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_pickle.html",
+            "https://github.com/0FuzzingQ/vuln/blob/master/pandas%20unserialize.md",
+            "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_pickle.html"
+          ],
+          "published": "2020-05-15T19:15:12.167",
+          "modified": "2024-11-21T05:00:38.950"
+        },
+        {
+          "id": "CVE-2023-39661",
+          "summary": "An issue in pandas-ai v.0.9.1 and before allows a remote attacker to execute arbitrary code via the _is_jailbreak function.",
+          "details": "An issue in pandas-ai v.0.9.1 and before allows a remote attacker to execute arbitrary code via the _is_jailbreak function.",
+          "severity": "CRITICAL",
+          "cvss_score": 9.8,
+          "source": "NVD",
+          "references": [
+            "https://github.com/gventuri/pandas-ai/issues/410",
+            "https://github.com/gventuri/pandas-ai/issues/410"
+          ],
+          "published": "2023-08-15T17:15:13.133",
+          "modified": "2024-11-21T08:15:46.770"
+        },
+        {
+          "id": "CVE-2023-39662",
+          "summary": "An issue in llama_index v.0.7.13 and before allows a remote attacker to execute arbitrary code via the `exec` parameter in PandasQueryEngine function.",
+          "details": "An issue in llama_index v.0.7.13 and before allows a remote attacker to execute arbitrary code via the `exec` parameter in PandasQueryEngine function.",
+          "severity": "CRITICAL",
+          "cvss_score": 9.8,
+          "source": "NVD",
+          "references": [
+            "https://github.com/jerryjliu/llama_index/issues/7054",
+            "https://github.com/jerryjliu/llama_index/issues/7054"
+          ],
+          "published": "2023-08-15T17:15:13.313",
+          "modified": "2024-11-21T08:15:46.923"
+        },
+        {
+          "id": "CVE-2023-39660",
+          "summary": "An issue in Gaberiele Venturi pandasai v.0.8.0 and before allows a remote attacker to execute arbitrary code via a crafted request to the prompt function.",
+          "details": "An issue in Gaberiele Venturi pandasai v.0.8.0 and before allows a remote attacker to execute arbitrary code via a crafted request to the prompt function.",
+          "severity": "CRITICAL",
+          "cvss_score": 9.8,
+          "source": "NVD",
+          "references": [
+            "https://github.com/gventuri/pandas-ai/issues/399",
+            "https://github.com/gventuri/pandas-ai/pull/409",
+            "https://github.com/gventuri/pandas-ai/issues/399",
+            "https://github.com/gventuri/pandas-ai/pull/409"
+          ],
+          "published": "2023-08-21T17:15:48.797",
+          "modified": "2024-11-21T08:15:46.610"
+        },
+        {
+          "id": "CVE-2023-46134",
+          "summary": "D-Tale is the combination of a Flask back-end and a React front-end to view & analyze Pandas data structures. Prior to version 3.7.0, users hosting D-Tale publicly can be vulnerable to remote code execution, allowing attackers to run malicious code on the server. This issue has been patched in versi",
+          "details": "D-Tale is the combination of a Flask back-end and a React front-end to view & analyze Pandas data structures. Prior to version 3.7.0, users hosting D-Tale publicly can be vulnerable to remote code execution, allowing attackers to run malicious code on the server. This issue has been patched in version 3.7.0 by turning off \"Custom Filter\" input by default. The only workaround for versions earlier than 3.7.0 is to only host D-Tale to trusted users.\n",
+          "severity": "MEDIUM",
+          "cvss_score": 6.1,
+          "source": "NVD",
+          "references": [
+            "https://github.com/man-group/dtale/commit/bf8c54ab2490803f45f0652a9a0e221a94d39668",
+            "https://github.com/man-group/dtale/security/advisories/GHSA-jq6c-r9xf-qxjm",
+            "https://github.com/man-group/dtale/commit/bf8c54ab2490803f45f0652a9a0e221a94d39668",
+            "https://github.com/man-group/dtale/security/advisories/GHSA-jq6c-r9xf-qxjm"
+          ],
+          "published": "2023-10-25T21:15:10.167",
+          "modified": "2024-11-21T08:27:57.147"
+        },
+        {
+          "id": "CVE-2024-21642",
+          "summary": "D-Tale is a visualizer for Pandas data structures. Users hosting versions D-Tale prior to 3.9.0 publicly can be vulnerable to server-side request forgery (SSRF), allowing attackers to access files on the server. Users should upgrade to version 3.9.0, where the `Load From the Web` input is turned off",
+          "details": "D-Tale is a visualizer for Pandas data structures. Users hosting versions D-Tale prior to 3.9.0 publicly can be vulnerable to server-side request forgery (SSRF), allowing attackers to access files on the server. Users should upgrade to version 3.9.0, where the `Load From the Web` input is turned off by default. The only workaround for versions earlier than 3.9.0 is to only host D-Tale to trusted users.",
+          "severity": "HIGH",
+          "cvss_score": 7.5,
+          "source": "NVD",
+          "references": [
+            "https://github.com/man-group/dtale/commit/954f6be1a06ff8629ead2c85c6e3f8e2196b3df2",
+            "https://github.com/man-group/dtale/security/advisories/GHSA-7hfx-h3j3-rwq4",
+            "https://github.com/man-group/dtale?tab=readme-ov-file#load-data--sample-datasets",
+            "https://github.com/man-group/dtale/commit/954f6be1a06ff8629ead2c85c6e3f8e2196b3df2",
+            "https://github.com/man-group/dtale/security/advisories/GHSA-7hfx-h3j3-rwq4"
+          ],
+          "published": "2024-01-05T22:15:43.190",
+          "modified": "2024-11-21T08:54:47.160"
+        },
+        {
+          "id": "CVE-2024-23752",
+          "summary": "GenerateSDFPipeline in synthetic_dataframe in PandasAI (aka pandas-ai) through 1.5.17 allows attackers to trigger the generation of arbitrary Python code that is executed by SDFCodeExecutor. An attacker can create a dataframe that provides an English language specification of this Python code. NOTE:",
+          "details": "GenerateSDFPipeline in synthetic_dataframe in PandasAI (aka pandas-ai) through 1.5.17 allows attackers to trigger the generation of arbitrary Python code that is executed by SDFCodeExecutor. An attacker can create a dataframe that provides an English language specification of this Python code. NOTE: the vendor previously attempted to restrict code execution in response to a separate issue, CVE-2023-39660.",
+          "severity": "CRITICAL",
+          "cvss_score": 9.8,
+          "source": "NVD",
+          "references": [
+            "https://github.com/gventuri/pandas-ai/issues/868",
+            "https://github.com/gventuri/pandas-ai/issues/868"
+          ],
+          "published": "2024-01-22T01:15:08.607",
+          "modified": "2025-05-30T15:15:37.600"
+        },
+        {
+          "id": "CVE-2024-45595",
+          "summary": "D-Tale is a visualizer for Pandas data structures. Users hosting D-Tale publicly can be vulnerable to remote code execution allowing attackers to run malicious code on the server. Users should upgrade to version 3.14.1 where the \"Custom Filter\" input is turned off by default.",
+          "details": "D-Tale is a visualizer for Pandas data structures. Users hosting D-Tale publicly can be vulnerable to remote code execution allowing attackers to run malicious code on the server. Users should upgrade to version 3.14.1 where the \"Custom Filter\" input is turned off by default.",
+          "severity": "MEDIUM",
+          "cvss_score": 6.1,
+          "source": "NVD",
+          "references": [
+            "https://github.com/man-group/dtale#custom-filter",
+            "https://github.com/man-group/dtale/commit/b6e30969390520d1400b55acbb13e5487b8472e8",
+            "https://github.com/man-group/dtale/security/advisories/GHSA-pw44-4h99-wqff"
+          ],
+          "published": "2024-09-10T16:15:21.970",
+          "modified": "2024-09-20T19:59:02.963"
+        },
+        {
+          "id": "CVE-2024-55890",
+          "summary": "D-Tale is a visualizer for pandas data structures. Prior to version 3.16.1, users hosting D-Tale publicly can be vulnerable to remote code execution allowing attackers to run malicious code on the server. Users should upgrade to version 3.16.1 where the `update-settings` endpoint blocks the ability ",
+          "details": "D-Tale is a visualizer for pandas data structures. Prior to version 3.16.1, users hosting D-Tale publicly can be vulnerable to remote code execution allowing attackers to run malicious code on the server. Users should upgrade to version 3.16.1 where the `update-settings` endpoint blocks the ability for users to update the `enable_custom_filters` flag. The only workaround for versions earlier than 3.16.1 is to only host D-Tale to trusted users.",
+          "severity": "UNKNOWN",
+          "cvss_score": 0.0,
+          "source": "NVD",
+          "references": [
+            "https://github.com/man-group/dtale#custom-filter",
+            "https://github.com/man-group/dtale/commit/1e26ed3ca12fe83812b90f12a2b3e5fb0b740f7a",
+            "https://github.com/man-group/dtale/security/advisories/GHSA-832w-fhmw-w4f4"
+          ],
+          "published": "2024-12-13T18:15:22.373",
+          "modified": "2024-12-13T18:15:22.373"
+        },
+        {
+          "id": "CVE-2024-12366",
+          "summary": "PandasAI uses an interactive prompt function that is vulnerable to prompt injection and run arbitrary Python code that can lead to Remote Code Execution (RCE) instead of the intended explanation of the natural language processing by the LLM.",
+          "details": "PandasAI uses an interactive prompt function that is vulnerable to prompt injection and run arbitrary Python code that can lead to Remote Code Execution (RCE) instead of the intended explanation of the natural language processing by the LLM.",
+          "severity": "CRITICAL",
+          "cvss_score": 9.8,
+          "source": "NVD",
+          "references": [
+            "https://docs.getpanda.ai/v3/privacy-security",
+            "https://docs.pandas-ai.com/advanced-security-agent",
+            "https://www.kb.cert.org/vuls/id/148244"
+          ],
+          "published": "2025-02-11T13:15:29.193",
+          "modified": "2025-02-11T20:15:33.247"
+        }
+      ],
+      "total_count": 10,
+      "critical_count": 6,
+      "high_count": 1,
+      "medium_count": 2,
+      "low_count": 0,
+      "risk_score": 100,
+      "sources_checked": [
+        "OSV",
+        "NVD"
+      ],
+      "errors": []
+    }
+  },
+  "code_analysis": {
+    "risk_score": 0,
+    "total_issues": 0,
+    "obfuscation_detected": false,
+    "details": {
+      "filename": "pandas/scripts",
+      "language": "javascript",
+      "issues": [],
+      "risk_score": 0,
+      "entropy_score": 3.5945,
+      "obfuscation_detected": false,
+      "encoded_payloads": [],
+      "suspicious_urls": [],
+      "suspicious_ips": [],
+      "dangerous_imports": [],
+      "suspicious_function_calls": [],
+      "summary": {
+        "total_issues": 0,
+        "critical_issues": 0,
+        "high_issues": 0,
+        "medium_issues": 0,
+        "low_issues": 0
+      }
+    }
+  },
+  "behavioral_analysis": {
+    "risk_score": 0,
+    "dominant_behavior": null,
+    "assessment": "MINIMAL - No significant behavioral concerns detected.",
+    "details": {
+      "behaviors": {
+        "network": {
+          "description": "Network communication",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "filesystem": {
+          "description": "File system operations",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "process_execution": {
+          "description": "Process spawning and command execution",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "code_execution": {
+          "description": "Dynamic code execution",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "data_encoding": {
+          "description": "Data encoding/decoding operations",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "environment_access": {
+          "description": "Environment variable and system info access",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "crypto_operations": {
+          "description": "Cryptographic operations",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "data_exfiltration": {
+          "description": "Potential data exfiltration patterns",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        }
+      },
+      "fingerprint_vector": {
+        "network": 0,
+        "filesystem": 0,
+        "process_execution": 0,
+        "code_execution": 0,
+        "data_encoding": 0,
+        "environment_access": 0,
+        "crypto_operations": 0,
+        "data_exfiltration": 0
+      },
+      "total_behaviors_detected": 0,
+      "dominant_behavior": null,
+      "risk_score": 0,
+      "risk_assessment": "MINIMAL - No significant behavioral concerns detected.",
+      "behavior_summary": []
+    }
+  },
+  "dependency_graph_analysis": {
+    "total_dependencies": 0,
+    "critical_nodes": 0,
+    "details": {
+      "risk_score": 0,
+      "total_dependencies": 0,
+      "error": "'DependencyGraphAnalyzer' object has no attribute 'adjacency'"
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Package has 6 critical vulnerability(ies). Check for patches or alternatives."
+    }
+  ]
+}

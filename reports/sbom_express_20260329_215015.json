@@ -1,0 +1,651 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-29T16:20:15.517862+00:00",
+    "tools": [
+      {
+        "vendor": "SupplyChainGuard",
+        "name": "SBOM Generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "express",
+      "version": "5.2.1"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "express",
+      "version": "5.2.1",
+      "purl": "pkg:npm/express@5.2.1",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "40.5"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "qs",
+      "version": "latest",
+      "purl": "pkg:npm/qs@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "depd",
+      "version": "latest",
+      "purl": "pkg:npm/depd@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "etag",
+      "version": "latest",
+      "purl": "pkg:npm/etag@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "once",
+      "version": "latest",
+      "purl": "pkg:npm/once@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "send",
+      "version": "latest",
+      "purl": "pkg:npm/send@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "vary",
+      "version": "latest",
+      "purl": "pkg:npm/vary@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "debug",
+      "version": "latest",
+      "purl": "pkg:npm/debug@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fresh",
+      "version": "latest",
+      "purl": "pkg:npm/fresh@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cookie",
+      "version": "latest",
+      "purl": "pkg:npm/cookie@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "router",
+      "version": "latest",
+      "purl": "pkg:npm/router@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.518893+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "accepts",
+      "version": "latest",
+      "purl": "pkg:npm/accepts@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.519684+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "type-is",
+      "version": "latest",
+      "purl": "pkg:npm/type-is@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.519684+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "parseurl",
+      "version": "latest",
+      "purl": "pkg:npm/parseurl@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.519684+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "statuses",
+      "version": "latest",
+      "purl": "pkg:npm/statuses@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.519684+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "encodeurl",
+      "version": "latest",
+      "purl": "pkg:npm/encodeurl@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.519684+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mime-types",
+      "version": "latest",
+      "purl": "pkg:npm/mime-types@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.519684+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "proxy-addr",
+      "version": "latest",
+      "purl": "pkg:npm/proxy-addr@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.519684+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "body-parser",
+      "version": "latest",
+      "purl": "pkg:npm/body-parser@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.519684+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "escape-html",
+      "version": "latest",
+      "purl": "pkg:npm/escape-html@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.519684+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "http-errors",
+      "version": "latest",
+      "purl": "pkg:npm/http-errors@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T16:20:15.519684+00:00"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-1999-0967",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "CRITICAL",
+          "score": 10.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/express@5.2.1"
+        }
+      ],
+      "description": "Buffer overflow in the HTML library used by Internet Explorer, Outlook Express, and Windows Explorer via the res: local resource protocol."
+    },
+    {
+      "id": "CVE-1999-1033",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/express@5.2.1"
+        }
+      ],
+      "description": "Microsoft Outlook Express before 4.72.3612.1700 allows a malicious user to send a message that contains a .., which can inadvertently cause Outlook to re-enter POP3 command mode and cause the POP3 session to hang."
+    },
+    {
+      "id": "CVE-1999-1016",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/express@5.2.1"
+        }
+      ],
+      "description": "Microsoft HTML control as used in (1) Internet Explorer 5.0, (2) FrontPage Express, (3) Outlook Express 5, and (4) Eudora, and possibly others, allows remote malicious web site or HTML emails to cause a denial of service (100% CPU consumption) via large HTML form fields such as text inputs in a tabl"
+    },
+    {
+      "id": "CVE-1999-1009",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "LOW",
+          "score": 2.6
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/express@5.2.1"
+        }
+      ],
+      "description": "The Disney Go Express Search allows remote attackers to access and modify search information for users by connecting to an HTTP server on the user's system."
+    },
+    {
+      "id": "CVE-2000-0036",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/express@5.2.1"
+        }
+      ],
+      "description": "Outlook Express 5 for Macintosh downloads attachments to HTML mail without prompting the user, aka the \"HTML Mail Attachment\" vulnerability."
+    },
+    {
+      "id": "CVE-1999-0455",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/express@5.2.1"
+        }
+      ],
+      "description": "The Expression Evaluator sample application in ColdFusion allows remote attackers to read or delete files on the server via exprcalc.cfm, which does not restrict access to the server properly."
+    },
+    {
+      "id": "CVE-1999-0477",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/express@5.2.1"
+        }
+      ],
+      "description": "The Expression Evaluator in the ColdFusion Application Server allows a remote attacker to upload files to the server via openfile.cfm, which does not restrict access to the server properly."
+    },
+    {
+      "id": "CVE-2000-0115",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/express@5.2.1"
+        }
+      ],
+      "description": "IIS allows local users to cause a denial of service via invalid regular expressions in a Visual Basic script in an ASP page."
+    },
+    {
+      "id": "CVE-2000-0105",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/express@5.2.1"
+        }
+      ],
+      "description": "Outlook Express 5.01 and Internet Explorer 5.01 allow remote attackers to view a user's email messages via a script that accesses a variable that references subsequent email messages that are read by the client."
+    },
+    {
+      "id": "CVE-2000-0415",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/express@5.2.1"
+        }
+      ],
+      "description": "Buffer overflow in Outlook Express 4.x allows attackers to cause a denial of service via a mail or news message that has a .jpg or .bmp attachment with a long file name."
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "express",
+      "dependsOn": [
+        "qs",
+        "depd",
+        "etag",
+        "once",
+        "send",
+        "vary",
+        "debug",
+        "fresh",
+        "cookie",
+        "router",
+        "accepts",
+        "type-is",
+        "parseurl",
+        "statuses",
+        "encodeurl",
+        "mime-types",
+        "proxy-addr",
+        "body-parser",
+        "escape-html",
+        "http-errors"
+      ]
+    }
+  ]
+}

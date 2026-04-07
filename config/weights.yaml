@@ -1,0 +1,44 @@
+# Risk Scoring Weights Configuration
+# These weights determine how much each analysis category
+# contributes to the final risk score.
+# Total should equal 1.0
+
+metadata: 0.20
+vulnerability: 0.35
+code_analysis: 0.30
+dependency_graph: 0.15
+
+# Individual factor scores (max contribution per factor)
+metadata_factors:
+  no_author: 15
+  new_package: 20
+  install_scripts: 30
+  suspicious_keywords_in_scripts: 25
+  high_dependency_count: 10
+  no_repository: 15
+  no_readme: 10
+  low_version_count: 10
+  single_maintainer: 10
+
+vulnerability_factors:
+  critical_cve: 40
+  high_cve: 30
+  medium_cve: 15
+  low_cve: 5
+  exploit_available: 35
+
+code_analysis_factors:
+  obfuscation: 35
+  base64_payload: 25
+  eval_exec: 30
+  network_calls: 25
+  filesystem_access: 20
+  environment_access: 20
+  high_entropy: 15
+  suspicious_urls: 30
+
+dependency_graph_factors:
+  deep_transitive: 15
+  abandoned_dependency: 25
+  single_point_of_failure: 20
+  circular_dependency: 10

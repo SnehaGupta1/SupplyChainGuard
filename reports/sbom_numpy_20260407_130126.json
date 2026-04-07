@@ -1,0 +1,225 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-04-07T07:31:26.772788+00:00",
+    "tools": [
+      {
+        "vendor": "SupplyChainGuard",
+        "name": "SBOM Generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "numpy",
+      "version": "2.4.4"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": "2.4.4",
+      "purl": "pkg:pypi/numpy@2.4.4",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "45.0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-04-07T07:31:26.772788+00:00"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2017-12852",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@2.4.4"
+        }
+      ],
+      "description": "The numpy.pad function in Numpy 1.13.1 and older versions is missing input validation. An empty list or ndarray will stick into an infinite loop, which can allow attackers to cause a DoS attack."
+    },
+    {
+      "id": "CVE-2014-1858",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@2.4.4"
+        }
+      ],
+      "description": "__init__.py in f2py in NumPy before 1.8.1 allows local users to write to arbitrary files via a symlink attack on a temporary file."
+    },
+    {
+      "id": "CVE-2014-1859",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@2.4.4"
+        }
+      ],
+      "description": "(1) core/tests/test_memmap.py, (2) core/tests/test_multiarray.py, (3) f2py/f2py2e.py, and (4) lib/tests/test_io.py in NumPy before 1.8.1 allow local users to write to arbitrary files via a symlink attack on a temporary file."
+    },
+    {
+      "id": "CVE-2019-6446",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "CRITICAL",
+          "score": 9.8
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@2.4.4"
+        }
+      ],
+      "description": "An issue was discovered in NumPy before 1.16.3. It uses the pickle Python module unsafely, which allows remote attackers to execute arbitrary code via a crafted serialized object, as demonstrated by a numpy.load call. NOTE: third parties dispute this issue because it is a behavior that might have le"
+    },
+    {
+      "id": "CVE-2021-33430",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.3
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@2.4.4"
+        }
+      ],
+      "description": "A Buffer Overflow vulnerability exists in NumPy 1.9.x in the PyArray_NewFromDescr_int function of ctors.c when specifying arrays of large dimensions (over 32) from Python code, which could let a malicious user cause a Denial of Service. NOTE: The vendor does not agree this is a vulneraility; In (ver"
+    },
+    {
+      "id": "CVE-2021-34141",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.3
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@2.4.4"
+        }
+      ],
+      "description": "An incomplete string comparison in the numpy.core component in NumPy before 1.22.0 allows attackers to trigger slightly incorrect copying by constructing specific string objects. NOTE: the vendor states that this reported code behavior is \"completely harmless.\""
+    },
+    {
+      "id": "CVE-2021-41495",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.3
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@2.4.4"
+        }
+      ],
+      "description": "Null Pointer Dereference vulnerability exists in numpy.sort in NumPy &lt and 1.19 in the PyArray_DescrNew function due to missing return-value validation, which allows attackers to conduct DoS attacks by repetitively creating sort arrays. NOTE: While correct that validation is missing, an error can "
+    },
+    {
+      "id": "CVE-2021-41496",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@2.4.4"
+        }
+      ],
+      "description": "Buffer overflow in the array_from_pyobj function of fortranobject.c in NumPy < 1.19, which allows attackers to conduct a Denial of Service attacks by carefully constructing an array with negative values. NOTE: The vendor does not agree this is a vulnerability; the negative dimensions can only be cre"
+    },
+    {
+      "id": "CVE-2022-29216",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.8
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@2.4.4"
+        }
+      ],
+      "description": "TensorFlow is an open source platform for machine learning. Prior to versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4, TensorFlow's `saved_model_cli` tool is vulnerable to a code injection. This can be used to open a reverse shell. This code path was maintained for compatibility reasons as the maintainers ha"
+    },
+    {
+      "id": "CVE-2022-41884",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 4.8
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/numpy@2.4.4"
+        }
+      ],
+      "description": "TensorFlow is an open source platform for machine learning. If a numpy array is created with a shape such that one element is zero and the others sum to a large number, an error will be raised. We have patched the issue in GitHub commit 2b56169c16e375c521a3bc8ea658811cc0793784. The fix will be inclu"
+    }
+  ],
+  "dependencies": []
+}

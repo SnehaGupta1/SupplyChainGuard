@@ -1,0 +1,812 @@
+{
+  "report_id": "SCG-20260329174154",
+  "generated_at": "2026-03-29T12:11:54.627627+00:00",
+  "tool": "SupplyChainGuard v1.0",
+  "target": {
+    "package_name": "jvm",
+    "ecosystem": "pypi"
+  },
+  "summary": {
+    "final_score": 41.0,
+    "risk_level": "LOW",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "evidence_count": 13
+  },
+  "risk_assessment": {
+    "final_score": 41.0,
+    "risk_level": "LOW",
+    "risk_color": "#00c853",
+    "recommended_action": "No significant risks detected. Safe to proceed.",
+    "category_breakdown": {
+      "metadata": {
+        "raw_score": 15,
+        "normalized": 15,
+        "weight": 0.2,
+        "weighted_score": 3.0
+      },
+      "vulnerability": {
+        "raw_score": 100,
+        "normalized": 100,
+        "weight": 0.35,
+        "weighted_score": 35.0
+      },
+      "code_analysis": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.3,
+        "weighted_score": 0.0
+      },
+      "dependency_graph": {
+        "raw_score": 20,
+        "normalized": 20,
+        "weight": 0.15,
+        "weighted_score": 3.0
+      }
+    },
+    "bonus_scores": {
+      "typosquatting": 0.0,
+      "behavioral": 0.0
+    },
+    "evidence": [
+      {
+        "source": "metadata",
+        "description": "Only 1 maintainer(s)",
+        "score": 10,
+        "severity": "low"
+      },
+      {
+        "source": "metadata",
+        "description": "No license specified",
+        "score": 5,
+        "severity": "low"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2002-2284: Netscape Communicator 4.0 through 4.79 allows remote attackers to bypass JVM security and execute ar",
+        "score": 6.4,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2003-0525: The getCanonicalPath function in Windows NT 4.0 may free memory that it does not own and cause heap ",
+        "score": 5.0,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2007-0014: ChainKey Java Code Protection allows attackers to decompile Java class files via a Java class loader",
+        "score": 4.4,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2007-5375: Interpretation conflict in the Sun Java Virtual Machine (JVM) allows user-assisted remote attackers ",
+        "score": 2.6,
+        "severity": "low"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2007-0012: Sun JRE 5.0 before update 14 allows remote attackers to cause a denial of service (Internet Explorer",
+        "score": 4.3,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2010-0838: Unspecified vulnerability in the Java 2D component in Oracle Java SE and Java for Business 6 Update ",
+        "score": 7.5,
+        "severity": "high"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2010-3564: Unspecified vulnerability in the Oracle Communications Messaging Server (Sun Java System Messaging S",
+        "score": 6.4,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2011-2526: Apache Tomcat 5.5.x before 5.5.34, 6.x before 6.0.33, and 7.x before 7.0.19, when sendfile is enable",
+        "score": 4.4,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2012-0213: The UnhandledDataStructure function in hwpf/model/UnhandledDataStructure.java in Apache POI 3.8 and ",
+        "score": 5.0,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2013-1493: The color management (CMM) functionality in the 2D component in Oracle Java SE 7 Update 15 and earli",
+        "score": 10.0,
+        "severity": "critical"
+      },
+      {
+        "source": "dependency_graph",
+        "description": "Very large dependency tree: 142 packages",
+        "score": 10,
+        "severity": "medium"
+      }
+    ],
+    "evidence_count": 13,
+    "timestamp": "2026-03-29T12:11:54.626628+00:00"
+  },
+  "metadata_analysis": {
+    "risk_score": 15,
+    "checks_performed": 11,
+    "issues_found": 2,
+    "details": {
+      "package_name": "jvm",
+      "ecosystem": "pypi",
+      "metadata": {
+        "name": "jvm",
+        "latest_version": "0.6.0b6",
+        "description": "Python bridge for the Java Virtual Machine.",
+        "author": "Adam Karpierz",
+        "author_email": "adam@karpierz.net",
+        "maintainers": [
+          "Adam Karpierz"
+        ],
+        "maintainer_count": 1,
+        "license": null,
+        "homepage": null,
+        "repository": "https://github.com/karpierz/jvm",
+        "readme": "jvm\r\n===\r\n\r\nPython bridge for the Java Virtual Machine.\r\n\r\nOverview\r\n========\r\n\r\n| |package_bold| is a bridge between Python and JVM, allowing these to intercommunicate.\r\n| It is an effort to allow Python programs full access to Java class libraries.\r\n\r\n`PyPI record`_.\r\n\r\n`Documentation`_.\r\n\r\n| |package_bold| package is closely based on the `jni`_ Python package.\r\n\r\nWhat is |package|:\r\n------------------\r\n\r\n| |package_bold| is an effort to allow Python programs full access to Java class libraries.\r\n| This is achieved not through re-implementing Python, as Jython has done, but rather\r\n  through interfacing at the native level in both virtual machines.\r\n\r\nEventually, it should be possible to replace Java with python in many, though not all,\r\nsituations. JSP, Servlets, RMI servers and IDE plugins are good candidates.\r\n\r\nOnce this integration is achieved, a second phase will be started to separate the Java\r\nlogic from the Python logic, eventually allowing the bridging technology to be used\r\nin other environments, I.E. Ruby, Perl, COM, etc ...\r\n\r\nKnown Bugs/Limitations :\r\n  * Java classes outside of a package (in the <default>) cannot be imported.\r\n  * Because of lack of JVM support, you cannot shutdown the JVM and then restart it.\r\n  * Some methods rely on the \"current\" class/caller. Since calls coming directly from\r\n    python code do not have a current class, these methods do not work. The User Manual\r\n    lists all the known methods like that.\r\n\r\nInstallation\r\n============\r\n\r\nPrerequisites:\r\n\r\n+ Python 3.10 or higher\r\n\r\n  * https://www.python.org/\r\n  * Java 17 is a primary test environment.\r\n\r\n+ pip and setuptools\r\n\r\n  * https://pypi.org/project/pip/\r\n  * https://pypi.org/project/setuptools/\r\n\r\nTo install run:\r\n\r\n  .. parsed-literal::\r\n\r\n    python -m pip install --upgrade |package|\r\n\r\nDevelopment\r\n===========\r\n\r\nPrerequisites:\r\n\r\n+ Development is strictly based on *tox*. To install it run::\r\n\r\n    python -m pip install --upgrade tox\r\n\r\nVisit `Development page`_.\r\n\r\nInstallation from sources:\r\n\r\nclone the sources:\r\n\r\n  .. parsed-literal::\r\n\r\n    git clone |respository| |package|\r\n\r\nand run:\r\n\r\n  .. parsed-literal::\r\n\r\n    python -m pip install ./|package|\r\n\r\nor on development mode:\r\n\r\n  .. parsed-literal::\r\n\r\n    python -m pip install --editable ./|package|\r\n\r\nLicense\r\n=======\r\n\r\n  | |copyright|\r\n  | Licensed under CC BY-NC-ND 4.0\r\n  | Licensed under proprietary License\r\n  | Please refer to the accompanying LICENSE file.\r\n\r\nAuthors\r\n=======\r\n\r\n* Adam Karpierz <adam@karpierz.net>\r\n\r\n.. |package| replace:: jvm\r\n.. |package_bold| replace:: **jvm**\r\n.. |copyright| replace:: Copyright (c) 2004-2025 Adam Karpierz\r\n.. |respository| replace:: https://github.com/karpierz/jvm.git\r\n.. _Development page: https://github.com/karpierz/jvm\r\n.. _PyPI record: https://pypi.org/project/jvm/\r\n.. _Documentation: https://jvm.readthedocs.io/\r\n.. _jni: https://pypi.org/project/jni/\r\n\r\nChangelog\r\n=========\r\n\r\n0.6.0b6 (2025-06-17)\r\n--------------------\r\n- Add support for Python 3.14\r\n- Add support for PyPy 3.11\r\n- Drop support for Python 3.9 (due to compatibility issues).\r\n- Drop support for PyPy 3.9\r\n- | Drop support for Oracle Java 1.8 (jdk, jre) due to licensing issues\r\n  | and the end of support from Oracle.\r\n- Update readthedocs's python to version 3.13\r\n- Update tox's base_python to version 3.13\r\n- Added utilities: dll_path(), python_dll_path()\r\n- pvm.h has been moved to jni (v.1.2.0b1) as pvm.c.\r\n- Tox configuration is now in native (toml) format.\r\n- Setup (dependencies) update.\r\n\r\n0.6.0b5 (2024-11-08)\r\n--------------------\r\n- Add support for Python 3.10, 3.11, 3.12 and 3.13\r\n- Drop support for Python 3.7 and 3.8\r\n- Add support for PyPy 3.9 and 3.10\r\n- pvm.h has been included for further development.\r\n- Tox configuration has been moved to pyproject.toml\r\n- Setup update (now based on tox >= 4.0).\r\n- Fix the bug in lib/classproperty.\r\n- Fixes for bugs in JVMFinder's.\r\n- Copyright year update.\r\n- Unittest have been performed for much more JVMs.\r\n- Setup fixes.\r\n- Setup (dependencies) update.\r\n\r\n0.5.0b7 (2022-01-29)\r\n--------------------\r\n- Drop support for Python 3.6\r\n- Setup update.\r\n\r\n0.5.0b5 (2021-10-16)\r\n--------------------\r\n- dll_path argument of JVM() can also be type os.PathLike.\r\n- Copyright year update.\r\n- Setup update.\r\n\r\n0.5.0b3 (2020-12-13)\r\n--------------------\r\n- Add support for Python 3.9\r\n- General update, improvements and cleanup.\r\n- Setup update.\r\n- Elimination of dependence on _testcapi.\r\n\r\n0.4.0b3 (2020-03-08)\r\n--------------------\r\n- Drop support for Python2\r\n- Update of Mozilla Rhino.\r\n- Update of license info.\r\n- Setup update.\r\n\r\n0.3.0b2 (2019-07-10)\r\n--------------------\r\n- Last release for Python2\r\n\r\n0.3.0b1 (2018-11-08)\r\n--------------------\r\n- Bug fixes and improvements.\r\n- Add Java 10 support.\r\n- Update of the required setuptools version.\r\n- Setup and tests improvements.\r\n\r\n0.2.0b3 (2018-05-29)\r\n--------------------\r\n- Bug fixes and improvements in Java 9 support.\r\n- Improved support for Cygwin.\r\n- Update of Mozilla Rhino.\r\n- Update of the required setuptools version.\r\n\r\n0.2.0b1 (2018-02-26)\r\n--------------------\r\n- Improvement and simplification of setup and packaging.\r\n\r\n0.1.1 (2005-10-05)\r\n------------------\r\n- Initial version.\r\n",
+        "publish_time": "2025-06-19T00:23:58.573812Z",
+        "created_time": "2020-03-09T00:36:31.754969Z",
+        "modified_time": "2025-06-19T00:23:58.573812Z",
+        "version_count": 6,
+        "version_history": {
+          "0.4.0b3": "2020-03-09T00:36:31.754969Z",
+          "0.5.0b3": "2020-12-13T20:54:47.334943Z",
+          "0.5.0b5": "2021-10-16T11:47:07.636878Z",
+          "0.5.0b7": "2022-01-29T12:02:54.205229Z",
+          "0.6.0b5": "2024-11-08T15:24:45.893094Z",
+          "0.6.0b6": "2025-06-19T00:23:58.573812Z"
+        },
+        "dependencies": {
+          "setuptools": "setuptools>=80.9.0",
+          "pkg-about": "pkg-about>=1.3.6",
+          "memorybuffer": "memorybuffer>=0.7.0b1",
+          "cffi": "cffi>=1.17.1",
+          "jni": "jni>=1.2.0b1",
+          "jni[cffi]": "jni[cffi]>=1.2.0b1",
+          "jni[cython]": "jni[cython]>=1.2.0b1",
+          "Sphinx": "Sphinx>=8.1.3",
+          "sphinx-autodoc-typehints": "sphinx-autodoc-typehints>=3.0.1",
+          "sphinx-toolbox": "sphinx-toolbox>=4.0.0",
+          "sphinx-tabs": "sphinx-tabs>=3.4.5",
+          "sphinx-copybutton": "sphinx-copybutton>=0.5.2",
+          "sphinxcontrib-spelling": "sphinxcontrib-spelling>=8.0.1",
+          "sphinx-lint": "sphinx-lint>=1.0.0",
+          "restructuredtext-lint": "restructuredtext-lint>=1.4.0",
+          "nbsphinx": "nbsphinx>=0.9.7",
+          "deepdiff": "deepdiff>=8.5.0",
+          "rich": "rich>=14.0.0"
+        },
+        "dev_dependencies": {},
+        "scripts": {},
+        "keywords": [
+          "jni",
+          " jvm",
+          " jtypes",
+          " jt",
+          " jpype",
+          " jep",
+          " pyjnius",
+          " jpy",
+          " javabridge",
+          " pyjava",
+          " jcc",
+          " py4j",
+          " jython",
+          " java",
+          " pythonjava",
+          " rubicon-java"
+        ],
+        "has_types": false,
+        "classifiers": [
+          "Development Status :: 4 - Beta",
+          "Intended Audience :: Developers",
+          "Natural Language :: Polish",
+          "Operating System :: OS Independent",
+          "Programming Language :: Java",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3 :: Only",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: Implementation :: CPython",
+          "Programming Language :: Python :: Implementation :: PyPy",
+          "Topic :: Software Development :: Libraries :: Java Libraries",
+          "Topic :: Software Development :: Libraries :: Python Modules"
+        ],
+        "requires_python": "<4.0.0,>=3.10.0",
+        "project_urls": {
+          "Documentation": "https://jvm.readthedocs.io/",
+          "Download": "https://pypi.org/project/jvm/",
+          "Homepage": "https://pypi.org/project/jvm/",
+          "Issues": "https://github.com/karpierz/jvm/issues",
+          "Source": "https://github.com/karpierz/jvm"
+        }
+      },
+      "checks": [
+        {
+          "name": "author_check",
+          "description": "Author information present",
+          "flagged": false,
+          "score": 15,
+          "severity": "medium",
+          "details": {
+            "author": "Adam Karpierz"
+          }
+        },
+        {
+          "name": "package_age_check",
+          "description": "Package is 283 days old",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "publish_time": "2025-06-19T00:23:58.573812Z",
+            "days_old": 283
+          }
+        },
+        {
+          "name": "install_scripts_check",
+          "description": "No install scripts detected",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "scripts": {}
+          }
+        },
+        {
+          "name": "script_contents_check",
+          "description": "No scripts to analyze",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {}
+        },
+        {
+          "name": "dependency_count_check",
+          "description": "Dependency count: 18",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "dependency_count": 18,
+            "threshold": 20,
+            "dependencies": [
+              "setuptools",
+              "pkg-about",
+              "memorybuffer",
+              "cffi",
+              "jni",
+              "jni[cffi]",
+              "jni[cython]",
+              "Sphinx",
+              "sphinx-autodoc-typehints",
+              "sphinx-toolbox",
+              "sphinx-tabs",
+              "sphinx-copybutton",
+              "sphinxcontrib-spelling",
+              "sphinx-lint",
+              "restructuredtext-lint",
+              "nbsphinx",
+              "deepdiff",
+              "rich"
+            ]
+          }
+        },
+        {
+          "name": "repository_check",
+          "description": "Source repository present",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "repository": "https://github.com/karpierz/jvm"
+          }
+        },
+        {
+          "name": "readme_check",
+          "description": "README present",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "readme_length": 5235
+          }
+        },
+        {
+          "name": "version_history_check",
+          "description": "6 versions published",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "version_count": 6
+          }
+        },
+        {
+          "name": "maintainer_count_check",
+          "description": "Only 1 maintainer(s)",
+          "flagged": true,
+          "score": 10,
+          "severity": "low",
+          "details": {
+            "maintainer_count": 1,
+            "maintainers": [
+              "Adam Karpierz"
+            ]
+          }
+        },
+        {
+          "name": "license_check",
+          "description": "No license specified",
+          "flagged": true,
+          "score": 5,
+          "severity": "low",
+          "details": {
+            "license": null
+          }
+        },
+        {
+          "name": "version_anomaly_check",
+          "description": "No version anomalies",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "anomalies": []
+          }
+        }
+      ],
+      "risk_score": 15,
+      "risk_factors": [
+        {
+          "check": "maintainer_count_check",
+          "description": "Only 1 maintainer(s)",
+          "score": 10,
+          "severity": "low"
+        },
+        {
+          "check": "license_check",
+          "description": "No license specified",
+          "score": 5,
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  "typosquatting_analysis": {
+    "is_suspect": false,
+    "closest_match": null,
+    "techniques_triggered": [],
+    "details": {
+      "package_name": "jvm",
+      "ecosystem": "pypi",
+      "is_typosquat_suspect": false,
+      "matches": [],
+      "techniques_triggered": [],
+      "closest_legitimate": null,
+      "min_distance": null,
+      "risk_score": 0,
+      "details": {}
+    }
+  },
+  "vulnerability_analysis": {
+    "total_vulnerabilities": 10,
+    "critical": 1,
+    "high": 1,
+    "medium": 7,
+    "low": 1,
+    "details": {
+      "package_name": "jvm",
+      "version": "0.6.0b6",
+      "ecosystem": "pypi",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2002-2284",
+          "summary": "Netscape Communicator 4.0 through 4.79 allows remote attackers to bypass JVM security and execute arbitrary Java code via an applet that loads user-supplied Java classes.",
+          "details": "Netscape Communicator 4.0 through 4.79 allows remote attackers to bypass JVM security and execute arbitrary Java code via an applet that loads user-supplied Java classes.",
+          "severity": "MEDIUM",
+          "cvss_score": 6.4,
+          "source": "NVD",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=103798147613151&w=2",
+            "http://www.lsd-pl.net/documents/javasecurity-1.0.0.pdf",
+            "http://www.securityfocus.com/bid/6223",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/10714",
+            "http://marc.info/?l=bugtraq&m=103798147613151&w=2"
+          ],
+          "published": "2002-12-31T05:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-2003-0525",
+          "summary": "The getCanonicalPath function in Windows NT 4.0 may free memory that it does not own and cause heap corruption, which allows attackers to cause a denial of service (crash) via requests that cause a long file name to be passed to getCanonicalPath, as demonstrated on the IBM JVM using a long string to",
+          "details": "The getCanonicalPath function in Windows NT 4.0 may free memory that it does not own and cause heap corruption, which allows attackers to cause a denial of service (crash) via requests that cause a long file name to be passed to getCanonicalPath, as demonstrated on the IBM JVM using a long string to the java.io.getCanonicalPath Java method.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.0,
+          "source": "NVD",
+          "references": [
+            "http://www.atstake.com/research/advisories/2003/a072303-1.txt",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2003/ms03-029",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/12701",
+            "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A319",
+            "http://www.atstake.com/research/advisories/2003/a072303-1.txt"
+          ],
+          "published": "2003-08-27T04:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-2007-0014",
+          "summary": "ChainKey Java Code Protection allows attackers to decompile Java class files via a Java class loader with a modified defineClass method that saves the bytecode to a file before it is passed to the JVM.",
+          "details": "ChainKey Java Code Protection allows attackers to decompile Java class files via a Java class loader with a modified defineClass method that saves the bytecode to a file before it is passed to the JVM.",
+          "severity": "MEDIUM",
+          "cvss_score": 4.4,
+          "source": "NVD",
+          "references": [
+            "http://osvdb.org/33473",
+            "http://www.securityfocus.com/archive/1/456712/100/0/threaded",
+            "http://www.securityfocus.com/archive/1/456734/100/0/threaded",
+            "http://osvdb.org/33473",
+            "http://www.securityfocus.com/archive/1/456712/100/0/threaded"
+          ],
+          "published": "2007-01-17T00:28:00.000",
+          "modified": "2025-04-09T00:30:58.490"
+        },
+        {
+          "id": "CVE-2007-5375",
+          "summary": "Interpretation conflict in the Sun Java Virtual Machine (JVM) allows user-assisted remote attackers to conduct a multi-pin DNS rebinding attack and execute arbitrary JavaScript in an intranet context, when an intranet web server has an HTML document that references a \"mayscript=true\" Java applet thr",
+          "details": "Interpretation conflict in the Sun Java Virtual Machine (JVM) allows user-assisted remote attackers to conduct a multi-pin DNS rebinding attack and execute arbitrary JavaScript in an intranet context, when an intranet web server has an HTML document that references a \"mayscript=true\" Java applet through a local relative URI, which may be associated with different IP addresses by the browser and the JVM.",
+          "severity": "LOW",
+          "cvss_score": 2.6,
+          "source": "NVD",
+          "references": [
+            "http://crypto.stanford.edu/dns/dns-rebinding.pdf",
+            "http://osvdb.org/40930",
+            "http://crypto.stanford.edu/dns/dns-rebinding.pdf",
+            "http://osvdb.org/40930"
+          ],
+          "published": "2007-10-11T10:17:00.000",
+          "modified": "2025-04-09T00:30:58.490"
+        },
+        {
+          "id": "CVE-2007-0012",
+          "summary": "Sun JRE 5.0 before update 14 allows remote attackers to cause a denial of service (Internet Explorer crash) via an object tag with an encoded applet and an undefined name attribute, which triggers a NULL pointer dereference in jpiexp32.dll when the applet is decoded and passed to the JVM.",
+          "details": "Sun JRE 5.0 before update 14 allows remote attackers to cause a denial of service (Internet Explorer crash) via an object tag with an encoded applet and an undefined name attribute, which triggers a NULL pointer dereference in jpiexp32.dll when the applet is decoded and passed to the JVM.",
+          "severity": "MEDIUM",
+          "cvss_score": 4.3,
+          "source": "NVD",
+          "references": [
+            "http://securityreason.com/securityalert/3527",
+            "http://www.securityfocus.com/archive/1/485942/100/0/threaded",
+            "http://www.securityfocus.com/bid/27185",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/39549",
+            "http://securityreason.com/securityalert/3527"
+          ],
+          "published": "2008-01-09T23:46:00.000",
+          "modified": "2025-04-09T00:30:58.490"
+        },
+        {
+          "id": "CVE-2010-0838",
+          "summary": "Unspecified vulnerability in the Java 2D component in Oracle Java SE and Java for Business 6 Update 18, 5.0, Update, and 23 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.  NOTE: the previous information was obtained from the March 2010 CPU.  Oracl",
+          "details": "Unspecified vulnerability in the Java 2D component in Oracle Java SE and Java for Business 6 Update 18, 5.0, Update, and 23 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.  NOTE: the previous information was obtained from the March 2010 CPU.  Oracle has not commented on claims from a reliable researcher that this is a stack-based buffer overflow using an untrusted size value in the readMabCurveData function in the CMM module in the JVM.",
+          "severity": "HIGH",
+          "cvss_score": 7.5,
+          "source": "NVD",
+          "references": [
+            "http://itrc.hp.com/service/cki/docDisplay.do?docId=emr_na-c02273751",
+            "http://lists.apple.com/archives/security-announce/2010//May/msg00001.html",
+            "http://lists.apple.com/archives/security-announce/2010//May/msg00002.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2010-04/msg00001.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2010-05/msg00001.html"
+          ],
+          "published": "2010-04-01T16:30:00.843",
+          "modified": "2025-04-11T00:51:21.963"
+        },
+        {
+          "id": "CVE-2010-3564",
+          "summary": "Unspecified vulnerability in the Oracle Communications Messaging Server (Sun Java System Messaging Server) component in Oracle Sun Products Suite 7.0 allows remote attackers to affect confidentiality and integrity via unknown vectors related to Webmail.  NOTE: the previous information was obtained f",
+          "details": "Unspecified vulnerability in the Oracle Communications Messaging Server (Sun Java System Messaging Server) component in Oracle Sun Products Suite 7.0 allows remote attackers to affect confidentiality and integrity via unknown vectors related to Webmail.  NOTE: the previous information was obtained from the October 2010 CPU.  Oracle has not commented on claims from a reliable downstream vendor that the Kerberos implementation does not properly check AP-REQ requests, which allows attackers to cause a denial of service in the JVM.  NOTE: CVE has not investigated the apparent discrepancy between the two vendors regarding the consequences of this issue.",
+          "severity": "MEDIUM",
+          "cvss_score": 6.4,
+          "source": "NVD",
+          "references": [
+            "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&cc=us&objectID=c02616748",
+            "http://lists.fedoraproject.org/pipermail/package-announce/2010-October/049455.html",
+            "http://lists.fedoraproject.org/pipermail/package-announce/2010-October/049528.html",
+            "http://lists.fedoraproject.org/pipermail/package-announce/2010-October/049702.html",
+            "http://secunia.com/advisories/41972"
+          ],
+          "published": "2010-10-14T18:00:17.837",
+          "modified": "2025-04-11T00:51:21.963"
+        },
+        {
+          "id": "CVE-2011-2526",
+          "summary": "Apache Tomcat 5.5.x before 5.5.34, 6.x before 6.0.33, and 7.x before 7.0.19, when sendfile is enabled for the HTTP APR or HTTP NIO connector, does not validate certain request attributes, which allows local users to bypass intended file access restrictions or cause a denial of service (infinite loop",
+          "details": "Apache Tomcat 5.5.x before 5.5.34, 6.x before 6.0.33, and 7.x before 7.0.19, when sendfile is enabled for the HTTP APR or HTTP NIO connector, does not validate certain request attributes, which allows local users to bypass intended file access restrictions or cause a denial of service (infinite loop or JVM crash) by leveraging an untrusted web application.",
+          "severity": "MEDIUM",
+          "cvss_score": 4.4,
+          "source": "NVD",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=132215163318824&w=2",
+            "http://marc.info/?l=bugtraq&m=133469267822771&w=2",
+            "http://marc.info/?l=bugtraq&m=136485229118404&w=2",
+            "http://marc.info/?l=bugtraq&m=139344343412337&w=2",
+            "http://osvdb.org/73797"
+          ],
+          "published": "2011-07-14T23:55:06.020",
+          "modified": "2025-04-11T00:51:21.963"
+        },
+        {
+          "id": "CVE-2012-0213",
+          "summary": "The UnhandledDataStructure function in hwpf/model/UnhandledDataStructure.java in Apache POI 3.8 and earlier allows remote attackers to cause a denial of service (OutOfMemoryError exception and possibly JVM destabilization) via a crafted length value in a Channel Definition Format (CDF) or Compound F",
+          "details": "The UnhandledDataStructure function in hwpf/model/UnhandledDataStructure.java in Apache POI 3.8 and earlier allows remote attackers to cause a denial of service (OutOfMemoryError exception and possibly JVM destabilization) via a crafted length value in a Channel Definition Format (CDF) or Compound File Binary Format (CFBF) document.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.0,
+          "source": "NVD",
+          "references": [
+            "http://lists.fedoraproject.org/pipermail/package-announce/2012-August/084609.html",
+            "http://rhn.redhat.com/errata/RHSA-2012-1232.html",
+            "http://secunia.com/advisories/49040",
+            "http://secunia.com/advisories/50549",
+            "http://www-01.ibm.com/support/docview.wss?uid=swg21996759"
+          ],
+          "published": "2012-08-07T21:55:01.093",
+          "modified": "2025-04-11T00:51:21.963"
+        },
+        {
+          "id": "CVE-2013-1493",
+          "summary": "The color management (CMM) functionality in the 2D component in Oracle Java SE 7 Update 15 and earlier, 6 Update 41 and earlier, and 5.0 Update 40 and earlier allows remote attackers to execute arbitrary code or cause a denial of service (crash) via an image with crafted raster parameters, which tri",
+          "details": "The color management (CMM) functionality in the 2D component in Oracle Java SE 7 Update 15 and earlier, 6 Update 41 and earlier, and 5.0 Update 40 and earlier allows remote attackers to execute arbitrary code or cause a denial of service (crash) via an image with crafted raster parameters, which triggers (1) an out-of-bounds read or (2) memory corruption in the JVM, as exploited in the wild in February 2013.",
+          "severity": "CRITICAL",
+          "cvss_score": 10.0,
+          "source": "NVD",
+          "references": [
+            "http://blog.fireeye.com/research/2013/02/yaj0-yet-another-java-zero-day-2.html",
+            "http://h20565.www2.hp.com/hpsc/doc/public/display?docId=emr_na-c04117626-1",
+            "http://lists.opensuse.org/opensuse-security-announce/2013-03/msg00009.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2013-03/msg00011.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2013-03/msg00012.html"
+          ],
+          "published": "2013-03-05T22:06:35.043",
+          "modified": "2025-04-11T00:51:21.963"
+        }
+      ],
+      "total_count": 10,
+      "critical_count": 1,
+      "high_count": 1,
+      "medium_count": 7,
+      "low_count": 1,
+      "risk_score": 100,
+      "sources_checked": [
+        "OSV",
+        "NVD"
+      ],
+      "errors": []
+    }
+  },
+  "code_analysis": {
+    "risk_score": 0,
+    "total_issues": 0,
+    "obfuscation_detected": false,
+    "details": {
+      "risk_score": 0,
+      "issues": [],
+      "summary": {}
+    }
+  },
+  "behavioral_analysis": {
+    "risk_score": 0,
+    "dominant_behavior": null,
+    "assessment": "",
+    "details": {
+      "risk_score": 0,
+      "behavior_summary": []
+    }
+  },
+  "dependency_graph_analysis": {
+    "total_dependencies": 142,
+    "critical_nodes": 0,
+    "details": {
+      "root_package": "jvm",
+      "ecosystem": "pypi",
+      "total_dependencies": 142,
+      "max_depth_reached": 2,
+      "dependency_list": [
+        "sphinx-autodoc-typehints",
+        "setuptools",
+        "rich",
+        "sphinxcontrib-spelling",
+        "jvm",
+        "Sphinx",
+        "sphinx-tabs",
+        "jni[cffi]",
+        "deepdiff",
+        "pkg-about",
+        "jni[cython]",
+        "cffi",
+        "sphinx-lint",
+        "jni",
+        "sphinx-toolbox",
+        "restructuredtext-lint",
+        "memorybuffer",
+        "sphinx-copybutton",
+        "nbsphinx"
+      ],
+      "critical_nodes": [],
+      "blast_radius": {
+        "affected_packages": [
+          "flake8~",
+          "setuptools",
+          "jinja2",
+          "tomli-w~",
+          "sphinxcontrib-spelling",
+          "pytest-cov",
+          "sphinx-favicon",
+          "sphinx-inline-tabs",
+          "packaging",
+          "importlib-metadata",
+          "build[virtualenv]",
+          "babel",
+          "tomli~",
+          "numpy~",
+          "sphinx-reredirects",
+          "click~",
+          "cachecontrol[filecache]",
+          "cffi",
+          "sphinxcontrib-htmlhelp",
+          "pygments",
+          "build",
+          "myst-nb",
+          "restructuredtext-lint",
+          "cython",
+          "memorybuffer",
+          "sphinx-notfound-page",
+          "sphinxcontrib-applehelp",
+          "sphinx-jinja2-compat",
+          "virtualenv",
+          "pytest~",
+          "tabulate",
+          "sphinxcontrib-serializinghtml",
+          "pytest-checkdocs",
+          "orderly-set",
+          "sphinx-prompt",
+          "jaraco.path",
+          "jaraco.develop",
+          "docutils",
+          "sphinxcontrib-qthelp",
+          "mypy",
+          "typing-inspect",
+          "sphinx-book-theme",
+          "tomli",
+          "sphinx-tabs",
+          "pytest-benchmark~",
+          "towncrier",
+          "coverage~",
+          "requests",
+          "deepdiff",
+          "polars~",
+          "typing-extensions",
+          "jaraco.test",
+          "ipywidgets",
+          "sphinxcontrib-devhelp",
+          "pytest-timeout",
+          "pytest-mypy",
+          "python-dateutil~",
+          "sphinx-sitemap~",
+          "roman-numerals",
+          "tomli-w",
+          "filelock",
+          "imagesize",
+          "pytest-ruff",
+          "pyenchant",
+          "orjson~",
+          "nbformat",
+          "colorama",
+          "pytest-home",
+          "pyproject-hooks",
+          "coincidence",
+          "pip",
+          "python-dotenv~",
+          "bs4",
+          "sphinx-copybutton",
+          "domdf-python-tools",
+          "wheel",
+          "html5lib",
+          "sphinx-autodoc-typehints",
+          "pytest-xdist",
+          "sphinxemoji~",
+          "uuid6",
+          "pytest",
+          "pytest-regressions",
+          "pre-commit",
+          "pytest-cov~",
+          "markdown-it-py",
+          "Sphinx",
+          "traitlets",
+          "more_itertools",
+          "jni[cffi]",
+          "pytest-enabler",
+          "flake8-pyproject~",
+          "orjson",
+          "pytest-subprocess",
+          "polib",
+          "roman",
+          "regex",
+          "pytest-perf",
+          "sphinx-lint",
+          "jni",
+          "nox",
+          "Sphinx~",
+          "ruff",
+          "sphinx-toolbox",
+          "Jinja2",
+          "beautifulsoup4",
+          "sphinx-examples",
+          "furo",
+          "nbsphinx",
+          "alabaster",
+          "bump2version~",
+          "sphinx",
+          "ruamel.yaml",
+          "jaraco.text",
+          "rich",
+          "ini2toml[lite]",
+          "jsonpickle~",
+          "pycparser",
+          "pyyaml~",
+          "pygments-github-lexers",
+          "jaraco.functools",
+          "importlib_metadata",
+          "apeye",
+          "rinohtype",
+          "ipython",
+          "sphinxcontrib-towncrier",
+          "dict2css",
+          "pkg-about",
+          "jni[cython]",
+          "coverage",
+          "jaraco.envs",
+          "autodocsumm",
+          "ipdb~",
+          "jaraco.packaging",
+          "nbconvert",
+          "snowballstemmer",
+          "Pygments",
+          "sphinxcontrib-jsmath",
+          "pydantic~",
+          "rst.linker",
+          "jaraco.tidelift",
+          "pandas~"
+        ],
+        "affected_count": 142,
+        "total_packages": 143,
+        "percentage": 99.3
+      },
+      "depth_analysis": {
+        "max_depth": 4,
+        "is_deep": false,
+        "warning": null
+      },
+      "risk_score": 20,
+      "risk_factors": [
+        "Very large dependency tree: 142 packages"
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Package has 1 critical vulnerability(ies). Check for patches or alternatives."
+    }
+  ]
+}

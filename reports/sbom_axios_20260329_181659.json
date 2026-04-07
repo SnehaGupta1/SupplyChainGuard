@@ -1,0 +1,294 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-29T12:46:59.619145+00:00",
+    "tools": [
+      {
+        "vendor": "SupplyChainGuard",
+        "name": "SBOM Generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "axios",
+      "version": "1.14.0"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "axios",
+      "version": "1.14.0",
+      "purl": "pkg:npm/axios@1.14.0",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "39.0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:46:59.619145+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "follow-redirects",
+      "version": "latest",
+      "purl": "pkg:npm/follow-redirects@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:46:59.619145+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "form-data",
+      "version": "latest",
+      "purl": "pkg:npm/form-data@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:46:59.619145+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "proxy-from-env",
+      "version": "latest",
+      "purl": "pkg:npm/proxy-from-env@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T12:46:59.619145+00:00"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2018-18437",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.1
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/axios@1.14.0"
+        }
+      ],
+      "description": "In AXIOS ITALIA Axioscloud Sissiweb Registro Elettronico 1.7.0, secret/relogoff.aspx has XSS via the Error_Desc parameter."
+    },
+    {
+      "id": "CVE-2019-7693",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.1
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/axios@1.14.0"
+        }
+      ],
+      "description": "Axios Italia Axios RE 1.7.0/7.0.0 devices have XSS via the RELogOff.aspx Error_Parameters parameter. In some situations, the XSS would be on the family.axioscloud.it cloud service; however, the vendor also supports \"Sissi in Rete (con server)\" for offline operation."
+    },
+    {
+      "id": "CVE-2019-10742",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/axios@1.14.0"
+        }
+      ],
+      "description": "Axios up to and including 0.18.0 allows attackers to cause a denial of service (application crash) by continuing to accepting content after maxContentLength is exceeded."
+    },
+    {
+      "id": "CVE-2020-28168",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.9
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/axios@1.14.0"
+        }
+      ],
+      "description": "Axios NPM package 0.21.0 contains a Server-Side Request Forgery (SSRF) vulnerability where an attacker is able to bypass a proxy by providing a URL that responds with a redirect to a restricted host or IP address."
+    },
+    {
+      "id": "CVE-2021-3749",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/axios@1.14.0"
+        }
+      ],
+      "description": "axios is vulnerable to Inefficient Regular Expression Complexity"
+    },
+    {
+      "id": "CVE-2019-25068",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.3
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/axios@1.14.0"
+        }
+      ],
+      "description": "A vulnerability classified as critical was found in Axios Italia Axios RE 1.7.0/7.0.0. This vulnerability affects unknown code of the file REDefault.aspx of the component Connection Handler. The manipulation of the argument DBIDX leads to privilege escalation. The attack can be initiated remotely."
+    },
+    {
+      "id": "CVE-2019-25069",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.3
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/axios@1.14.0"
+        }
+      ],
+      "description": "A vulnerability, which was classified as problematic, has been found in Axios Italia Axios RE 1.7.0/7.0.0. This issue affects some unknown processing of the component Error Message Handler. The manipulation leads to information disclosure (ASP.NET). The attack may be initiated remotely."
+    },
+    {
+      "id": "CVE-2023-45857",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/axios@1.14.0"
+        }
+      ],
+      "description": "An issue discovered in Axios 1.5.1 inadvertently reveals the confidential XSRF-TOKEN stored in cookies by including it in the HTTP header X-XSRF-TOKEN for every request made to any host allowing attackers to view sensitive information."
+    },
+    {
+      "id": "CVE-2024-39338",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/axios@1.14.0"
+        }
+      ],
+      "description": "axios 1.7.2 allows SSRF via unexpected behavior where requests for path relative URLs get processed as protocol relative URLs."
+    },
+    {
+      "id": "CVE-2024-57965",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "NONE",
+          "score": 0.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/axios@1.14.0"
+        }
+      ],
+      "description": "In axios before 1.7.8, lib/helpers/isURLSameOrigin.js does not use a URL object when determining an origin, and has a potentially unwanted setAttribute('href',href) call. NOTE: some parties feel that the code change only addresses a warning message from a SAST tool and does not fix a vulnerability."
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "axios",
+      "dependsOn": [
+        "follow-redirects",
+        "form-data",
+        "proxy-from-env"
+      ]
+    }
+  ]
+}

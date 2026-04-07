@@ -1,0 +1,63 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-30T04:02:13.686981+00:00",
+    "tools": [
+      {
+        "vendor": "SupplyChainGuard",
+        "name": "SBOM Generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "expresss",
+      "version": "0.0.0"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "expresss",
+      "version": "0.0.0",
+      "purl": "pkg:npm/expresss@0.0.0",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "37.5"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-30T04:02:13.686981+00:00"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2010-1941",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.8
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expresss@0.0.0"
+        }
+      ],
+      "description": "Unspecified vulnerability in NEC WebSAM DeploymentManager 5.13 and earlier, as used in SigmaSystemCenter 2.1 Update2 and earlier, BladeSystemCenter, ExpressSystemCenter, and VirtualPCCenter 2.2 and earlier, allows remote attackers to cause a denial of service (OS shutdown or restart) via unknown vec"
+    }
+  ],
+  "dependencies": []
+}

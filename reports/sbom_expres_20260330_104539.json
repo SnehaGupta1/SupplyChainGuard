@@ -1,0 +1,225 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-30T05:15:39.707678+00:00",
+    "tools": [
+      {
+        "vendor": "SupplyChainGuard",
+        "name": "SBOM Generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "expres",
+      "version": "0.0.5"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "expres",
+      "version": "0.0.5",
+      "purl": "pkg:npm/expres@0.0.5",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "52.0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "MEDIUM"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-30T05:15:39.708676+00:00"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-1999-0132",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "LOW",
+          "score": 2.1
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expres@0.0.5"
+        }
+      ],
+      "description": "Expreserve, as used in vi and ex, allows local users to overwrite arbitrary files and gain root access."
+    },
+    {
+      "id": "CVE-1999-0967",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "CRITICAL",
+          "score": 10.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expres@0.0.5"
+        }
+      ],
+      "description": "Buffer overflow in the HTML library used by Internet Explorer, Outlook Express, and Windows Explorer via the res: local resource protocol."
+    },
+    {
+      "id": "CVE-1999-1033",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expres@0.0.5"
+        }
+      ],
+      "description": "Microsoft Outlook Express before 4.72.3612.1700 allows a malicious user to send a message that contains a .., which can inadvertently cause Outlook to re-enter POP3 command mode and cause the POP3 session to hang."
+    },
+    {
+      "id": "CVE-1999-1016",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expres@0.0.5"
+        }
+      ],
+      "description": "Microsoft HTML control as used in (1) Internet Explorer 5.0, (2) FrontPage Express, (3) Outlook Express 5, and (4) Eudora, and possibly others, allows remote malicious web site or HTML emails to cause a denial of service (100% CPU consumption) via large HTML form fields such as text inputs in a tabl"
+    },
+    {
+      "id": "CVE-1999-1009",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "LOW",
+          "score": 2.6
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expres@0.0.5"
+        }
+      ],
+      "description": "The Disney Go Express Search allows remote attackers to access and modify search information for users by connecting to an HTTP server on the user's system."
+    },
+    {
+      "id": "CVE-2000-0036",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expres@0.0.5"
+        }
+      ],
+      "description": "Outlook Express 5 for Macintosh downloads attachments to HTML mail without prompting the user, aka the \"HTML Mail Attachment\" vulnerability."
+    },
+    {
+      "id": "CVE-1999-0455",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expres@0.0.5"
+        }
+      ],
+      "description": "The Expression Evaluator sample application in ColdFusion allows remote attackers to read or delete files on the server via exprcalc.cfm, which does not restrict access to the server properly."
+    },
+    {
+      "id": "CVE-1999-0477",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expres@0.0.5"
+        }
+      ],
+      "description": "The Expression Evaluator in the ColdFusion Application Server allows a remote attacker to upload files to the server via openfile.cfm, which does not restrict access to the server properly."
+    },
+    {
+      "id": "CVE-2000-0115",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expres@0.0.5"
+        }
+      ],
+      "description": "IIS allows local users to cause a denial of service via invalid regular expressions in a Visual Basic script in an ASP page."
+    },
+    {
+      "id": "CVE-2000-0105",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.0
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/expres@0.0.5"
+        }
+      ],
+      "description": "Outlook Express 5.01 and Internet Explorer 5.01 allow remote attackers to view a user's email messages via a script that accesses a variable that references subsequent email messages that are read by the client."
+    }
+  ],
+  "dependencies": []
+}

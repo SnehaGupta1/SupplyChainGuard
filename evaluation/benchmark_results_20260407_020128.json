@@ -1,0 +1,338 @@
+{
+  "timestamp": "2026-04-07 02:01:05",
+  "metadata_performance": [
+    {
+      "package": "express",
+      "ecosystem": "npm",
+      "risk_score": 39.0,
+      "risk_level": "LOW",
+      "scan_time": 2.773,
+      "vulnerabilities": 10,
+      "status": "success"
+    },
+    {
+      "package": "lodash",
+      "ecosystem": "npm",
+      "risk_score": 39.0,
+      "risk_level": "LOW",
+      "scan_time": 1.471,
+      "vulnerabilities": 10,
+      "status": "success"
+    },
+    {
+      "package": "axios",
+      "ecosystem": "npm",
+      "risk_score": 43.0,
+      "risk_level": "LOW",
+      "scan_time": 0.92,
+      "vulnerabilities": 10,
+      "status": "success"
+    },
+    {
+      "package": "react",
+      "ecosystem": "npm",
+      "risk_score": 43.0,
+      "risk_level": "LOW",
+      "scan_time": 1.183,
+      "vulnerabilities": 10,
+      "status": "success"
+    },
+    {
+      "package": "chalk",
+      "ecosystem": "npm",
+      "risk_score": 7.0,
+      "risk_level": "LOW",
+      "scan_time": 0.966,
+      "vulnerabilities": 0,
+      "status": "success"
+    },
+    {
+      "package": "commander",
+      "ecosystem": "npm",
+      "risk_score": 37.0,
+      "risk_level": "LOW",
+      "scan_time": 1.026,
+      "vulnerabilities": 10,
+      "status": "success"
+    },
+    {
+      "package": "debug",
+      "ecosystem": "npm",
+      "risk_score": 35.0,
+      "risk_level": "LOW",
+      "scan_time": 1.024,
+      "vulnerabilities": 10,
+      "status": "success"
+    },
+    {
+      "package": "dotenv",
+      "ecosystem": "npm",
+      "risk_score": 17.5,
+      "risk_level": "LOW",
+      "scan_time": 1.024,
+      "vulnerabilities": 1,
+      "status": "success"
+    },
+    {
+      "package": "cors",
+      "ecosystem": "npm",
+      "risk_score": 35.0,
+      "risk_level": "LOW",
+      "scan_time": 1.024,
+      "vulnerabilities": 10,
+      "status": "success"
+    },
+    {
+      "package": "uuid",
+      "ecosystem": "npm",
+      "risk_score": 38.0,
+      "risk_level": "LOW",
+      "scan_time": 1.026,
+      "vulnerabilities": 10,
+      "status": "success"
+    },
+    {
+      "package": "requests",
+      "ecosystem": "pypi",
+      "risk_score": 44.0,
+      "risk_level": "LOW",
+      "scan_time": 1.431,
+      "vulnerabilities": 10,
+      "status": "success"
+    },
+    {
+      "package": "flask",
+      "ecosystem": "pypi",
+      "risk_score": 6.0,
+      "risk_level": "LOW",
+      "scan_time": 0.646,
+      "vulnerabilities": 0,
+      "status": "success"
+    },
+    {
+      "package": "numpy",
+      "ecosystem": "pypi",
+      "risk_score": 10.0,
+      "risk_level": "LOW",
+      "scan_time": 1.195,
+      "vulnerabilities": 0,
+      "status": "success"
+    },
+    {
+      "package": "pandas",
+      "ecosystem": "pypi",
+      "risk_score": 14.0,
+      "risk_level": "LOW",
+      "scan_time": 0.818,
+      "vulnerabilities": 0,
+      "status": "success"
+    },
+    {
+      "package": "click",
+      "ecosystem": "pypi",
+      "risk_score": 10.0,
+      "risk_level": "LOW",
+      "scan_time": 0.82,
+      "vulnerabilities": 0,
+      "status": "success"
+    },
+    {
+      "package": "jinja2",
+      "ecosystem": "pypi",
+      "risk_score": 6.0,
+      "risk_level": "LOW",
+      "scan_time": 0.817,
+      "vulnerabilities": 0,
+      "status": "success"
+    },
+    {
+      "package": "pyyaml",
+      "ecosystem": "pypi",
+      "risk_score": 5.0,
+      "risk_level": "LOW",
+      "scan_time": 0.82,
+      "vulnerabilities": 0,
+      "status": "success"
+    },
+    {
+      "package": "pytest",
+      "ecosystem": "pypi",
+      "risk_score": 3.0,
+      "risk_level": "LOW",
+      "scan_time": 0.954,
+      "vulnerabilities": 0,
+      "status": "success"
+    },
+    {
+      "package": "boto3",
+      "ecosystem": "pypi",
+      "risk_score": 6.0,
+      "risk_level": "LOW",
+      "scan_time": 0.991,
+      "vulnerabilities": 0,
+      "status": "success"
+    },
+    {
+      "package": "pillow",
+      "ecosystem": "pypi",
+      "risk_score": 12.0,
+      "risk_level": "LOW",
+      "scan_time": 1.126,
+      "vulnerabilities": 0,
+      "status": "success"
+    }
+  ],
+  "typosquat_performance": {
+    "total_tests": 10,
+    "correct": 10,
+    "accuracy": 100.0,
+    "details": [
+      {
+        "input": "expres",
+        "ecosystem": "npm",
+        "expected": true,
+        "actual": true,
+        "correct": true,
+        "closest_match": "express",
+        "techniques": [
+          "repeated_char",
+          "levenshtein"
+        ]
+      },
+      {
+        "input": "expresss",
+        "ecosystem": "npm",
+        "expected": true,
+        "actual": true,
+        "correct": true,
+        "closest_match": "express",
+        "techniques": [
+          "repeated_char",
+          "levenshtein"
+        ]
+      },
+      {
+        "input": "l0dash",
+        "ecosystem": "npm",
+        "expected": true,
+        "actual": true,
+        "correct": true,
+        "closest_match": "lodash",
+        "techniques": [
+          "homoglyph",
+          "levenshtein"
+        ]
+      },
+      {
+        "input": "axois",
+        "ecosystem": "npm",
+        "expected": true,
+        "actual": true,
+        "correct": true,
+        "closest_match": "axios",
+        "techniques": [
+          "levenshtein"
+        ]
+      },
+      {
+        "input": "my-real-package",
+        "ecosystem": "npm",
+        "expected": false,
+        "actual": false,
+        "correct": true,
+        "closest_match": null,
+        "techniques": []
+      },
+      {
+        "input": "requets",
+        "ecosystem": "pypi",
+        "expected": true,
+        "actual": true,
+        "correct": true,
+        "closest_match": "requests",
+        "techniques": [
+          "repeated_char",
+          "levenshtein"
+        ]
+      },
+      {
+        "input": "requsets",
+        "ecosystem": "pypi",
+        "expected": true,
+        "actual": true,
+        "correct": true,
+        "closest_match": "requests",
+        "techniques": [
+          "levenshtein"
+        ]
+      },
+      {
+        "input": "fl4sk",
+        "ecosystem": "pypi",
+        "expected": true,
+        "actual": true,
+        "correct": true,
+        "closest_match": "flask",
+        "techniques": [
+          "levenshtein"
+        ]
+      },
+      {
+        "input": "numpyy",
+        "ecosystem": "pypi",
+        "expected": true,
+        "actual": true,
+        "correct": true,
+        "closest_match": "numpy",
+        "techniques": [
+          "repeated_char",
+          "levenshtein"
+        ]
+      },
+      {
+        "input": "my-unique-lib",
+        "ecosystem": "pypi",
+        "expected": false,
+        "actual": false,
+        "correct": true,
+        "closest_match": null,
+        "techniques": []
+      }
+    ]
+  },
+  "scan_times": [
+    2.773360252380371,
+    1.4706213474273682,
+    0.9195618629455566,
+    1.1826107501983643,
+    0.965811014175415,
+    1.0260319709777832,
+    1.0235977172851562,
+    1.0238943099975586,
+    1.024062156677246,
+    1.0261905193328857,
+    1.430872917175293,
+    0.6455955505371094,
+    1.194565773010254,
+    0.8180692195892334,
+    0.8202612400054932,
+    0.8170578479766846,
+    0.8197574615478516,
+    0.953822135925293,
+    0.9908604621887207,
+    1.1264100074768066
+  ],
+  "risk_distribution": {
+    "LOW": 20,
+    "MEDIUM": 0,
+    "HIGH": 0,
+    "CRITICAL": 0
+  },
+  "performance_metrics": {
+    "total_scans": 20,
+    "avg_scan_time": 1.103,
+    "min_scan_time": 0.646,
+    "max_scan_time": 2.773,
+    "total_time": 22.053
+  }
+}

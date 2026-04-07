@@ -1,0 +1,420 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-29T11:54:12.338949+00:00",
+    "tools": [
+      {
+        "vendor": "SupplyChainGuard",
+        "name": "SBOM Generator",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "flask",
+      "version": "3.1.3"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "flask",
+      "version": "3.1.3",
+      "purl": "pkg:pypi/flask@3.1.3",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "42.5"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T11:54:12.338949+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "blinker",
+      "version": "latest",
+      "purl": "pkg:pypi/blinker@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T11:54:12.338949+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "click",
+      "version": "latest",
+      "purl": "pkg:pypi/click@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T11:54:12.338949+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "importlib-metadata",
+      "version": "latest",
+      "purl": "pkg:pypi/importlib-metadata@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T11:54:12.338949+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "itsdangerous",
+      "version": "latest",
+      "purl": "pkg:pypi/itsdangerous@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T11:54:12.338949+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "jinja2",
+      "version": "latest",
+      "purl": "pkg:pypi/jinja2@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T11:54:12.338949+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "markupsafe",
+      "version": "latest",
+      "purl": "pkg:pypi/markupsafe@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T11:54:12.338949+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "werkzeug",
+      "version": "latest",
+      "purl": "pkg:pypi/werkzeug@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T11:54:12.338949+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "asgiref",
+      "version": "latest",
+      "purl": "pkg:pypi/asgiref@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T11:54:12.339950+00:00"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "python-dotenv",
+      "version": "latest",
+      "purl": "pkg:pypi/python-dotenv@latest",
+      "properties": [
+        {
+          "name": "supplychain:risk_score",
+          "value": "0"
+        },
+        {
+          "name": "supplychain:risk_level",
+          "value": "LOW"
+        },
+        {
+          "name": "supplychain:scan_timestamp",
+          "value": "2026-03-29T11:54:12.339950+00:00"
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2008-3687",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.8
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/flask@3.1.3"
+        }
+      ],
+      "description": "Heap-based buffer overflow in the flask_security_label function in Xen 3.3, when compiled with the XSM:FLASK module, allows unprivileged domain users (domU) to execute arbitrary code via the flask_op hypercall."
+    },
+    {
+      "id": "CVE-2014-1891",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.2
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/flask@3.1.3"
+        }
+      ],
+      "description": "Multiple integer overflows in the (1) FLASK_GETBOOL, (2) FLASK_SETBOOL, (3) FLASK_USER, and (4) FLASK_CONTEXT_TO_SID suboperations in the flask hypercall in Xen 4.3.x, 4.2.x, 4.1.x, 3.2.x, and earlier, when XSM is enabled, allow local users to cause a denial of service (processor fault) via unspecif"
+    },
+    {
+      "id": "CVE-2014-1893",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.2
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/flask@3.1.3"
+        }
+      ],
+      "description": "Multiple integer overflows in the (1) FLASK_GETBOOL and (2) FLASK_SETBOOL suboperations in the flask hypercall in Xen 4.1.x, 3.3.x, 3.2.x, and earlier, when XSM is enabled, allow local users to cause a denial of service (processor fault) via unspecified vectors, a different vulnerability than CVE-20"
+    },
+    {
+      "id": "CVE-2014-1894",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.2
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/flask@3.1.3"
+        }
+      ],
+      "description": "Multiple integer overflows in unspecified suboperations in the flask hypercall in Xen 3.2.x and earlier, when XSM is enabled, allow local users to cause a denial of service (processor fault) via unspecified vectors, a different vulnerability than CVE-2014-1891, CVE-2014-1892, and CVE-2014-1893."
+    },
+    {
+      "id": "CVE-2014-1895",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 5.8
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/flask@3.1.3"
+        }
+      ],
+      "description": "Off-by-one error in the flask_security_avc_cachestats function in xsm/flask/flask_op.c in Xen 4.2.x and 4.3.x, when the maximum number of physical CPUs are in use, allows local users to cause a denial of service (host crash) or obtain sensitive information from hypervisor memory by leveraging a FLAS"
+    },
+    {
+      "id": "CVE-2015-5306",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.8
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/flask@3.1.3"
+        }
+      ],
+      "description": "OpenStack Ironic Inspector (aka ironic-inspector or ironic-discoverd), when debug mode is enabled, might allow remote attackers to access the Flask console and execute arbitrary Python code by triggering an error."
+    },
+    {
+      "id": "CVE-2016-1000001",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.4
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/flask@3.1.3"
+        }
+      ],
+      "description": "flask-oidc version 0.1.2 and earlier is vulnerable to an open redirect"
+    },
+    {
+      "id": "CVE-2016-10516",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.1
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/flask@3.1.3"
+        }
+      ],
+      "description": "Cross-site scripting (XSS) vulnerability in the render_full function in debug/tbtools.py in the debugger in Pallets Werkzeug before 0.11.11 (as used in Pallets Flask and other products) allows remote attackers to inject arbitrary web script or HTML via a field that contains an exception message."
+    },
+    {
+      "id": "CVE-2018-1000656",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "HIGH",
+          "score": 7.5
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/flask@3.1.3"
+        }
+      ],
+      "description": "The Pallets Project flask version Before 0.12.3 contains a CWE-20: Improper Input Validation vulnerability in flask that can result in Large amount of memory usage possibly leading to denial of service. This attack appear to be exploitable via Attacker provides JSON data in incorrect encoding. This "
+    },
+    {
+      "id": "CVE-2018-16516",
+      "source": {
+        "name": "NVD"
+      },
+      "ratings": [
+        {
+          "severity": "MEDIUM",
+          "score": 6.1
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:pypi/flask@3.1.3"
+        }
+      ],
+      "description": "helpers.py in Flask-Admin 1.5.2 has Reflected XSS via a crafted URL."
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "flask",
+      "dependsOn": [
+        "blinker",
+        "click",
+        "importlib-metadata",
+        "itsdangerous",
+        "jinja2",
+        "markupsafe",
+        "werkzeug",
+        "asgiref",
+        "python-dotenv"
+      ]
+    }
+  ]
+}

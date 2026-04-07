@@ -1,0 +1,650 @@
+{
+  "report_id": "SCG-20260329215815",
+  "generated_at": "2026-03-29T16:28:15.313015+00:00",
+  "tool": "SupplyChainGuard v1.0",
+  "target": {
+    "package_name": "expres",
+    "ecosystem": "npm"
+  },
+  "summary": {
+    "final_score": 52.0,
+    "risk_level": "MEDIUM",
+    "recommended_action": "Review flagged issues before proceeding with installation.",
+    "evidence_count": 12
+  },
+  "risk_assessment": {
+    "final_score": 52.0,
+    "risk_level": "MEDIUM",
+    "risk_color": "#ffd600",
+    "recommended_action": "Review flagged issues before proceeding with installation.",
+    "category_breakdown": {
+      "metadata": {
+        "raw_score": 10,
+        "normalized": 10,
+        "weight": 0.2,
+        "weighted_score": 2.0
+      },
+      "vulnerability": {
+        "raw_score": 100,
+        "normalized": 100,
+        "weight": 0.35,
+        "weighted_score": 35.0
+      },
+      "code_analysis": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.3,
+        "weighted_score": 0.0
+      },
+      "dependency_graph": {
+        "raw_score": 0,
+        "normalized": 0,
+        "weight": 0.15,
+        "weighted_score": 0.0
+      }
+    },
+    "bonus_scores": {
+      "typosquatting": 15.0,
+      "behavioral": 0.0
+    },
+    "evidence": [
+      {
+        "source": "metadata",
+        "description": "Only 1 maintainer(s)",
+        "score": 10,
+        "severity": "low"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-1999-0132: Expreserve, as used in vi and ex, allows local users to overwrite arbitrary files and gain root acce",
+        "score": 2.1,
+        "severity": "low"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-1999-0967: Buffer overflow in the HTML library used by Internet Explorer, Outlook Express, and Windows Explorer",
+        "score": 10.0,
+        "severity": "critical"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-1999-1033: Microsoft Outlook Express before 4.72.3612.1700 allows a malicious user to send a message that conta",
+        "score": 5.0,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-1999-1016: Microsoft HTML control as used in (1) Internet Explorer 5.0, (2) FrontPage Express, (3) Outlook Expr",
+        "score": 5.0,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-1999-1009: The Disney Go Express Search allows remote attackers to access and modify search information for use",
+        "score": 2.6,
+        "severity": "low"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2000-0036: Outlook Express 5 for Macintosh downloads attachments to HTML mail without prompting the user, aka t",
+        "score": 5.0,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-1999-0455: The Expression Evaluator sample application in ColdFusion allows remote attackers to read or delete ",
+        "score": 7.5,
+        "severity": "high"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-1999-0477: The Expression Evaluator in the ColdFusion Application Server allows a remote attacker to upload fil",
+        "score": 7.5,
+        "severity": "high"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2000-0115: IIS allows local users to cause a denial of service via invalid regular expressions in a Visual Basi",
+        "score": 5.0,
+        "severity": "medium"
+      },
+      {
+        "source": "vulnerability",
+        "description": "CVE-2000-0105: Outlook Express 5.01 and Internet Explorer 5.01 allow remote attackers to view a user's email messag",
+        "score": 5.0,
+        "severity": "medium"
+      },
+      {
+        "source": "typosquatting",
+        "description": "Package name similar to 'express'",
+        "score": 50,
+        "severity": "critical"
+      }
+    ],
+    "evidence_count": 12,
+    "timestamp": "2026-03-29T16:28:15.312016+00:00"
+  },
+  "metadata_analysis": {
+    "risk_score": 10,
+    "checks_performed": 11,
+    "issues_found": 1,
+    "details": {
+      "package_name": "expres",
+      "ecosystem": "npm",
+      "metadata": {
+        "name": "expres",
+        "latest_version": "0.0.5",
+        "description": "Add express compatible methods to your response object",
+        "author": {
+          "name": "Brian Link",
+          "email": "cpsubrian@gmail.com"
+        },
+        "maintainers": [
+          "cpsubrian"
+        ],
+        "maintainer_count": 1,
+        "license": "MIT",
+        "homepage": null,
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/cpsubrian/node-expres.git"
+        },
+        "readme": "expRes\n======\n\nMiddleware to add express compatible methods to your response objects.\n\n[![build status](https://secure.travis-ci.org/cpsubrian/node-expres.png)](http://travis-ci.org/cpsubrian/node-expres)\n\nUsage\n-----\n\n```js\nvar expres = require('expres'),\n    server = require('http').createServer();\n\nserver.on('request', expres.middleware);\n\n// ...\n```\n\nResponse Methods Added\n----------------------\n\n### status(code)\nSet status `code`.\n@param {Number} code\n@return {ServerResponse}\n\n### links(links)\n\nSet Link header field with the given `links`.\n\n    res.links({\n      next: 'http://api.example.com/users?page=2',\n      last: 'http://api.example.com/users?page=5'\n    });\n\n### type(type)\n\nSet the Content-Type to `type`.\n\n    res.type('application/json');\n\n### send(body|status, [body])\n\nSend a response.\n\n    res.send(new Buffer('wahoo'));\n    res.send({ some: 'json' });\n    res.send('<p>some html</p>');\n    res.send(404, 'Sorry, cant find that');\n    res.send(404);\n\n### json(obj|status, [obj])\n\nSend JSON response.\n\n    res.json(null);\n    res.json({ user: 'tj' });\n    res.json(500, 'oh noes!');\n    res.json(404, 'I dont have that');\n\n### jsonp(obj|status, [obj])\n\nSend JSON response with JSONP callback support.\n\n    res.jsonp(null);\n    res.jsonp({ user: 'tj' });\n    res.jsonp(500, 'oh noes!');\n    res.jsonp(404, 'I dont have that');\n\n### format(obj)\n\nRespond to the Acceptable formats using an `obj`\nof content-type callbacks.\n\nContent-Type is set for you, however if you choose\nyou may alter this within the callback using `res.type()`\nor `res.set('Content-Type', ...)`.\n\n    res.format({\n      'text/plain'(){\n        res.send('hey');\n      },\n      'text/html'(){\n        res.send('<p>hey</p>');\n      },\n      'appliation/json'(){\n        res.send({ message: 'hey' });\n      }\n    });\n\nBy default expres passes an `Error`\nwith a `.status` of 406 to `next(err)`\nif a match is not made. If you provide\na `.default` callback it will be invoked\ninstead.\n\n### set(field, [val])\n\nSet header `field` to `val`, or pass\nan object of header fields.\n\n    res.set('Accept', 'application/json');\n    res.set({ Accept: 'text/plain', 'X-API-Key': 'tobi' });\n\nAliased as `res.header()`.\n\n### get(field)\n\nGet value for header `field`.\n\n### redirect(toUrl, [status])\n\nRedirect to the given `url` with optional response `status`\ndefaulting to 302.\n\nThe given `url` can also be the name of a mapped url, for\nexample by default expres supports \"back\" which redirects\nto the _Referrer_ or _Referer_ headers or \"/\".\n\n    res.redirect('/foo/bar');\n    res.redirect('http://example.com');\n    res.redirect(301, 'http://example.com');\n    res.redirect('http://example.com', 301);\n    res.redirect('../login'); // /blog/post/1 -> /blog/login\n\n\nCredit\n------\n\nMany of the methods and tests are copied verbatim from express, so, thanks TJ :)\n\n- - -\n\n### Developed by [Terra Eclipse](http://www.terraeclipse.com)\nTerra Eclipse, Inc. is a nationally recognized political technology and\nstrategy firm located in Aptos, CA and Washington, D.C.\n\n- - -\n\n### License: MIT\n\n- Copyright (C) 2012 Terra Eclipse, Inc. (http://www.terraeclipse.com/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the &quot;Software&quot;), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is furnished\nto do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+        "publish_time": "2013-07-16T23:16:37.336Z",
+        "created_time": "2012-10-10T03:49:52.879Z",
+        "modified_time": "2022-06-17T22:06:27.898Z",
+        "version_count": 5,
+        "version_history": {
+          "0.0.1": "2012-10-10T03:49:54.420Z",
+          "0.0.2": "2012-10-10T17:56:13.666Z",
+          "0.0.3": "2012-10-10T18:10:02.210Z",
+          "0.0.4": "2012-10-25T21:27:15.851Z",
+          "0.0.5": "2013-07-16T23:16:37.336Z"
+        },
+        "dependencies": {},
+        "dev_dependencies": {
+          "mocha": "*",
+          "supertest": "~0.3.1",
+          "clone": "~0.1.1"
+        },
+        "scripts": {
+          "test": "make test"
+        },
+        "keywords": [],
+        "has_types": false,
+        "dist": {
+          "shasum": "bf4484749f83920cb116d6baf6da230220d1fb9c",
+          "tarball": "https://registry.npmjs.org/expres/-/expres-0.0.5.tgz",
+          "integrity": "sha512-pK2yFc2Ke66rveH6iq6YJr63v55cFP6fs2xhoJ7RUGg+uwwApMlod3IwVm8zEtKH4ALqSvaGQF4cNemsyApd/w==",
+          "signatures": [
+            {
+              "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+              "sig": "MEUCIQCeAGop/A9myvsK8ClkwqsvF4Kkv/7u2GrcnkSvPA5ITAIgK2QsHUSY6pXeFHWoofchp3Sb2Al6fMnSMqA9QERFOPc="
+            }
+          ]
+        },
+        "engines": {}
+      },
+      "checks": [
+        {
+          "name": "author_check",
+          "description": "Author information present",
+          "flagged": false,
+          "score": 15,
+          "severity": "medium",
+          "details": {
+            "author": {
+              "name": "Brian Link",
+              "email": "cpsubrian@gmail.com"
+            }
+          }
+        },
+        {
+          "name": "package_age_check",
+          "description": "Package is 4638 days old",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "publish_time": "2013-07-16T23:16:37.336Z",
+            "days_old": 4638
+          }
+        },
+        {
+          "name": "install_scripts_check",
+          "description": "No suspicious install scripts",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "all_scripts": [
+              "test"
+            ],
+            "suspicious_scripts": []
+          }
+        },
+        {
+          "name": "script_contents_check",
+          "description": "No suspicious keywords in scripts",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "findings": []
+          }
+        },
+        {
+          "name": "dependency_count_check",
+          "description": "Dependency count: 0",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "dependency_count": 0,
+            "threshold": 20,
+            "dependencies": []
+          }
+        },
+        {
+          "name": "repository_check",
+          "description": "Source repository present",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "repository": {
+              "type": "git",
+              "url": "git://github.com/cpsubrian/node-expres.git"
+            }
+          }
+        },
+        {
+          "name": "readme_check",
+          "description": "README present",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "readme_length": 4173
+          }
+        },
+        {
+          "name": "version_history_check",
+          "description": "5 versions published",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "version_count": 5
+          }
+        },
+        {
+          "name": "maintainer_count_check",
+          "description": "Only 1 maintainer(s)",
+          "flagged": true,
+          "score": 10,
+          "severity": "low",
+          "details": {
+            "maintainer_count": 1,
+            "maintainers": [
+              "cpsubrian"
+            ]
+          }
+        },
+        {
+          "name": "license_check",
+          "description": "License: MIT",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "license": "MIT"
+          }
+        },
+        {
+          "name": "version_anomaly_check",
+          "description": "No version anomalies",
+          "flagged": false,
+          "score": 0,
+          "severity": "info",
+          "details": {
+            "anomalies": []
+          }
+        }
+      ],
+      "risk_score": 10,
+      "risk_factors": [
+        {
+          "check": "maintainer_count_check",
+          "description": "Only 1 maintainer(s)",
+          "score": 10,
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  "typosquatting_analysis": {
+    "is_suspect": true,
+    "closest_match": "express",
+    "techniques_triggered": [
+      "levenshtein",
+      "repeated_char"
+    ],
+    "details": {
+      "package_name": "expres",
+      "ecosystem": "npm",
+      "is_typosquat_suspect": true,
+      "matches": [
+        {
+          "suspect_package": "expres",
+          "legitimate_package": "express",
+          "is_similar": true,
+          "distance": 1,
+          "techniques": [
+            "levenshtein",
+            "repeated_char"
+          ]
+        }
+      ],
+      "techniques_triggered": [
+        "levenshtein",
+        "repeated_char"
+      ],
+      "closest_legitimate": "express",
+      "min_distance": 1,
+      "risk_score": 50,
+      "details": {}
+    }
+  },
+  "vulnerability_analysis": {
+    "total_vulnerabilities": 10,
+    "critical": 1,
+    "high": 2,
+    "medium": 5,
+    "low": 2,
+    "details": {
+      "package_name": "expres",
+      "version": "0.0.5",
+      "ecosystem": "npm",
+      "vulnerabilities": [
+        {
+          "id": "CVE-1999-0132",
+          "summary": "Expreserve, as used in vi and ex, allows local users to overwrite arbitrary files and gain root access.",
+          "details": "Expreserve, as used in vi and ex, allows local users to overwrite arbitrary files and gain root access.",
+          "severity": "LOW",
+          "cvss_score": 2.1,
+          "source": "NVD",
+          "references": [
+            "http://www.cert.org/advisories/CA-1996-19.html",
+            "http://www.osvdb.org/11723",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/401",
+            "http://www.cert.org/advisories/CA-1996-19.html",
+            "http://www.osvdb.org/11723"
+          ],
+          "published": "1996-08-15T04:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-1999-0967",
+          "summary": "Buffer overflow in the HTML library used by Internet Explorer, Outlook Express, and Windows Explorer via the res: local resource protocol.",
+          "details": "Buffer overflow in the HTML library used by Internet Explorer, Outlook Express, and Windows Explorer via the res: local resource protocol.",
+          "severity": "CRITICAL",
+          "cvss_score": 10.0,
+          "source": "NVD",
+          "references": [
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/CVE-1999-0967",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/CVE-1999-0967"
+          ],
+          "published": "1997-11-01T05:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-1999-1033",
+          "summary": "Microsoft Outlook Express before 4.72.3612.1700 allows a malicious user to send a message that contains a .., which can inadvertently cause Outlook to re-enter POP3 command mode and cause the POP3 session to hang.",
+          "details": "Microsoft Outlook Express before 4.72.3612.1700 allows a malicious user to send a message that contains a .., which can inadvertently cause Outlook to re-enter POP3 command mode and cause the POP3 session to hang.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.0,
+          "source": "NVD",
+          "references": [
+            "http://marc.info/?l=bugtraq&m=92647407427342&w=2",
+            "http://marc.info/?l=bugtraq&m=92663402004275&w=2",
+            "http://www.securityfocus.com/bid/252",
+            "http://marc.info/?l=bugtraq&m=92647407427342&w=2",
+            "http://marc.info/?l=bugtraq&m=92663402004275&w=2"
+          ],
+          "published": "1999-05-11T04:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-1999-1016",
+          "summary": "Microsoft HTML control as used in (1) Internet Explorer 5.0, (2) FrontPage Express, (3) Outlook Express 5, and (4) Eudora, and possibly others, allows remote malicious web site or HTML emails to cause a denial of service (100% CPU consumption) via large HTML form fields such as text inputs in a tabl",
+          "details": "Microsoft HTML control as used in (1) Internet Explorer 5.0, (2) FrontPage Express, (3) Outlook Express 5, and (4) Eudora, and possibly others, allows remote malicious web site or HTML emails to cause a denial of service (100% CPU consumption) via large HTML form fields such as text inputs in a table cell.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.0,
+          "source": "NVD",
+          "references": [
+            "http://marc.info/?l=ntbugtraq&m=93578772920970&w=2",
+            "http://www.securityfocus.com/bid/606",
+            "http://marc.info/?l=ntbugtraq&m=93578772920970&w=2",
+            "http://www.securityfocus.com/bid/606"
+          ],
+          "published": "1999-08-27T04:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-1999-1009",
+          "summary": "The Disney Go Express Search allows remote attackers to access and modify search information for users by connecting to an HTTP server on the user's system.",
+          "details": "The Disney Go Express Search allows remote attackers to access and modify search information for users by connecting to an HTTP server on the user's system.",
+          "severity": "LOW",
+          "cvss_score": 2.6,
+          "source": "NVD",
+          "references": [
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/CVE-1999-1009",
+            "https://exchange.xforce.ibmcloud.com/vulnerabilities/CVE-1999-1009"
+          ],
+          "published": "1999-12-12T05:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-2000-0036",
+          "summary": "Outlook Express 5 for Macintosh downloads attachments to HTML mail without prompting the user, aka the \"HTML Mail Attachment\" vulnerability.",
+          "details": "Outlook Express 5 for Macintosh downloads attachments to HTML mail without prompting the user, aka the \"HTML Mail Attachment\" vulnerability.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.0,
+          "source": "NVD",
+          "references": [
+            "http://support.microsoft.com/default.aspx?scid=kb%3B%5BLN%5D%3BQ249082",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/1999/ms99-060",
+            "http://support.microsoft.com/default.aspx?scid=kb%3B%5BLN%5D%3BQ249082",
+            "https://docs.microsoft.com/en-us/security-updates/securitybulletins/1999/ms99-060"
+          ],
+          "published": "1999-12-22T05:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-1999-0455",
+          "summary": "The Expression Evaluator sample application in ColdFusion allows remote attackers to read or delete files on the server via exprcalc.cfm, which does not restrict access to the server properly.",
+          "details": "The Expression Evaluator sample application in ColdFusion allows remote attackers to read or delete files on the server via exprcalc.cfm, which does not restrict access to the server properly.",
+          "severity": "HIGH",
+          "cvss_score": 7.5,
+          "source": "NVD",
+          "references": [
+            "http://www.securityfocus.com/bid/115",
+            "http://www.securityfocus.com/bid/115"
+          ],
+          "published": "1999-12-25T05:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-1999-0477",
+          "summary": "The Expression Evaluator in the ColdFusion Application Server allows a remote attacker to upload files to the server via openfile.cfm, which does not restrict access to the server properly.",
+          "details": "The Expression Evaluator in the ColdFusion Application Server allows a remote attacker to upload files to the server via openfile.cfm, which does not restrict access to the server properly.",
+          "severity": "HIGH",
+          "cvss_score": 7.5,
+          "source": "NVD",
+          "references": [
+            "http://www.securityfocus.com/bid/115",
+            "http://www.securityfocus.com/bid/115"
+          ],
+          "published": "1999-12-25T05:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-2000-0115",
+          "summary": "IIS allows local users to cause a denial of service via invalid regular expressions in a Visual Basic script in an ASP page.",
+          "details": "IIS allows local users to cause a denial of service via invalid regular expressions in a Visual Basic script in an ASP page.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.0,
+          "source": "NVD",
+          "references": [
+            "https://marc.info/?l=ntbugtraq&m=94881904724731&w=2",
+            "https://marc.info/?l=ntbugtraq&m=94881904724731&w=2"
+          ],
+          "published": "2000-01-21T05:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        },
+        {
+          "id": "CVE-2000-0105",
+          "summary": "Outlook Express 5.01 and Internet Explorer 5.01 allow remote attackers to view a user's email messages via a script that accesses a variable that references subsequent email messages that are read by the client.",
+          "details": "Outlook Express 5.01 and Internet Explorer 5.01 allow remote attackers to view a user's email messages via a script that accesses a variable that references subsequent email messages that are read by the client.",
+          "severity": "MEDIUM",
+          "cvss_score": 5.0,
+          "source": "NVD",
+          "references": [
+            "http://www.securityfocus.com/bid/962",
+            "http://www.securityfocus.com/bid/962"
+          ],
+          "published": "2000-02-01T05:00:00.000",
+          "modified": "2025-04-03T01:03:51.193"
+        }
+      ],
+      "total_count": 10,
+      "critical_count": 1,
+      "high_count": 2,
+      "medium_count": 5,
+      "low_count": 2,
+      "risk_score": 100,
+      "sources_checked": [
+        "OSV",
+        "NVD"
+      ],
+      "errors": []
+    }
+  },
+  "code_analysis": {
+    "risk_score": 0,
+    "total_issues": 0,
+    "obfuscation_detected": false,
+    "details": {
+      "filename": "expres/scripts",
+      "language": "javascript",
+      "issues": [],
+      "risk_score": 0,
+      "entropy_score": 2.7255,
+      "obfuscation_detected": false,
+      "encoded_payloads": [],
+      "suspicious_urls": [],
+      "suspicious_ips": [],
+      "dangerous_imports": [],
+      "suspicious_function_calls": [],
+      "summary": {
+        "total_issues": 0,
+        "critical_issues": 0,
+        "high_issues": 0,
+        "medium_issues": 0,
+        "low_issues": 0
+      }
+    }
+  },
+  "behavioral_analysis": {
+    "risk_score": 0,
+    "dominant_behavior": null,
+    "assessment": "MINIMAL - No significant behavioral concerns detected.",
+    "details": {
+      "behaviors": {
+        "network": {
+          "description": "Network communication",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "filesystem": {
+          "description": "File system operations",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "process_execution": {
+          "description": "Process spawning and command execution",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "code_execution": {
+          "description": "Dynamic code execution",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "data_encoding": {
+          "description": "Data encoding/decoding operations",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "environment_access": {
+          "description": "Environment variable and system info access",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "crypto_operations": {
+          "description": "Cryptographic operations",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        },
+        "data_exfiltration": {
+          "description": "Potential data exfiltration patterns",
+          "detections": [],
+          "detection_count": 0,
+          "weighted_score": 0.0
+        }
+      },
+      "fingerprint_vector": {
+        "network": 0,
+        "filesystem": 0,
+        "process_execution": 0,
+        "code_execution": 0,
+        "data_encoding": 0,
+        "environment_access": 0,
+        "crypto_operations": 0,
+        "data_exfiltration": 0
+      },
+      "total_behaviors_detected": 0,
+      "dominant_behavior": null,
+      "risk_score": 0,
+      "risk_assessment": "MINIMAL - No significant behavioral concerns detected.",
+      "behavior_summary": []
+    }
+  },
+  "dependency_graph_analysis": {
+    "total_dependencies": 0,
+    "critical_nodes": 0,
+    "details": {
+      "risk_score": 0,
+      "total_dependencies": 0,
+      "error": "'DependencyGraphAnalyzer' object has no attribute 'adjacency'"
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "action": "Package name is suspiciously similar to 'express'. Verify you have the correct package name."
+    },
+    {
+      "priority": "HIGH",
+      "action": "Package has 1 critical vulnerability(ies). Check for patches or alternatives."
+    }
+  ]
+}
