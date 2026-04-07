@@ -152,7 +152,11 @@ s.connect(("127.0.0.1", 8080))
     def test_high_entropy_detected(self):
         """High entropy code should trigger obfuscation detection"""
         # Simulated obfuscated code
-        code = 'x="' + 'aZ3kL9mN' * 200 + '"'
+        # Base64-encoded string has entropy ~5.5-6.0
+        import base64
+        import os
+        encoded = base64.b64encode(os.urandom(300)).decode()
+        code = f'data = "{encoded}"'
         result = self.analyzer.scan(code, "test.py", "python")
         assert result["entropy_score"] > 4.0
 

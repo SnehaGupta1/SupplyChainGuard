@@ -1,9 +1,9 @@
 services:
   - type: web
     name: supplychainguard-api
-    env: python
+    runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn api.routes:app --bind 0.0.0.0:$PORT
+    startCommand: gunicorn api:app --bind 0.0.0.0:$PORT
     plan: free
     envVars:
       - key: PYTHON_VERSION

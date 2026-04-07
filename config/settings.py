@@ -44,10 +44,9 @@ HIGH_DEPENDENCY_THRESHOLD = 20     # Flag if more deps than this
 # RISK SCORE THRESHOLDS
 # ──────────────────────────────────────────────
 RISK_THRESHOLDS = {
-    "LOW": 25,
-    "MEDIUM": 50,
-    "HIGH": 75,
-    "CRITICAL": 100
+    "MEDIUM": 25,     # MEDIUM starts at 25
+    "HIGH": 50,       # HIGH starts at 50
+    "CRITICAL": 75    # CRITICAL starts at 75
 }
 
 # ──────────────────────────────────────────────
